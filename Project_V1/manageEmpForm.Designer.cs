@@ -68,9 +68,10 @@
             panelEmp.CustomizableEdges = customizableEdges7;
             panelEmp.Dock = DockStyle.Fill;
             panelEmp.Location = new Point(0, 0);
+            panelEmp.Margin = new Padding(3, 2, 3, 2);
             panelEmp.Name = "panelEmp";
             panelEmp.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            panelEmp.Size = new Size(1112, 864);
+            panelEmp.Size = new Size(973, 648);
             panelEmp.TabIndex = 0;
             panelEmp.Paint += panelEmp_Paint;
             // 
@@ -87,13 +88,13 @@
             btnAdd.FillColor2 = Color.FromArgb(128, 255, 128);
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(900, 17);
-            btnAdd.Margin = new Padding(3, 4, 3, 4);
+            btnAdd.Location = new Point(788, 13);
             btnAdd.Name = "btnAdd";
             btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnAdd.Size = new Size(200, 55);
+            btnAdd.Size = new Size(175, 41);
             btnAdd.TabIndex = 59;
             btnAdd.Text = "Thêm nhân viên";
+            btnAdd.Click += btnAdd_Click;
             // 
             // panelView
             // 
@@ -103,10 +104,11 @@
             panelView.BorderThickness = 1;
             panelView.Controls.Add(datagridviewEmpList);
             panelView.CustomizableEdges = customizableEdges3;
-            panelView.Location = new Point(12, 93);
+            panelView.Location = new Point(10, 70);
+            panelView.Margin = new Padding(3, 2, 3, 2);
             panelView.Name = "panelView";
             panelView.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            panelView.Size = new Size(1088, 771);
+            panelView.Size = new Size(952, 578);
             panelView.TabIndex = 15;
             // 
             // datagridviewEmpList
@@ -119,6 +121,7 @@
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
             datagridviewEmpList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             datagridviewEmpList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            datagridviewEmpList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(94, 148, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -138,7 +141,8 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             datagridviewEmpList.DefaultCellStyle = dataGridViewCellStyle3;
             datagridviewEmpList.GridColor = Color.FromArgb(231, 229, 255);
-            datagridviewEmpList.Location = new Point(3, 3);
+            datagridviewEmpList.Location = new Point(3, 2);
+            datagridviewEmpList.Margin = new Padding(3, 2, 3, 2);
             datagridviewEmpList.Name = "datagridviewEmpList";
             datagridviewEmpList.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -152,7 +156,7 @@
             datagridviewEmpList.RowHeadersVisible = false;
             datagridviewEmpList.RowHeadersWidth = 51;
             datagridviewEmpList.RowTemplate.Height = 30;
-            datagridviewEmpList.Size = new Size(1082, 1037);
+            datagridviewEmpList.Size = new Size(947, 778);
             datagridviewEmpList.TabIndex = 15;
             datagridviewEmpList.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             datagridviewEmpList.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -182,9 +186,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(0, 0, 64);
-            label7.Location = new Point(15, 36);
+            label7.Location = new Point(13, 27);
             label7.Name = "label7";
-            label7.Size = new Size(102, 28);
+            label7.Size = new Size(82, 21);
             label7.TabIndex = 13;
             label7.Text = "Chọn vị trí";
             // 
@@ -199,20 +203,22 @@
             positionDisplay.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             positionDisplay.ForeColor = Color.FromArgb(68, 88, 112);
             positionDisplay.ItemHeight = 30;
-            positionDisplay.Location = new Point(123, 36);
+            positionDisplay.Location = new Point(108, 27);
+            positionDisplay.Margin = new Padding(3, 2, 3, 2);
             positionDisplay.Name = "positionDisplay";
             positionDisplay.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            positionDisplay.Size = new Size(323, 36);
+            positionDisplay.Size = new Size(283, 36);
             positionDisplay.TabIndex = 0;
             // 
             // manageEmpForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1112, 864);
+            ClientSize = new Size(973, 648);
             Controls.Add(panelEmp);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "manageEmpForm";
             Load += manageEmpForm_Load;
             panelEmp.ResumeLayout(false);

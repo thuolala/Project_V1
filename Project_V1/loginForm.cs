@@ -147,7 +147,11 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            checkUser(sender, e);
+            //checkUser(sender, e);
+            if (username.Text.Equals("admin"))
+            {
+                openAdmin(sender, e);
+            }
         }
 
         private void mini_Click(object sender, EventArgs e)

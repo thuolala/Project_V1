@@ -42,6 +42,7 @@ namespace GUI
             editBtn.Name = "EditBtn";
             editBtn.Image = Properties.Resources.pencil1;
             editBtn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            editBtn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             editBtn.Width = 20;
             datagridviewEmpList.Columns.Add(editBtn);
 
@@ -50,8 +51,11 @@ namespace GUI
             delBtn.Name = "DeleteBtn";
             delBtn.Image = Properties.Resources.trash_can;
             delBtn.ImageLayout = DataGridViewImageCellLayout.Zoom;
+            delBtn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             delBtn.Width = 20;
             datagridviewEmpList.Columns.Add(delBtn);
+
+
         }
 
         private void datagridviewEmpList_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -61,6 +65,12 @@ namespace GUI
                 infoForm f = new infoForm();
                 f.ShowDialog();
             }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            addEmpForm f = new addEmpForm();
+            f.ShowDialog();
         }
     }
 }
