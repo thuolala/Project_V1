@@ -126,7 +126,7 @@ namespace GUI
 
         private void editInfo_Load(object sender, EventArgs e)
         {
-
+            /*
             FormCollection fc = Application.OpenForms;
             foreach (Form frm in fc)
             {
@@ -188,6 +188,8 @@ namespace GUI
             email.Text = mailD;
             displayUsername.Text = username;
             displayPassword.Text = password;
+
+            */
         }
 
         private void btnSave_Click(object sender, EventArgs e)

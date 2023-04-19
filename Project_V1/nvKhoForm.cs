@@ -54,6 +54,7 @@ namespace GUI
 
         public void getInfo()
         {
+            /*
             ID = loginForm.ID;
             fname = loginForm.fname;
             //Select ID 
@@ -73,6 +74,7 @@ namespace GUI
                 mailD = dt.Rows[0]["EMAIL"].ToString();
             }
             da.Dispose();
+            */
         }
 
         public void getAccount()
@@ -98,10 +100,12 @@ namespace GUI
 
         private void logout_Click(object sender, EventArgs e)
         {
+            /*
             this.Hide();
             loginForm f = new loginForm();
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
+            */
         }
 
         private void btnInfo_Click(object sender, EventArgs e)
