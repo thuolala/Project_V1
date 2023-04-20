@@ -28,462 +28,352 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnMoney = new System.Windows.Forms.Button();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btnInfo = new System.Windows.Forms.Button();
-            this.btnEditI = new System.Windows.Forms.Button();
-            this.btnStore = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.panelPersonal = new System.Windows.Forms.Panel();
-            this.displayName = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.logout = new System.Windows.Forms.PictureBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.search = new System.Windows.Forms.TextBox();
-            this.mini = new System.Windows.Forms.PictureBox();
-            this.menuShow = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonIncome = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnEditInfo = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panelTask = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelAction = new System.Windows.Forms.Panel();
-            this.panel8.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.panelPersonal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).BeginInit();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuShow)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panelTask.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
+            panelShow = new Guna.UI2.WinForms.Guna2Panel();
+            search = new TextBox();
+            guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            btnInfo = new Guna.UI2.WinForms.Guna2Button();
+            btnMedicine = new Guna.UI2.WinForms.Guna2Button();
+            btnSale = new Guna.UI2.WinForms.Guna2Button();
+            label1 = new Label();
+            btnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
+            panelSearch = new Panel();
+            panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            logout = new PictureBox();
+            guna2ResizeForm2 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
+            displayName = new Label();
+            btnMenu = new Guna.UI2.WinForms.Guna2Button();
+            pictureBox4 = new PictureBox();
+            panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            timerMenu = new System.Windows.Forms.Timer(components);
+            guna2ResizeForm3 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            panelSearch.SuspendLayout();
+            panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)logout).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panelMenu.SuspendLayout();
+            SuspendLayout();
             // 
-            // label1
+            // panelShow
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.LightSteelBlue;
-            this.label1.Location = new System.Drawing.Point(48, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Nhân viên kho";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel8.Controls.Add(this.btnMoney);
-            this.panel8.Location = new System.Drawing.Point(3, 192);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(270, 55);
-            this.panel8.TabIndex = 23;
-            // 
-            // btnMoney
-            // 
-            this.btnMoney.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.btnMoney.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.btnMoney.Image = global::GUI.Properties.Resources.bar_chart;
-            this.btnMoney.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMoney.Location = new System.Drawing.Point(-12, -13);
-            this.btnMoney.Name = "btnMoney";
-            this.btnMoney.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnMoney.Size = new System.Drawing.Size(299, 79);
-            this.btnMoney.TabIndex = 22;
-            this.btnMoney.Text = "       Quản lý doanh thu";
-            this.btnMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMoney.UseVisualStyleBackColor = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel9.Controls.Add(this.btnInfo);
-            this.panel9.Controls.Add(this.btnEditI);
-            this.panel9.Location = new System.Drawing.Point(3, 253);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(270, 55);
-            this.panel9.TabIndex = 23;
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.btnInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.btnInfo.Image = global::GUI.Properties.Resources.pencil;
-            this.btnInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.Location = new System.Drawing.Point(-14, -12);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnInfo.Size = new System.Drawing.Size(299, 79);
-            this.btnInfo.TabIndex = 23;
-            this.btnInfo.Text = "       Chỉnh sửa thông tin";
-            this.btnInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInfo.UseVisualStyleBackColor = false;
-            this.btnInfo.Click += new System.EventHandler(this.btnInfo_Click);
-            // 
-            // btnEditI
-            // 
-            this.btnEditI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.btnEditI.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEditI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.btnEditI.Image = global::GUI.Properties.Resources.pencil;
-            this.btnEditI.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditI.Location = new System.Drawing.Point(-12, -13);
-            this.btnEditI.Name = "btnEditI";
-            this.btnEditI.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnEditI.Size = new System.Drawing.Size(299, 79);
-            this.btnEditI.TabIndex = 22;
-            this.btnEditI.Text = "Chỉnh sửa thông tin";
-            this.btnEditI.UseVisualStyleBackColor = false;
-            // 
-            // btnStore
-            // 
-            this.btnStore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.btnStore.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnStore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.btnStore.Image = global::GUI.Properties.Resources.warehouse;
-            this.btnStore.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStore.Location = new System.Drawing.Point(-12, -13);
-            this.btnStore.Name = "btnStore";
-            this.btnStore.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btnStore.Size = new System.Drawing.Size(299, 79);
-            this.btnStore.TabIndex = 22;
-            this.btnStore.Text = "       Quản lý kho";
-            this.btnStore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnStore.UseVisualStyleBackColor = false;
-            this.btnStore.Click += new System.EventHandler(this.btnStore_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel3.Controls.Add(this.btnStore);
-            this.panel3.Location = new System.Drawing.Point(3, 131);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(270, 55);
-            this.panel3.TabIndex = 21;
-            // 
-            // exit
-            // 
-            this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.Image = global::GUI.Properties.Resources.exit;
-            this.exit.Location = new System.Drawing.Point(694, 10);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(20, 20);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.exit.TabIndex = 12;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = global::GUI.Properties.Resources.pmc_logo;
-            this.pictureBox4.Location = new System.Drawing.Point(125, 1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(102, 39);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 2;
-            this.pictureBox4.TabStop = false;
-            // 
-            // panelPersonal
-            // 
-            this.panelPersonal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panelPersonal.Controls.Add(this.label1);
-            this.panelPersonal.Controls.Add(this.displayName);
-            this.panelPersonal.Controls.Add(this.pictureBox3);
-            this.panelPersonal.Location = new System.Drawing.Point(0, 58);
-            this.panelPersonal.Name = "panelPersonal";
-            this.panelPersonal.Padding = new System.Windows.Forms.Padding(10, 0, 10, 0);
-            this.panelPersonal.Size = new System.Drawing.Size(236, 56);
-            this.panelPersonal.TabIndex = 0;
-            // 
-            // displayName
-            // 
-            this.displayName.AutoSize = true;
-            this.displayName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.displayName.ForeColor = System.Drawing.Color.White;
-            this.displayName.Location = new System.Drawing.Point(48, 18);
-            this.displayName.Name = "displayName";
-            this.displayName.Size = new System.Drawing.Size(40, 17);
-            this.displayName.TabIndex = 8;
-            this.displayName.Text = "(Tên)";
-            this.displayName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::GUI.Properties.Resources.user__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 56);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panelTop
-            // 
-            this.panelTop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(228)))), ((int)(((byte)(226)))));
-            this.panelTop.Controls.Add(this.logout);
-            this.panelTop.Controls.Add(this.panel7);
-            this.panelTop.Controls.Add(this.mini);
-            this.panelTop.Controls.Add(this.exit);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTop.Location = new System.Drawing.Point(236, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(741, 67);
-            this.panelTop.TabIndex = 9;
-            // 
-            // logout
-            // 
-            this.logout.BackColor = System.Drawing.Color.Transparent;
-            this.logout.Image = global::GUI.Properties.Resources.logout4;
-            this.logout.Location = new System.Drawing.Point(9, 17);
-            this.logout.Name = "logout";
-            this.logout.Size = new System.Drawing.Size(32, 32);
-            this.logout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.logout.TabIndex = 26;
-            this.logout.TabStop = false;
-            this.logout.Click += new System.EventHandler(this.logout_Click);
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Azure;
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Controls.Add(this.search);
-            this.panel7.Location = new System.Drawing.Point(344, 10);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(290, 39);
-            this.panel7.TabIndex = 14;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Azure;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.search;
-            this.pictureBox1.Location = new System.Drawing.Point(262, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            panelShow.BackColor = Color.Transparent;
+            panelShow.CustomizableEdges = customizableEdges17;
+            panelShow.Dock = DockStyle.Fill;
+            panelShow.Location = new Point(236, 67);
+            panelShow.Name = "panelShow";
+            panelShow.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            panelShow.Size = new Size(973, 567);
+            panelShow.TabIndex = 8;
             // 
             // search
             // 
-            this.search.BackColor = System.Drawing.Color.Azure;
-            this.search.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.search.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.search.Location = new System.Drawing.Point(4, 8);
-            this.search.Name = "search";
-            this.search.PlaceholderText = "Tìm kiếm";
-            this.search.Size = new System.Drawing.Size(253, 22);
-            this.search.TabIndex = 11;
+            search.BackColor = Color.Azure;
+            search.BorderStyle = BorderStyle.None;
+            search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            search.ForeColor = Color.FromArgb(0, 0, 64);
+            search.Location = new Point(4, 8);
+            search.Name = "search";
+            search.PlaceholderText = "Tìm kiếm";
+            search.Size = new Size(287, 22);
+            search.TabIndex = 11;
             // 
-            // mini
+            // guna2Separator1
             // 
-            this.mini.BackColor = System.Drawing.Color.Transparent;
-            this.mini.Image = global::GUI.Properties.Resources.mini;
-            this.mini.Location = new System.Drawing.Point(664, 10);
-            this.mini.Name = "mini";
-            this.mini.Size = new System.Drawing.Size(20, 20);
-            this.mini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.mini.TabIndex = 13;
-            this.mini.TabStop = false;
-            this.mini.Click += new System.EventHandler(this.mini_Click);
+            guna2Separator1.FillColor = Color.FromArgb(182, 228, 226);
+            guna2Separator1.Location = new Point(0, 59);
+            guna2Separator1.Margin = new Padding(3, 2, 3, 2);
+            guna2Separator1.MaximumSize = new Size(236, 0);
+            guna2Separator1.MinimumSize = new Size(37, 0);
+            guna2Separator1.Name = "guna2Separator1";
+            guna2Separator1.Size = new Size(236, 0);
+            guna2Separator1.TabIndex = 18;
             // 
-            // menuShow
+            // guna2CirclePictureBox1
             // 
-            this.menuShow.Image = global::GUI.Properties.Resources.menu;
-            this.menuShow.Location = new System.Drawing.Point(8, 8);
-            this.menuShow.Name = "menuShow";
-            this.menuShow.Size = new System.Drawing.Size(32, 32);
-            this.menuShow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.menuShow.TabIndex = 3;
-            this.menuShow.TabStop = false;
+            guna2CirclePictureBox1.FillColor = Color.Transparent;
+            guna2CirclePictureBox1.Image = Properties.Resources.user__1_;
+            guna2CirclePictureBox1.ImageRotate = 0F;
+            guna2CirclePictureBox1.Location = new Point(10, 87);
+            guna2CirclePictureBox1.Margin = new Padding(3, 2, 3, 2);
+            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna2CirclePictureBox1.Size = new Size(28, 24);
+            guna2CirclePictureBox1.TabIndex = 17;
+            guna2CirclePictureBox1.TabStop = false;
             // 
-            // panel1
+            // btnInfo
             // 
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.panelPersonal);
-            this.panel1.Controls.Add(this.menuShow);
-            this.panel1.Location = new System.Drawing.Point(3, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(236, 112);
-            this.panel1.TabIndex = 1;
+            btnInfo.BackColor = Color.Transparent;
+            btnInfo.CustomizableEdges = customizableEdges20;
+            btnInfo.DisabledState.BorderColor = Color.DarkGray;
+            btnInfo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnInfo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnInfo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnInfo.FillColor = Color.Transparent;
+            btnInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnInfo.ForeColor = Color.FromArgb(182, 228, 226);
+            btnInfo.Image = Properties.Resources.pencil;
+            btnInfo.ImageAlign = HorizontalAlignment.Left;
+            btnInfo.ImageOffset = new Point(4, 0);
+            btnInfo.Location = new Point(0, 224);
+            btnInfo.Margin = new Padding(3, 2, 3, 2);
+            btnInfo.Name = "btnInfo";
+            btnInfo.RightToLeft = RightToLeft.No;
+            btnInfo.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            btnInfo.Size = new Size(236, 42);
+            btnInfo.TabIndex = 16;
+            btnInfo.Text = "  Chỉnh sửa thông tin";
+            btnInfo.TextAlign = HorizontalAlignment.Left;
             // 
-            // buttonIncome
+            // btnMedicine
             // 
-            this.buttonIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.buttonIncome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonIncome.ForeColor = System.Drawing.Color.White;
-            this.buttonIncome.Image = global::GUI.Properties.Resources.bar_chart;
-            this.buttonIncome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonIncome.Location = new System.Drawing.Point(-12, -12);
-            this.buttonIncome.Name = "buttonIncome";
-            this.buttonIncome.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.buttonIncome.Size = new System.Drawing.Size(272, 61);
-            this.buttonIncome.TabIndex = 18;
-            this.buttonIncome.Text = "Quản lý doanh thu";
-            this.buttonIncome.UseVisualStyleBackColor = false;
+            btnMedicine.BackColor = Color.Transparent;
+            btnMedicine.CustomizableEdges = customizableEdges22;
+            btnMedicine.DisabledState.BorderColor = Color.DarkGray;
+            btnMedicine.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMedicine.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMedicine.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMedicine.FillColor = Color.Transparent;
+            btnMedicine.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMedicine.ForeColor = Color.FromArgb(182, 228, 226);
+            btnMedicine.Image = Properties.Resources.medicines;
+            btnMedicine.ImageAlign = HorizontalAlignment.Left;
+            btnMedicine.ImageOffset = new Point(4, 0);
+            btnMedicine.Location = new Point(0, 182);
+            btnMedicine.Margin = new Padding(3, 2, 3, 2);
+            btnMedicine.Name = "btnMedicine";
+            btnMedicine.RightToLeft = RightToLeft.No;
+            btnMedicine.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            btnMedicine.Size = new Size(236, 42);
+            btnMedicine.TabIndex = 16;
+            btnMedicine.Text = "  Quản lý thuốc";
+            btnMedicine.TextAlign = HorizontalAlignment.Left;
             // 
-            // panel4
+            // btnSale
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel4.Controls.Add(this.buttonIncome);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 10);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(236, 0);
-            this.panel4.TabIndex = 3;
+            btnSale.BackColor = Color.Transparent;
+            btnSale.CustomizableEdges = customizableEdges24;
+            btnSale.DisabledState.BorderColor = Color.DarkGray;
+            btnSale.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSale.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSale.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSale.FillColor = Color.Transparent;
+            btnSale.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSale.ForeColor = Color.FromArgb(182, 228, 226);
+            btnSale.Image = Properties.Resources.warehouse;
+            btnSale.ImageAlign = HorizontalAlignment.Left;
+            btnSale.ImageOffset = new Point(4, 0);
+            btnSale.Location = new Point(0, 140);
+            btnSale.Margin = new Padding(3, 2, 3, 2);
+            btnSale.Name = "btnSale";
+            btnSale.RightToLeft = RightToLeft.No;
+            btnSale.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            btnSale.Size = new Size(236, 42);
+            btnSale.TabIndex = 13;
+            btnSale.Text = "  Quản lý kho";
+            btnSale.TextAlign = HorizontalAlignment.Left;
             // 
-            // btnEditInfo
+            // label1
             // 
-            this.btnEditInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.btnEditInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnEditInfo.ForeColor = System.Drawing.Color.White;
-            this.btnEditInfo.Image = global::GUI.Properties.Resources.pencil;
-            this.btnEditInfo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditInfo.Location = new System.Drawing.Point(-5, -7);
-            this.btnEditInfo.Name = "btnEditInfo";
-            this.btnEditInfo.Padding = new System.Windows.Forms.Padding(18, 0, 0, 0);
-            this.btnEditInfo.Size = new System.Drawing.Size(272, 61);
-            this.btnEditInfo.TabIndex = 18;
-            this.btnEditInfo.Text = "Chỉnh sửa thông tin";
-            this.btnEditInfo.UseVisualStyleBackColor = false;
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.LightSteelBlue;
+            label1.Location = new Point(48, 100);
+            label1.Name = "label1";
+            label1.Size = new Size(91, 17);
+            label1.TabIndex = 12;
+            label1.Text = "Nhân viên kho";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // panel2
+            // btnSearch
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(236, 0);
-            this.panel2.TabIndex = 1;
+            btnSearch.CheckedState.ImageSize = new Size(64, 64);
+            btnSearch.HoverState.Image = Properties.Resources.search;
+            btnSearch.Image = Properties.Resources.search;
+            btnSearch.ImageOffset = new Point(0, 0);
+            btnSearch.ImageRotate = 0F;
+            btnSearch.ImageSize = new Size(20, 20);
+            btnSearch.Location = new Point(297, 8);
+            btnSearch.Name = "btnSearch";
+            btnSearch.PressedState.Image = Properties.Resources.search;
+            btnSearch.PressedState.ImageSize = new Size(64, 64);
+            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnSearch.Size = new Size(20, 20);
+            btnSearch.TabIndex = 12;
             // 
-            // panel5
+            // panelSearch
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panel5.Controls.Add(this.btnEditInfo);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(3, 6);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(236, 0);
-            this.panel5.TabIndex = 3;
+            panelSearch.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            panelSearch.BackColor = Color.Azure;
+            panelSearch.Controls.Add(btnSearch);
+            panelSearch.Controls.Add(search);
+            panelSearch.Location = new Point(1408, 15);
+            panelSearch.Name = "panelSearch";
+            panelSearch.RightToLeft = RightToLeft.No;
+            panelSearch.Size = new Size(327, 39);
+            panelSearch.TabIndex = 29;
             // 
-            // panelTask
+            // panelTop
             // 
-            this.panelTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(49)))), ((int)(((byte)(99)))));
-            this.panelTask.Controls.Add(this.panel2);
-            this.panelTask.Controls.Add(this.panel5);
-            this.panelTask.Controls.Add(this.panel4);
-            this.panelTask.Controls.Add(this.panel1);
-            this.panelTask.Controls.Add(this.panel3);
-            this.panelTask.Controls.Add(this.panel8);
-            this.panelTask.Controls.Add(this.panel9);
-            this.panelTask.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelTask.Location = new System.Drawing.Point(0, 0);
-            this.panelTask.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTask.Name = "panelTask";
-            this.panelTask.Size = new System.Drawing.Size(236, 736);
-            this.panelTask.TabIndex = 8;
+            panelTop.BackColor = Color.FromArgb(182, 228, 226);
+            panelTop.Controls.Add(panelSearch);
+            panelTop.Controls.Add(logout);
+            panelTop.CustomizableEdges = customizableEdges27;
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(236, 0);
+            panelTop.Name = "panelTop";
+            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            panelTop.Size = new Size(973, 67);
+            panelTop.TabIndex = 7;
             // 
-            // panelAction
+            // logout
             // 
-            this.panelAction.Location = new System.Drawing.Point(236, 67);
-            this.panelAction.Name = "panelAction";
-            this.panelAction.Size = new System.Drawing.Size(725, 630);
-            this.panelAction.TabIndex = 10;
+            logout.BackColor = Color.Transparent;
+            logout.Image = Properties.Resources.logout4;
+            logout.Location = new Point(5, 21);
+            logout.Name = "logout";
+            logout.Size = new Size(32, 32);
+            logout.SizeMode = PictureBoxSizeMode.AutoSize;
+            logout.TabIndex = 28;
+            logout.TabStop = false;
+            logout.Click += logout_Click;
+            // 
+            // displayName
+            // 
+            displayName.AutoSize = true;
+            displayName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            displayName.ForeColor = Color.White;
+            displayName.Location = new Point(48, 79);
+            displayName.Name = "displayName";
+            displayName.Size = new Size(40, 17);
+            displayName.TabIndex = 11;
+            displayName.Text = "(Tên)";
+            displayName.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnMenu
+            // 
+            btnMenu.BackColor = Color.Transparent;
+            btnMenu.CustomizableEdges = customizableEdges29;
+            btnMenu.DisabledState.BorderColor = Color.DarkGray;
+            btnMenu.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMenu.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMenu.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMenu.FillColor = Color.Transparent;
+            btnMenu.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMenu.ForeColor = Color.White;
+            btnMenu.HoverState.FillColor = Color.Transparent;
+            btnMenu.Image = Properties.Resources.menu;
+            btnMenu.Location = new Point(10, 15);
+            btnMenu.Margin = new Padding(3, 2, 3, 2);
+            btnMenu.Name = "btnMenu";
+            btnMenu.PressedColor = Color.Transparent;
+            btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnMenu.Size = new Size(95, 42);
+            btnMenu.TabIndex = 6;
+            btnMenu.Text = "  Menu";
+            btnMenu.Click += btnMenu_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.Transparent;
+            pictureBox4.Image = Properties.Resources.pmc_logo;
+            pictureBox4.Location = new Point(111, 15);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(102, 39);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 5;
+            pictureBox4.TabStop = false;
+            // 
+            // panelMenu
+            // 
+            panelMenu.BackColor = Color.FromArgb(3, 49, 90);
+            panelMenu.Controls.Add(guna2Separator1);
+            panelMenu.Controls.Add(guna2CirclePictureBox1);
+            panelMenu.Controls.Add(btnInfo);
+            panelMenu.Controls.Add(btnMedicine);
+            panelMenu.Controls.Add(btnSale);
+            panelMenu.Controls.Add(label1);
+            panelMenu.Controls.Add(displayName);
+            panelMenu.Controls.Add(btnMenu);
+            panelMenu.Controls.Add(pictureBox4);
+            panelMenu.CustomizableEdges = customizableEdges31;
+            panelMenu.Dock = DockStyle.Left;
+            panelMenu.Location = new Point(0, 0);
+            panelMenu.MaximumSize = new Size(236, 0);
+            panelMenu.MinimumSize = new Size(46, 0);
+            panelMenu.Name = "panelMenu";
+            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            panelMenu.Size = new Size(236, 634);
+            panelMenu.TabIndex = 6;
+            // 
+            // timerMenu
+            // 
+            timerMenu.Interval = 10;
+            timerMenu.Tick += timerMenu_Tick;
             // 
             // nvKhoForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(977, 736);
-            this.Controls.Add(this.panelAction);
-            this.Controls.Add(this.panelTop);
-            this.Controls.Add(this.panelTask);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "nvKhoForm";
-            this.Text = "nvKhoForm";
-            this.Load += new System.EventHandler(this.nvKhoForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.nvKhoForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.nvKhoForm_MouseMove);
-            this.panel8.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.panelPersonal.ResumeLayout(false);
-            this.panelPersonal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logout)).EndInit();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.menuShow)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panelTask.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1209, 634);
+            Controls.Add(panelShow);
+            Controls.Add(panelTop);
+            Controls.Add(panelMenu);
+            Name = "nvKhoForm";
+            Text = "Pharmacity";
+            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            panelSearch.ResumeLayout(false);
+            panelSearch.PerformLayout();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)logout).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panelMenu.ResumeLayout(false);
+            panelMenu.PerformLayout();
+            ResumeLayout(false);
         }
 
         #endregion
 
-        private Label label1;
-        private Panel panel8;
-        private Button btnMoney;
-        private Panel panel9;
-        private Button btnInfo;
-        private Button btnEditI;
-        private Button btnStore;
-        private Panel panel3;
-        private PictureBox exit;
-        private PictureBox pictureBox4;
-        private Panel panelPersonal;
-        private Label displayName;
-        private PictureBox pictureBox3;
-        private Panel panelTop;
-        private Panel panel7;
-        private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
+        private Guna.UI2.WinForms.Guna2Panel panelShow;
         private TextBox search;
-        private PictureBox mini;
-        private PictureBox menuShow;
-        private Panel panel1;
-        private Button buttonIncome;
-        private Panel panel4;
-        private Button btnEditInfo;
-        private Panel panel2;
-        private Panel panel5;
-        private FlowLayoutPanel panelTask;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnInfo;
+        private Guna.UI2.WinForms.Guna2Button btnMedicine;
+        private Guna.UI2.WinForms.Guna2Button btnSale;
+        private Label label1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnSearch;
+        private Panel panelSearch;
+        private Guna.UI2.WinForms.Guna2Panel panelTop;
         private PictureBox logout;
-        private Panel panelAction;
+        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm2;
+        private Label displayName;
+        private Guna.UI2.WinForms.Guna2Button btnMenu;
+        private PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Panel panelMenu;
+        private System.Windows.Forms.Timer timerMenu;
+        private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm3;
     }
 }

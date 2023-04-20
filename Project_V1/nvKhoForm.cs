@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Configuration;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,129 +12,51 @@ namespace GUI
 {
     public partial class nvKhoForm : Form
     {
-        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString);
-        //private String username;
-
-        //
-        private editInfo editInfo = new editInfo();
-
-        //move function 
-        private Point mouse;
-
-        private void nvKhoForm_MouseDown(object sender, MouseEventArgs e)
-        {
-            mouse = e.Location;
-        }
-
-        private void nvKhoForm_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                int dx = e.Location.X - mouse.X;
-                int dy = e.Location.Y - mouse.Y;
-                this.Location = new Point(this.Location.X + dx, this.Location.Y + dy);
-            }
-        }
-
-
-        //get info  
-        public static string ID = "";
-        public static string fname = "";
-        public static string pos = "";
-        public static string sex = "";
-        public static string phone = "";
-        public static string birth = "";
-        public static string town = "";
-        public static string mailD = "";
-        public static string username = "";
-        public static string password = "";
-        public static int point = 0;
-
-        public void getInfo()
-        {
-            /*
-            ID = loginForm.ID;
-            fname = loginForm.fname;
-            //Select ID 
-            String sSQL = "SELECT * FROM Employee WHERE " +
-                           "ID_EMPLOYEE = '" + ID + "'";
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
-            {
-                pos = dt.Rows[0]["POSITION"].ToString();
-                sex = dt.Rows[0]["GENDER"].ToString();
-                phone = dt.Rows[0]["PHONE"].ToString();
-                birth = dt.Rows[0]["DOB"].ToString();
-                town = dt.Rows[0]["HOMETOWN"].ToString();
-                mailD = dt.Rows[0]["EMAIL"].ToString();
-            }
-            da.Dispose();
-            */
-        }
-
-        public void getAccount()
-        {
-            String sSQL = "SELECT * FROM Account WHERE " +
-                           "ID = '" + ID + "'";
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count > 0)
-            {
-                username = dt.Rows[0]["USERNAME"].ToString();
-                password = dt.Rows[0]["PASSWORD"].ToString();
-            }
-            da.Dispose();
-        }
-
         public nvKhoForm()
         {
             InitializeComponent();
         }
 
-        private void logout_Click(object sender, EventArgs e)
+        //close and open login form
+        private void openLogin(object sender, EventArgs e)
         {
-            /*
             this.Hide();
             loginForm f = new loginForm();
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
-            */
         }
 
-        private void btnInfo_Click(object sender, EventArgs e)
+        private void logout_Click(object sender, EventArgs e)
         {
-            editInfo.Dock = DockStyle.Fill;
-            editInfo.Show();
-            panelAction.Controls.Add(editInfo);
-            editInfo.BringToFront();
+            openLogin(sender, e);
         }
 
-        private void exit_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            timerMenu.Start();
         }
 
-        private void mini_Click(object sender, EventArgs e)
+        bool sidebarExpand;
+        private void timerMenu_Tick(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void nvKhoForm_Load(object sender, EventArgs e)
-        {
-            getInfo();
-            getAccount();
-            displayName.Text = string.Empty;
-            displayName.Text = fname;
-        }
-
-        private void btnStore_Click(object sender, EventArgs e)
-        {
-
+            if (sidebarExpand)
+            {
+                panelMenu.Width -= 10;
+                if (panelMenu.Width == panelMenu.MinimumSize.Width)
+                {
+                    sidebarExpand = false;
+                    timerMenu.Stop();
+                }
+            }
+            else
+            {
+                panelMenu.Width += 10;
+                if (panelMenu.Width == panelMenu.MaximumSize.Width)
+                {
+                    sidebarExpand = true;
+                    timerMenu.Stop();
+                }
+            }
         }
     }
 }

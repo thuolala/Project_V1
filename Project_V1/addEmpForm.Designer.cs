@@ -107,7 +107,7 @@
             guna2CustomGradientPanel7 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             comboboxPosition = new Guna.UI2.WinForms.Guna2ComboBox();
             label6 = new Label();
-            btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             label1 = new Label();
             exit = new PictureBox();
             guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -617,24 +617,24 @@
             label6.TabIndex = 21;
             label6.Text = "Vị trí";
             // 
-            // btnUpdate
+            // btnSave
             // 
-            btnUpdate.BorderRadius = 10;
-            btnUpdate.CustomizableEdges = customizableEdges15;
-            btnUpdate.DisabledState.BorderColor = Color.DarkGray;
-            btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnUpdate.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
-            btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUpdate.FillColor2 = Color.FromArgb(128, 255, 128);
-            btnUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(368, 718);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnUpdate.Size = new Size(175, 41);
-            btnUpdate.TabIndex = 68;
-            btnUpdate.Text = "Cập nhật";
+            btnSave.BorderRadius = 10;
+            btnSave.CustomizableEdges = customizableEdges15;
+            btnSave.DisabledState.BorderColor = Color.DarkGray;
+            btnSave.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSave.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSave.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
+            btnSave.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSave.FillColor2 = Color.FromArgb(128, 255, 128);
+            btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.ForeColor = Color.White;
+            btnSave.Location = new Point(368, 718);
+            btnSave.Name = "btnSave";
+            btnSave.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnSave.Size = new Size(175, 41);
+            btnSave.TabIndex = 68;
+            btnSave.Text = "Lưu";
             // 
             // label1
             // 
@@ -828,7 +828,7 @@
             ClientSize = new Size(612, 780);
             Controls.Add(label9);
             Controls.Add(guna2CustomGradientPanel9);
-            Controls.Add(btnUpdate);
+            Controls.Add(btnSave);
             Controls.Add(exit);
             Controls.Add(guna2CustomGradientPanel8);
             Controls.Add(btnUploadPic);
@@ -880,7 +880,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel10;
         private Guna.UI2.WinForms.Guna2TextBox username;
         private Label label10;
-        private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private PictureBox exit;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel8;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel7;

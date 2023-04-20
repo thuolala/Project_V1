@@ -152,6 +152,14 @@ namespace GUI
             {
                 openAdmin(sender, e);
             }
+            if (username.Text.Equals("bh"))
+            {
+                openNVBH(sender, e);
+            }
+            if (username.Text.Equals("kho"))
+            {
+                openNVKho(sender, e);
+            }
         }
 
         private void mini_Click(object sender, EventArgs e)
