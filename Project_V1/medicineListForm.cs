@@ -22,5 +22,14 @@ namespace GUI
             addMedicineForm f = new addMedicineForm();
             f.ShowDialog();
         }
+
+        private void medicineListForm_Load(object sender, EventArgs e)
+        {
+            medItem med = new medItem();
+            med.Dock = DockStyle.Fill;
+            med.Show();
+            panelShow.Controls.Add(med);
+            med.BringToFront();
+        }
     }
 }
