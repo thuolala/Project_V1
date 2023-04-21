@@ -123,6 +123,7 @@
             // 
             // btnInfo
             // 
+            btnInfo.Animated = true;
             btnInfo.BackColor = Color.Transparent;
             btnInfo.CustomizableEdges = customizableEdges4;
             btnInfo.DisabledState.BorderColor = Color.DarkGray;
@@ -148,6 +149,7 @@
             // 
             // btnMedicine
             // 
+            btnMedicine.Animated = true;
             btnMedicine.BackColor = Color.Transparent;
             btnMedicine.CustomizableEdges = customizableEdges6;
             btnMedicine.DisabledState.BorderColor = Color.DarkGray;
@@ -169,9 +171,11 @@
             btnMedicine.TabIndex = 16;
             btnMedicine.Text = "  Quản lý thuốc";
             btnMedicine.TextAlign = HorizontalAlignment.Left;
+            btnMedicine.Click += btnMedicine_Click;
             // 
             // btnWarehouse
             // 
+            btnWarehouse.Animated = true;
             btnWarehouse.BackColor = Color.Transparent;
             btnWarehouse.CustomizableEdges = customizableEdges8;
             btnWarehouse.DisabledState.BorderColor = Color.DarkGray;
@@ -274,6 +278,7 @@
             // 
             // btnMenu
             // 
+            btnMenu.Animated = true;
             btnMenu.BackColor = Color.Transparent;
             btnMenu.CustomizableEdges = customizableEdges13;
             btnMenu.DisabledState.BorderColor = Color.DarkGray;

@@ -66,7 +66,7 @@ namespace GUI
 
         private void btnWarehouse_Click(object sender, EventArgs e)
         {
-
+            panelShow.Controls.Clear();
         }
 
         private void nvKhoForm_Load(object sender, EventArgs e)
@@ -76,11 +76,23 @@ namespace GUI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             selfEditForm info = new selfEditForm(nv, tk);
             info.TopLevel = false;
             panelShow.Controls.Add(info);
             info.Dock = DockStyle.Fill;
             info.Show();
+        }
+
+        private void btnMedicine_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
+            manageMedForm manageMed = new manageMedForm();
+            manageMed.TopLevel = false;
+            manageMed.Dock = DockStyle.Fill;
+            manageMed.Show();
+            panelShow.Controls.Add(manageMed);
+            manageMed.BringToFront();
         }
     }
 }

@@ -95,6 +95,7 @@
             // btnAdd
             // 
             btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdd.Animated = true;
             btnAdd.BorderRadius = 10;
             btnAdd.CustomizableEdges = customizableEdges1;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
@@ -116,6 +117,7 @@
             // panelView
             // 
             panelView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelView.AutoScroll = true;
             panelView.BorderColor = Color.FromArgb(94, 148, 255);
             panelView.BorderRadius = 10;
             panelView.BorderThickness = 1;

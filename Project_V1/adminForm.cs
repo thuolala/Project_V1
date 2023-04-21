@@ -73,6 +73,7 @@ namespace GUI
 
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             manageEmpForm manageEmp = new manageEmpForm();
             manageEmp.TopLevel = false;
             manageEmp.Dock = DockStyle.Fill;
@@ -88,6 +89,7 @@ namespace GUI
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             manageCusForm manageCus = new manageCusForm();
             manageCus.TopLevel = false;
             manageCus.Dock = DockStyle.Fill;
@@ -98,6 +100,7 @@ namespace GUI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             selfEditForm info = new selfEditForm(nv, tk);
             info.TopLevel = false;
             panelShow.Controls.Add(info);

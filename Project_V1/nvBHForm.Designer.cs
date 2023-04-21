@@ -125,6 +125,7 @@
             // 
             // btnInfo
             // 
+            btnInfo.Animated = true;
             btnInfo.BackColor = Color.Transparent;
             btnInfo.CustomizableEdges = customizableEdges2;
             btnInfo.DisabledState.BorderColor = Color.DarkGray;
@@ -150,6 +151,7 @@
             // 
             // btnMedicine
             // 
+            btnMedicine.Animated = true;
             btnMedicine.BackColor = Color.Transparent;
             btnMedicine.CustomizableEdges = customizableEdges4;
             btnMedicine.DisabledState.BorderColor = Color.DarkGray;
@@ -175,6 +177,7 @@
             // 
             // btnCustomer
             // 
+            btnCustomer.Animated = true;
             btnCustomer.BackColor = Color.Transparent;
             btnCustomer.CustomizableEdges = customizableEdges6;
             btnCustomer.DisabledState.BorderColor = Color.DarkGray;
@@ -200,6 +203,7 @@
             // 
             // btnSale
             // 
+            btnSale.Animated = true;
             btnSale.BackColor = Color.Transparent;
             btnSale.CustomizableEdges = customizableEdges8;
             btnSale.DisabledState.BorderColor = Color.DarkGray;
@@ -221,6 +225,7 @@
             btnSale.TabIndex = 13;
             btnSale.Text = "  Quản lý bán hàng";
             btnSale.TextAlign = HorizontalAlignment.Left;
+            btnSale.Click += btnSale_Click;
             // 
             // label1
             // 
@@ -248,6 +253,7 @@
             // 
             // btnMenu
             // 
+            btnMenu.Animated = true;
             btnMenu.BackColor = Color.Transparent;
             btnMenu.CustomizableEdges = customizableEdges10;
             btnMenu.DisabledState.BorderColor = Color.DarkGray;

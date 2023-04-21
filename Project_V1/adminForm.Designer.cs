@@ -165,6 +165,7 @@
             // 
             // btnMenu
             // 
+            btnMenu.Animated = true;
             btnMenu.BackColor = Color.Transparent;
             btnMenu.CustomizableEdges = customizableEdges4;
             btnMenu.DisabledState.BorderColor = Color.DarkGray;
@@ -212,6 +213,7 @@
             // 
             // btnEmployee
             // 
+            btnEmployee.Animated = true;
             btnEmployee.BackColor = Color.Transparent;
             btnEmployee.CustomizableEdges = customizableEdges6;
             btnEmployee.DisabledState.BorderColor = Color.DarkGray;
@@ -237,6 +239,7 @@
             // 
             // btnCustomer
             // 
+            btnCustomer.Animated = true;
             btnCustomer.BackColor = Color.Transparent;
             btnCustomer.CustomizableEdges = customizableEdges8;
             btnCustomer.DisabledState.BorderColor = Color.DarkGray;
@@ -262,6 +265,7 @@
             // 
             // btnMoney
             // 
+            btnMoney.Animated = true;
             btnMoney.BackColor = Color.Transparent;
             btnMoney.CustomizableEdges = customizableEdges10;
             btnMoney.DisabledState.BorderColor = Color.DarkGray;
@@ -286,6 +290,7 @@
             // 
             // btnInfo
             // 
+            btnInfo.Animated = true;
             btnInfo.BackColor = Color.Transparent;
             btnInfo.CustomizableEdges = customizableEdges12;
             btnInfo.DisabledState.BorderColor = Color.DarkGray;

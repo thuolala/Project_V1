@@ -76,7 +76,7 @@ namespace GUI
             string nvName = fullname.Text;
             string nvSex = "";
 
-            if(radbtnFemale.Checked)
+            if (radbtnFemale.Checked)
             {
                 nvSex += "Nữ";
             }

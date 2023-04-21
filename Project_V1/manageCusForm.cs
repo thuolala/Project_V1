@@ -54,7 +54,7 @@ namespace GUI
 
         private void datagridviewCusList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

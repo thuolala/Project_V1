@@ -156,6 +156,7 @@
             // 
             // btnReset
             // 
+            btnReset.Animated = true;
             btnReset.BorderRadius = 10;
             btnReset.CustomizableEdges = customizableEdges1;
             btnReset.DisabledState.BorderColor = Color.DarkGray;
@@ -176,6 +177,7 @@
             // 
             // btnUpdate
             // 
+            btnUpdate.Animated = true;
             btnUpdate.BorderRadius = 10;
             btnUpdate.CustomizableEdges = customizableEdges3;
             btnUpdate.DisabledState.BorderColor = Color.DarkGray;

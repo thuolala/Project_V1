@@ -619,6 +619,7 @@
             // 
             // btnSave
             // 
+            btnSave.Animated = true;
             btnSave.BorderRadius = 10;
             btnSave.CustomizableEdges = customizableEdges15;
             btnSave.DisabledState.BorderColor = Color.DarkGray;
@@ -761,6 +762,7 @@
             // 
             // btnUploadPic
             // 
+            btnUploadPic.Animated = true;
             btnUploadPic.BorderRadius = 10;
             btnUploadPic.CustomizableEdges = customizableEdges45;
             btnUploadPic.DisabledState.BorderColor = Color.DarkGray;
@@ -794,6 +796,7 @@
             // 
             // btnReset
             // 
+            btnReset.Animated = true;
             btnReset.BorderRadius = 10;
             btnReset.CustomizableEdges = customizableEdges48;
             btnReset.DisabledState.BorderColor = Color.DarkGray;

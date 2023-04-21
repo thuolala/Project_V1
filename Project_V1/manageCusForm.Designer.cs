@@ -43,12 +43,12 @@
             panelCus = new Guna.UI2.WinForms.Guna2Panel();
             btnRefresh = new PictureBox();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
-            guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            panelData = new Guna.UI2.WinForms.Guna2Panel();
             datagridviewCusList = new Guna.UI2.WinForms.Guna2DataGridView();
             gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
             panelCus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
-            guna2Panel1.SuspendLayout();
+            panelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datagridviewCusList).BeginInit();
             SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             // 
             panelCus.Controls.Add(btnRefresh);
             panelCus.Controls.Add(btnAdd);
-            panelCus.Controls.Add(guna2Panel1);
+            panelCus.Controls.Add(panelData);
             panelCus.CustomizableEdges = customizableEdges5;
             panelCus.Dock = DockStyle.Fill;
             panelCus.Location = new Point(0, 0);
@@ -87,6 +87,7 @@
             // btnAdd
             // 
             btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnAdd.Animated = true;
             btnAdd.BorderRadius = 10;
             btnAdd.CustomizableEdges = customizableEdges1;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
@@ -105,19 +106,20 @@
             btnAdd.Text = "Thêm khách hàng";
             btnAdd.Click += btnAdd_Click;
             // 
-            // guna2Panel1
+            // panelData
             // 
-            guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2Panel1.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2Panel1.BorderRadius = 10;
-            guna2Panel1.BorderThickness = 1;
-            guna2Panel1.Controls.Add(datagridviewCusList);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
-            guna2Panel1.Location = new Point(10, 70);
-            guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(952, 578);
-            guna2Panel1.TabIndex = 0;
+            panelData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelData.AutoScroll = true;
+            panelData.BorderColor = Color.FromArgb(94, 148, 255);
+            panelData.BorderRadius = 10;
+            panelData.BorderThickness = 1;
+            panelData.Controls.Add(datagridviewCusList);
+            panelData.CustomizableEdges = customizableEdges3;
+            panelData.Location = new Point(10, 70);
+            panelData.Name = "panelData";
+            panelData.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            panelData.Size = new Size(952, 578);
+            panelData.TabIndex = 0;
             // 
             // datagridviewCusList
             // 
@@ -205,7 +207,7 @@
             panelCus.ResumeLayout(false);
             panelCus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
-            guna2Panel1.ResumeLayout(false);
+            panelData.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)datagridviewCusList).EndInit();
             ResumeLayout(false);
         }
@@ -214,7 +216,7 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Panel panelCus;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel panelData;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewCusList;
         private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
         private PictureBox btnRefresh;

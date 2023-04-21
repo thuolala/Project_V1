@@ -66,7 +66,8 @@ namespace GUI
 
         private void btnMedicine_Click(object sender, EventArgs e)
         {
-            medicineListForm manageMed = new medicineListForm();
+            panelShow.Controls.Clear();
+            manageMedForm manageMed = new manageMedForm();
             manageMed.TopLevel = false;
             manageMed.Dock = DockStyle.Fill;
             manageMed.Show();
@@ -81,6 +82,7 @@ namespace GUI
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             manageCusForm manageCus = new manageCusForm();
             manageCus.TopLevel = false;
             manageCus.Dock = DockStyle.Fill;
@@ -91,11 +93,17 @@ namespace GUI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            panelShow.Controls.Clear();
             selfEditForm info = new selfEditForm(nv, tk);
             info.TopLevel = false;
             panelShow.Controls.Add(info);
             info.Dock = DockStyle.Fill;
             info.Show();
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            panelShow.Controls.Clear();
         }
     }
 }

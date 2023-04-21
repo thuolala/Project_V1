@@ -101,6 +101,7 @@
             // 
             // btnLogin
             // 
+            btnLogin.Animated = true;
             btnLogin.BorderRadius = 10;
             btnLogin.CustomizableEdges = customizableEdges1;
             btnLogin.DisabledState.BorderColor = Color.DarkGray;
