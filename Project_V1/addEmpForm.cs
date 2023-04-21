@@ -93,7 +93,7 @@ namespace GUI
             byte[] nvAva = ImageToByteArray(avatar);
 
             //set nhan vien
-            nv = new Nhanvien(nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, img);
+            nv = new Nhanvien(nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, nvAva);
 
             string uname = username.Text;
             string pass = password.Text;
