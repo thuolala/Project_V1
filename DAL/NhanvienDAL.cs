@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Xml.Linq;
 using DTO;
 
@@ -17,6 +18,15 @@ namespace DAL
         public DataTable getAllNV()
         {
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Nhanvien", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        //get all nv by pos
+        public DataTable getNVByPos(string idPos)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Nhanvien WHERE IdVitri = '" + idPos + "'", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             return dt;
@@ -39,8 +49,9 @@ namespace DAL
                 string phone = dt.Rows[0]["SDT"].ToString();
                 string email = dt.Rows[0]["EMAIL"].ToString();
                 string idpos = dt.Rows[0]["IDVitri"].ToString();
+                byte[] ava = (byte[])dt.Rows[0]["Avatar"];
 
-                nv = new Nhanvien(id, name, gender, birthday, hometown, phone, email, idpos);
+                nv = new Nhanvien(id, name, gender, birthday, hometown, phone, email, idpos, ava);
             }
 
             return nv;
@@ -61,13 +72,14 @@ namespace DAL
                     //Nhap vao bang Nhan vien
                     SqlCommand cmd = new SqlCommand("INSERT_NV", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.Add(new SqlParameter("HOTEN", SqlDbType.NVarChar)).Value = nv.Name;
+                    cmd.Parameters.Add(new SqlParameter("@HOTEN", SqlDbType.NVarChar)).Value = nv.Name;
                     cmd.Parameters.Add(new SqlParameter("@GIOITINH", SqlDbType.NVarChar)).Value = nv.Gender;
                     cmd.Parameters.Add(new SqlParameter("@DOB", SqlDbType.DateTime)).Value = nv.Birthday;
                     cmd.Parameters.Add(new SqlParameter("@QUEQUAN", SqlDbType.NVarChar)).Value = nv.Hometown;
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = nv.Phone;
                     cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.NVarChar)).Value = nv.Email;
                     cmd.Parameters.Add(new SqlParameter("@IDVitri", SqlDbType.NVarChar)).Value = nv.Idpos;
+                    cmd.Parameters.Add(new SqlParameter("@AVATAR", SqlDbType.Image)).Value = nv.Avatar;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -116,6 +128,7 @@ namespace DAL
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = nv.Phone;
                     cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.NVarChar)).Value = nv.Email;
                     cmd.Parameters.Add(new SqlParameter("@IDVitri", SqlDbType.NVarChar)).Value = nv.Idpos;
+                    cmd.Parameters.Add(new SqlParameter("@AVATAR", SqlDbType.Image)).Value = nv.Avatar;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -142,7 +155,7 @@ namespace DAL
         }
 
         //delete nv 
-        public bool deleteAccount(string id)
+        public bool deleteNV(string id)
         {
             bool result = false;
 

@@ -20,6 +20,12 @@ namespace BLL
             return nvDAL.getAllNV();
         }
 
+        //get all nv 
+        public DataTable getNVByPos(string idPos)
+        {
+            return nvDAL.getNVByPos(idPos);
+        }
+
         //get nv by id 
         public Nhanvien getNVById(string nID)
         {
@@ -39,9 +45,9 @@ namespace BLL
         }
 
         //delete nv 
-        public bool deleteAccount(string id)
+        public bool deleteNV(string id)
         {
-            return nvDAL.deleteAccount(id);
+            return nvDAL.deleteNV(id);
         }
 
         //get vi tri 

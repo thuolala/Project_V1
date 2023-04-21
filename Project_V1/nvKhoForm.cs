@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,12 @@ namespace GUI
 {
     public partial class nvKhoForm : Form
     {
-        public nvKhoForm()
+        Nhanvien nv = new Nhanvien();
+        Taikhoan tk = new Taikhoan();
+        public nvKhoForm(Nhanvien nhanvien, Taikhoan taikhoan)
         {
+            this.nv = nhanvien;
+            this.tk = taikhoan;
             InitializeComponent();
         }
 
@@ -57,6 +62,25 @@ namespace GUI
                     timerMenu.Stop();
                 }
             }
+        }
+
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nvKhoForm_Load(object sender, EventArgs e)
+        {
+            displayName.Text = nv.Name;
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            selfEditForm info = new selfEditForm(nv, tk);
+            info.TopLevel = false;
+            panelShow.Controls.Add(info);
+            info.Dock = DockStyle.Fill;
+            info.Show();
         }
     }
 }

@@ -7,13 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
 namespace GUI
 {
     public partial class nvBHForm : Form
     {
-        public nvBHForm()
+        Nhanvien nv = new Nhanvien();
+        Taikhoan tk = new Taikhoan();
+
+        public nvBHForm(Nhanvien nhanvien, Taikhoan taikhoan)
         {
+            this.nv = nhanvien;
+            this.tk = taikhoan;
             InitializeComponent();
         }
 
@@ -67,6 +72,30 @@ namespace GUI
             manageMed.Show();
             panelShow.Controls.Add(manageMed);
             manageMed.BringToFront();
+        }
+
+        private void nvBHForm_Load(object sender, EventArgs e)
+        {
+            displayName.Text = nv.Name;
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            manageCusForm manageCus = new manageCusForm();
+            manageCus.TopLevel = false;
+            manageCus.Dock = DockStyle.Fill;
+            manageCus.Show();
+            panelShow.Controls.Add(manageCus);
+            manageCus.BringToFront();
+        }
+
+        private void btnInfo_Click(object sender, EventArgs e)
+        {
+            selfEditForm info = new selfEditForm(nv, tk);
+            info.TopLevel = false;
+            panelShow.Controls.Add(info);
+            info.Dock = DockStyle.Fill;
+            info.Show();
         }
     }
 }

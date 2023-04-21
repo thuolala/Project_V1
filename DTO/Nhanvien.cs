@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 
 namespace DTO
 {
@@ -16,6 +17,7 @@ namespace DTO
         private string _phone;
         private string _email;
         private string _idpos;
+        private byte[] _ava; 
 
         public string Id 
         { 
@@ -89,11 +91,31 @@ namespace DTO
             }
         }
 
+        public byte[] Avatar
+        {
+            get { return _ava; }
+            set
+            {
+                _ava = value;
+            }
+        }
+
         public Nhanvien()
         {
         }
+        public Nhanvien(string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, byte[] avatar)
+        {
+            this._name = nname;
+            this._gender = ngender;
+            this._birthday = nbirthday;
+            this._hometown = nhometown;
+            this._phone = nphone;
+            this._email = nemail;
+            this._idpos = nidpos;
+            this._ava = avatar;
+        }
 
-        public Nhanvien(string nid, string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos)
+        public Nhanvien(string nid, string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, byte[] avatar)
         {
             this._id = nid;
             this._name = nname;
@@ -103,6 +125,9 @@ namespace DTO
             this._phone = nphone;
             this._email = nemail;
             this._idpos = nidpos;
+            this._ava = avatar;
         }
+
+        
     }
 }

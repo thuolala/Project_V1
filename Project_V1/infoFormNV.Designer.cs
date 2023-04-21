@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class infoForm
+    partial class infoFormNV
     {
         /// <summary>
         /// Required designer variable.
@@ -107,7 +107,7 @@
             fullname = new Guna.UI2.WinForms.Guna2TextBox();
             label11 = new Label();
             label7 = new Label();
-            label8 = new Label();
+            labelPos = new Label();
             guna2CustomGradientPanel9 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2CustomGradientPanel12 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             confirmPass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -175,6 +175,7 @@
             btnUploadPic.Size = new Size(175, 41);
             btnUploadPic.TabIndex = 23;
             btnUploadPic.Text = "Tải hình";
+            btnUploadPic.Click += btnUploadPic_Click;
             // 
             // labelID
             // 
@@ -194,9 +195,9 @@
             label12.ForeColor = Color.DarkGray;
             label12.Location = new Point(272, 104);
             label12.Name = "label12";
-            label12.Size = new Size(36, 30);
+            label12.Size = new Size(42, 30);
             label12.TabIndex = 37;
-            label12.Text = "ID";
+            label12.Text = "ID:";
             // 
             // guna2CustomGradientPanel8
             // 
@@ -604,16 +605,16 @@
             label7.Size = new Size(0, 21);
             label7.TabIndex = 21;
             // 
-            // label8
+            // labelPos
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.DarkGray;
-            label8.Location = new Point(272, 142);
-            label8.Name = "label8";
-            label8.Size = new Size(35, 21);
-            label8.TabIndex = 52;
-            label8.Text = "(ID)";
+            labelPos.AutoSize = true;
+            labelPos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPos.ForeColor = Color.DarkGray;
+            labelPos.Location = new Point(272, 142);
+            labelPos.Name = "labelPos";
+            labelPos.Size = new Size(35, 21);
+            labelPos.TabIndex = 52;
+            labelPos.Text = "(ID)";
             // 
             // guna2CustomGradientPanel9
             // 
@@ -772,6 +773,7 @@
             username.Name = "username";
             username.PasswordChar = '\0';
             username.PlaceholderText = "";
+            username.ReadOnly = true;
             username.SelectedText = "";
             username.ShadowDecoration.CustomizableEdges = customizableEdges14;
             username.Size = new Size(319, 32);
@@ -806,6 +808,7 @@
             btnUpdate.Size = new Size(175, 41);
             btnUpdate.TabIndex = 58;
             btnUpdate.Text = "Cập nhật";
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnReset
             // 
@@ -850,7 +853,7 @@
             label9.TabIndex = 61;
             label9.Text = "Cập nhật thông tin nhân viên";
             // 
-            // infoForm
+            // infoFormNV
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -860,7 +863,7 @@
             Controls.Add(btnReset);
             Controls.Add(btnUpdate);
             Controls.Add(guna2CustomGradientPanel9);
-            Controls.Add(label8);
+            Controls.Add(labelPos);
             Controls.Add(guna2CustomGradientPanel8);
             Controls.Add(labelID);
             Controls.Add(label12);
@@ -868,8 +871,7 @@
             Controls.Add(avatar);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 2, 3, 2);
-            Name = "infoForm";
-            Text = "infoForm";
+            Name = "infoFormNV";
             Load += infoForm_Load;
             ((System.ComponentModel.ISupportInitialize)avatar).EndInit();
             guna2CustomGradientPanel8.ResumeLayout(false);
@@ -943,7 +945,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel10;
         private Guna.UI2.WinForms.Guna2TextBox username;
         private Label label10;
-        private Label label8;
+        private Label labelPos;
         private PictureBox exit;
         private Label label9;
     }

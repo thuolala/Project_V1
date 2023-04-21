@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BLL;
 using DAL;
 using DTO;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI
 {
@@ -27,6 +28,8 @@ namespace GUI
         VitriBLL vtBLL = new VitriBLL();
         TaikhoanBLL taikhoanBLL = new TaikhoanBLL();
         NhanvienBLL nhanvienBLL = new NhanvienBLL();
+        Taikhoan tk = new Taikhoan();
+        Nhanvien nv = new Nhanvien();
 
         private void test_Load(object sender, EventArgs e)
         {
@@ -87,31 +90,31 @@ namespace GUI
         }
 
         //close and open admin
-        private void openAdmin(object sender, EventArgs e)
+        private void openAdmin(object sender, EventArgs e, Nhanvien nhanvien, Taikhoan taikhoan)
         {
             this.Hide();
             //String uname = username.Text;
-            adminForm f = new adminForm();
+            adminForm f = new adminForm(nhanvien, taikhoan);
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
         }
 
         //close and open NV Ban Hang
-        private void openNVBH(object sender, EventArgs e)
+        private void openNVBH(object sender, EventArgs e, Nhanvien nhanvien, Taikhoan taikhoan)
         {
             this.Hide();
             //String uname = username.Text;
-            nvBHForm f = new nvBHForm();
+            nvBHForm f = new nvBHForm(nhanvien, taikhoan);
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
         }
 
         //close and open NV Kho
-        private void openNVKho(object sender, EventArgs e)
+        private void openNVKho(object sender, EventArgs e, Nhanvien nhanvien, Taikhoan taikhoan)
         {
             this.Hide();
             //String uname = username.Text;
-            nvKhoForm f = new nvKhoForm();
+            nvKhoForm f = new nvKhoForm(nhanvien, taikhoan);
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
         }
@@ -123,31 +126,42 @@ namespace GUI
             //Select
             Taikhoan tk = taikhoanBLL.getAccountByUname(username.Text);
             Nhanvien nv = nhanvienBLL.getNVById(tk.Id);
+            int per = tk.Permission;
 
-            if (tk != null)
+            if (username.Text == "" || tk.Userame.Equals(username.Text) == false)
             {
-                if (nv.Idpos.Equals("AD"))
+                errorLogin.Text = "Tên đăng nhập sai!";
+            }
+            else if (string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == false)
+            {
+                errorLogin.Text = "Mật khẩu sai!";
+            }
+            else
+            {
+                if (per == 2)
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
-                    openAdmin(sender, e);
+                    openAdmin(sender, e, nv, tk);
                 }
-                if (nv.Idpos.Equals("BH"))
+                if (per == 1)
                 {
-                    MessageBox.Show("Đăng nhập thành công!");
-                    openNVBH(sender, e);
+                    if (nv.Idpos.Equals("BH"))
+                    {
+                        openNVBH(sender, e, nv, tk);
+                    }
+                    if (nv.Idpos.Equals("KHO"))
+                    {
+                        openNVKho(sender, e, nv, tk);
+                    }
                 }
-                if (nv.Idpos.Equals("KHO"))
-                {
-                    MessageBox.Show("Đăng nhập thành công!");
-                    openNVKho(sender, e);
-                }
-
             }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            //checkUser(sender, e);
+
+            checkUser(sender, e);
+
+            /*
             if (username.Text.Equals("admin"))
             {
                 openAdmin(sender, e);
@@ -160,6 +174,7 @@ namespace GUI
             {
                 openNVKho(sender, e);
             }
+            */
         }
 
         private void mini_Click(object sender, EventArgs e)

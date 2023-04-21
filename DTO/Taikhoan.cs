@@ -52,6 +52,12 @@ namespace DTO
         public Taikhoan()
         {
         }
+        public Taikhoan(string nusername, string npassword, int npermission)
+        {
+            this._username = nusername;
+            this._password = npassword;
+            this._permission = npermission;
+        }
 
         public Taikhoan(string nid, string nusername, string npassword, int npermission)
         {

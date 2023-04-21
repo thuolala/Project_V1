@@ -43,12 +43,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panelEmp = new Guna.UI2.WinForms.Guna2Panel();
+            btnRefresh = new PictureBox();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             panelView = new Guna.UI2.WinForms.Guna2Panel();
             datagridviewEmpList = new Guna.UI2.WinForms.Guna2DataGridView();
             label7 = new Label();
             positionDisplay = new Guna.UI2.WinForms.Guna2ComboBox();
+            gunaAreaDataset1 = new Guna.Charts.WinForms.GunaAreaDataset();
             panelEmp.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
             panelView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)datagridviewEmpList).BeginInit();
             SuspendLayout();
@@ -61,6 +64,7 @@
             // 
             // panelEmp
             // 
+            panelEmp.Controls.Add(btnRefresh);
             panelEmp.Controls.Add(btnAdd);
             panelEmp.Controls.Add(panelView);
             panelEmp.Controls.Add(label7);
@@ -74,6 +78,19 @@
             panelEmp.Size = new Size(973, 648);
             panelEmp.TabIndex = 0;
             panelEmp.Paint += panelEmp_Paint;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRefresh.BackColor = Color.Transparent;
+            btnRefresh.Image = Properties.Resources.refresh_button;
+            btnRefresh.Location = new Point(731, 22);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(32, 32);
+            btnRefresh.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnRefresh.TabIndex = 60;
+            btnRefresh.TabStop = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnAdd
             // 
@@ -110,10 +127,10 @@
             panelView.ShadowDecoration.CustomizableEdges = customizableEdges4;
             panelView.Size = new Size(952, 578);
             panelView.TabIndex = 15;
+            panelView.Paint += panelView_Paint;
             // 
             // datagridviewEmpList
             // 
-            datagridviewEmpList.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = Color.White;
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = SystemColors.ControlText;
@@ -121,7 +138,6 @@
             dataGridViewCellStyle1.SelectionForeColor = Color.FromArgb(71, 69, 94);
             datagridviewEmpList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             datagridviewEmpList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            datagridviewEmpList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.FromArgb(94, 148, 255);
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -191,6 +207,7 @@
             label7.Size = new Size(82, 21);
             label7.TabIndex = 13;
             label7.Text = "Chọn vị trí";
+            label7.Click += label7_Click;
             // 
             // positionDisplay
             // 
@@ -209,6 +226,13 @@
             positionDisplay.ShadowDecoration.CustomizableEdges = customizableEdges6;
             positionDisplay.Size = new Size(283, 36);
             positionDisplay.TabIndex = 0;
+            positionDisplay.SelectedIndexChanged += positionDisplay_SelectedIndexChanged;
+            // 
+            // gunaAreaDataset1
+            // 
+            gunaAreaDataset1.BorderColor = Color.Empty;
+            gunaAreaDataset1.FillColor = Color.Empty;
+            gunaAreaDataset1.Label = "Area1";
             // 
             // manageEmpForm
             // 
@@ -223,6 +247,7 @@
             Load += manageEmpForm_Load;
             panelEmp.ResumeLayout(false);
             panelEmp.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
             panelView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)datagridviewEmpList).EndInit();
             ResumeLayout(false);
@@ -237,5 +262,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelView;
         private Guna.UI2.WinForms.Guna2DataGridView datagridviewEmpList;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
+        private Guna.Charts.WinForms.GunaAreaDataset gunaAreaDataset1;
+        private PictureBox btnRefresh;
     }
 }

@@ -1,21 +1,18 @@
-﻿using BLL;
-using DTO;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.Intrinsics.X86;
-using System.Xml.Linq;
+using BLL;
+using DTO;
 
 namespace GUI
 {
-    public partial class addEmpForm : Form
+    public partial class infoFormNV : Form
     {
         private string filePath;
         private byte[] img;
@@ -23,10 +20,41 @@ namespace GUI
         Nhanvien nv;
         TaikhoanBLL tkBLL = new TaikhoanBLL();
         Taikhoan tk;
+        VitriBLL vtBLL = new VitriBLL();
+        Vitri vt;
 
-        public addEmpForm()
+        public infoFormNV(Nhanvien nnv, Taikhoan ttk)
         {
+            this.nv = nnv;
+            this.tk = ttk;
             InitializeComponent();
+        }
+
+        private void infoForm_Load(object sender, EventArgs e)
+        {
+            labelID.Text = nv.Id;
+            labelPos.Text = vtBLL.getVTName(nv.Idpos);
+            fullname.Text = nv.Name;
+            if (nv.Gender.Equals("Nam"))
+            {
+                radbtnMale.Checked = true;
+            }
+            if (nv.Gender.Equals("Nữ"))
+            {
+                radbtnFemale.Checked = true;
+            }
+            dob.Value = nv.Birthday;
+            hometown.Text = nv.Hometown;
+            phone.Text = nv.Phone;
+            email.Text = nv.Email;
+            using (MemoryStream stream = new MemoryStream(nv.Avatar))
+            {
+                Image image = Image.FromStream(stream);
+                avatar.Image = image;
+            }
+
+            username.Text = tk.Userame;
+            password.Text = tk.Password;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -71,12 +99,13 @@ namespace GUI
             OpenImage();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string id = labelID.Text;
             string nvName = fullname.Text;
             string nvSex = "";
 
-            if(radbtnFemale.Checked)
+            if (radbtnFemale.Checked)
             {
                 nvSex += "Nữ";
             }
@@ -93,18 +122,18 @@ namespace GUI
             byte[] nvAva = ImageToByteArray(avatar);
 
             //set nhan vien
-            nv = new Nhanvien(nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, img);
+            nv = new Nhanvien(id, nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, nvAva);
 
             string uname = username.Text;
             string pass = password.Text;
             int per = 1;
 
             //set taikhoan
-            tk = new Taikhoan(uname, pass, per);
+            tk = new Taikhoan(id, uname, pass, per);
 
-            if (nvBLL.addNV(nv) && tkBLL.addAccount(tk))
+            if (nvBLL.updateNV(nv) && tkBLL.updateAccount(tk))
             {
-                MessageBox.Show("Thêm thành công");
+                MessageBox.Show("Cập nhật thành công");
                 this.Close();
             }
         }

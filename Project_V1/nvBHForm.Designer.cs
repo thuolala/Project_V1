@@ -146,6 +146,7 @@
             btnInfo.TabIndex = 16;
             btnInfo.Text = "  Chỉnh sửa thông tin";
             btnInfo.TextAlign = HorizontalAlignment.Left;
+            btnInfo.Click += btnInfo_Click;
             // 
             // btnMedicine
             // 
@@ -195,6 +196,7 @@
             btnCustomer.TabIndex = 14;
             btnCustomer.Text = "  Quản lý khách hàng";
             btnCustomer.TextAlign = HorizontalAlignment.Left;
+            btnCustomer.Click += btnCustomer_Click;
             // 
             // btnSale
             // 
@@ -369,6 +371,7 @@
             Controls.Add(panelMenu);
             Name = "nvBHForm";
             Text = "Pharmacity";
+            Load += nvBHForm_Load;
             panelMenu.ResumeLayout(false);
             panelMenu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();

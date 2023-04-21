@@ -15,7 +15,7 @@ namespace GUI
     {
         //move 
         private bool mouse;
-        private Point lastPos; 
+        private Point lastPos;
 
         public welcomeForm()
         {
@@ -31,7 +31,7 @@ namespace GUI
 
         private void welcomeForm_MouseMove(object sender, MouseEventArgs e)
         {
-            if(mouse)
+            if (mouse)
             {
                 this.Location = new Point((this.Location.X - lastPos.X) + e.X, (this.Location.Y - lastPos.Y) + e.Y);
                 this.Update();
@@ -66,7 +66,7 @@ namespace GUI
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel2.Width += 5;
-            if(panel2.Width >= 750)
+            if (panel2.Width >= 750)
             {
                 timer1.Stop();
                 loginForm f = new loginForm();

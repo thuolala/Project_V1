@@ -26,6 +26,12 @@ namespace BLL
             return vitriDAL.getVTById(ID);
         }
 
+        //get name
+        public string getVTName(string ID)
+        {
+            return vitriDAL.getVTById(ID).Name;
+        }
+
         //get vi tri by name 
         public Vitri getVTByName(string nname)
         {

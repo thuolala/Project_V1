@@ -635,6 +635,7 @@
             btnSave.Size = new Size(175, 41);
             btnSave.TabIndex = 68;
             btnSave.Text = "Lưu";
+            btnSave.Click += btnSave_Click;
             // 
             // label1
             // 
@@ -777,6 +778,7 @@
             btnUploadPic.Size = new Size(176, 41);
             btnUploadPic.TabIndex = 62;
             btnUploadPic.Text = "Tải hình";
+            btnUploadPic.Click += btnUploadPic_Click;
             // 
             // avatar
             // 

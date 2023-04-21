@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="KhachhangBLL.cs" />
     <Compile Include="NhanvienBLL.cs" />
+    <Compile Include="ProductBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaikhoanBLL.cs" />
     <Compile Include="VitriBLL.cs" />
