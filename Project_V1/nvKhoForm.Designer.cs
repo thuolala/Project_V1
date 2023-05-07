@@ -78,10 +78,11 @@
             panelShow.BackColor = Color.Transparent;
             panelShow.CustomizableEdges = customizableEdges1;
             panelShow.Dock = DockStyle.Fill;
-            panelShow.Location = new Point(236, 67);
+            panelShow.Location = new Point(270, 89);
+            panelShow.Margin = new Padding(3, 4, 3, 4);
             panelShow.Name = "panelShow";
             panelShow.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            panelShow.Size = new Size(973, 567);
+            panelShow.Size = new Size(1112, 756);
             panelShow.TabIndex = 8;
             // 
             // search
@@ -90,21 +91,21 @@
             search.BorderStyle = BorderStyle.None;
             search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             search.ForeColor = Color.FromArgb(0, 0, 64);
-            search.Location = new Point(4, 8);
+            search.Location = new Point(5, 11);
+            search.Margin = new Padding(3, 4, 3, 4);
             search.Name = "search";
             search.PlaceholderText = "Tìm kiếm";
-            search.Size = new Size(287, 22);
+            search.Size = new Size(328, 27);
             search.TabIndex = 11;
             // 
             // guna2Separator1
             // 
             guna2Separator1.FillColor = Color.FromArgb(182, 228, 226);
-            guna2Separator1.Location = new Point(0, 59);
-            guna2Separator1.Margin = new Padding(3, 2, 3, 2);
-            guna2Separator1.MaximumSize = new Size(236, 0);
-            guna2Separator1.MinimumSize = new Size(37, 0);
+            guna2Separator1.Location = new Point(0, 79);
+            guna2Separator1.MaximumSize = new Size(270, 0);
+            guna2Separator1.MinimumSize = new Size(42, 0);
             guna2Separator1.Name = "guna2Separator1";
-            guna2Separator1.Size = new Size(236, 0);
+            guna2Separator1.Size = new Size(270, 0);
             guna2Separator1.TabIndex = 18;
             // 
             // guna2CirclePictureBox1
@@ -112,12 +113,11 @@
             guna2CirclePictureBox1.FillColor = Color.Transparent;
             guna2CirclePictureBox1.Image = Properties.Resources.user__1_;
             guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(10, 87);
-            guna2CirclePictureBox1.Margin = new Padding(3, 2, 3, 2);
+            guna2CirclePictureBox1.Location = new Point(11, 116);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges3;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(28, 24);
+            guna2CirclePictureBox1.Size = new Size(32, 32);
             guna2CirclePictureBox1.TabIndex = 17;
             guna2CirclePictureBox1.TabStop = false;
             // 
@@ -136,12 +136,11 @@
             btnInfo.Image = Properties.Resources.pencil;
             btnInfo.ImageAlign = HorizontalAlignment.Left;
             btnInfo.ImageOffset = new Point(4, 0);
-            btnInfo.Location = new Point(0, 224);
-            btnInfo.Margin = new Padding(3, 2, 3, 2);
+            btnInfo.Location = new Point(0, 299);
             btnInfo.Name = "btnInfo";
             btnInfo.RightToLeft = RightToLeft.No;
             btnInfo.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            btnInfo.Size = new Size(236, 42);
+            btnInfo.Size = new Size(270, 56);
             btnInfo.TabIndex = 16;
             btnInfo.Text = "  Chỉnh sửa thông tin";
             btnInfo.TextAlign = HorizontalAlignment.Left;
@@ -162,12 +161,11 @@
             btnMedicine.Image = Properties.Resources.medicines;
             btnMedicine.ImageAlign = HorizontalAlignment.Left;
             btnMedicine.ImageOffset = new Point(4, 0);
-            btnMedicine.Location = new Point(0, 182);
-            btnMedicine.Margin = new Padding(3, 2, 3, 2);
+            btnMedicine.Location = new Point(0, 243);
             btnMedicine.Name = "btnMedicine";
             btnMedicine.RightToLeft = RightToLeft.No;
             btnMedicine.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnMedicine.Size = new Size(236, 42);
+            btnMedicine.Size = new Size(270, 56);
             btnMedicine.TabIndex = 16;
             btnMedicine.Text = "  Quản lý thuốc";
             btnMedicine.TextAlign = HorizontalAlignment.Left;
@@ -188,12 +186,11 @@
             btnWarehouse.Image = Properties.Resources.warehouse;
             btnWarehouse.ImageAlign = HorizontalAlignment.Left;
             btnWarehouse.ImageOffset = new Point(4, 0);
-            btnWarehouse.Location = new Point(0, 140);
-            btnWarehouse.Margin = new Padding(3, 2, 3, 2);
+            btnWarehouse.Location = new Point(0, 187);
             btnWarehouse.Name = "btnWarehouse";
             btnWarehouse.RightToLeft = RightToLeft.No;
             btnWarehouse.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            btnWarehouse.Size = new Size(236, 42);
+            btnWarehouse.Size = new Size(270, 56);
             btnWarehouse.TabIndex = 13;
             btnWarehouse.Text = "  Quản lý kho";
             btnWarehouse.TextAlign = HorizontalAlignment.Left;
@@ -204,9 +201,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.LightSteelBlue;
-            label1.Location = new Point(48, 100);
+            label1.Location = new Point(55, 133);
             label1.Name = "label1";
-            label1.Size = new Size(91, 17);
+            label1.Size = new Size(121, 23);
             label1.TabIndex = 12;
             label1.Text = "Nhân viên kho";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -219,12 +216,13 @@
             btnSearch.ImageOffset = new Point(0, 0);
             btnSearch.ImageRotate = 0F;
             btnSearch.ImageSize = new Size(20, 20);
-            btnSearch.Location = new Point(297, 8);
+            btnSearch.Location = new Point(339, 11);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
             btnSearch.PressedState.Image = Properties.Resources.search;
             btnSearch.PressedState.ImageSize = new Size(64, 64);
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnSearch.Size = new Size(20, 20);
+            btnSearch.Size = new Size(23, 27);
             btnSearch.TabIndex = 12;
             // 
             // panelSearch
@@ -233,10 +231,11 @@
             panelSearch.BackColor = Color.Azure;
             panelSearch.Controls.Add(btnSearch);
             panelSearch.Controls.Add(search);
-            panelSearch.Location = new Point(1408, 15);
+            panelSearch.Location = new Point(1609, 20);
+            panelSearch.Margin = new Padding(3, 4, 3, 4);
             panelSearch.Name = "panelSearch";
             panelSearch.RightToLeft = RightToLeft.No;
-            panelSearch.Size = new Size(327, 39);
+            panelSearch.Size = new Size(374, 52);
             panelSearch.TabIndex = 29;
             // 
             // panelTop
@@ -246,17 +245,19 @@
             panelTop.Controls.Add(logout);
             panelTop.CustomizableEdges = customizableEdges11;
             panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(236, 0);
+            panelTop.Location = new Point(270, 0);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            panelTop.Size = new Size(973, 67);
+            panelTop.Size = new Size(1112, 89);
             panelTop.TabIndex = 7;
             // 
             // logout
             // 
             logout.BackColor = Color.Transparent;
             logout.Image = Properties.Resources.logout4;
-            logout.Location = new Point(5, 21);
+            logout.Location = new Point(6, 28);
+            logout.Margin = new Padding(3, 4, 3, 4);
             logout.Name = "logout";
             logout.Size = new Size(32, 32);
             logout.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -269,9 +270,9 @@
             displayName.AutoSize = true;
             displayName.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             displayName.ForeColor = Color.White;
-            displayName.Location = new Point(48, 79);
+            displayName.Location = new Point(55, 105);
             displayName.Name = "displayName";
-            displayName.Size = new Size(40, 17);
+            displayName.Size = new Size(49, 23);
             displayName.TabIndex = 11;
             displayName.Text = "(Tên)";
             displayName.TextAlign = ContentAlignment.MiddleCenter;
@@ -290,12 +291,11 @@
             btnMenu.ForeColor = Color.White;
             btnMenu.HoverState.FillColor = Color.Transparent;
             btnMenu.Image = Properties.Resources.menu;
-            btnMenu.Location = new Point(10, 15);
-            btnMenu.Margin = new Padding(3, 2, 3, 2);
+            btnMenu.Location = new Point(11, 20);
             btnMenu.Name = "btnMenu";
             btnMenu.PressedColor = Color.Transparent;
             btnMenu.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnMenu.Size = new Size(95, 42);
+            btnMenu.Size = new Size(109, 56);
             btnMenu.TabIndex = 6;
             btnMenu.Text = "  Menu";
             btnMenu.Click += btnMenu_Click;
@@ -304,9 +304,10 @@
             // 
             pictureBox4.BackColor = Color.Transparent;
             pictureBox4.Image = Properties.Resources.pmc_logo;
-            pictureBox4.Location = new Point(111, 15);
+            pictureBox4.Location = new Point(127, 20);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(102, 39);
+            pictureBox4.Size = new Size(117, 52);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
@@ -326,11 +327,12 @@
             panelMenu.CustomizableEdges = customizableEdges15;
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
-            panelMenu.MaximumSize = new Size(236, 0);
-            panelMenu.MinimumSize = new Size(46, 0);
+            panelMenu.Margin = new Padding(3, 4, 3, 4);
+            panelMenu.MaximumSize = new Size(270, 0);
+            panelMenu.MinimumSize = new Size(53, 0);
             panelMenu.Name = "panelMenu";
             panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            panelMenu.Size = new Size(236, 634);
+            panelMenu.Size = new Size(270, 845);
             panelMenu.TabIndex = 6;
             // 
             // timerMenu
@@ -340,12 +342,13 @@
             // 
             // nvKhoForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1209, 634);
+            ClientSize = new Size(1382, 845);
             Controls.Add(panelShow);
             Controls.Add(panelTop);
             Controls.Add(panelMenu);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "nvKhoForm";
             Text = "Pharmacity";
             Load += nvKhoForm_Load;

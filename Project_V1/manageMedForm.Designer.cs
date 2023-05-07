@@ -39,12 +39,12 @@
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panelMed = new Guna.UI2.WinForms.Guna2Panel();
             panelView = new Guna.UI2.WinForms.Guna2Panel();
+            panelData = new FlowLayoutPanel();
             panelType = new FlowLayoutPanel();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             panelSearch = new Panel();
             btnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
             search = new TextBox();
-            panelData = new FlowLayoutPanel();
             panelMed.SuspendLayout();
             panelView.SuspendLayout();
             panelSearch.SuspendLayout();
@@ -81,6 +81,17 @@
             panelView.ShadowDecoration.CustomizableEdges = customizableEdges2;
             panelView.Size = new Size(949, 498);
             panelView.TabIndex = 62;
+            // 
+            // panelData
+            // 
+            panelData.AutoScroll = true;
+            panelData.BorderStyle = BorderStyle.FixedSingle;
+            panelData.Dock = DockStyle.Fill;
+            panelData.Location = new Point(0, 68);
+            panelData.Name = "panelData";
+            panelData.Size = new Size(949, 430);
+            panelData.TabIndex = 65;
+            panelData.Paint += panelData_Paint_1;
             // 
             // panelType
             // 
@@ -150,16 +161,6 @@
             search.PlaceholderText = "Tìm kiếm";
             search.Size = new Size(287, 22);
             search.TabIndex = 11;
-            // 
-            // panelData
-            // 
-            panelData.AutoScroll = true;
-            panelData.BorderStyle = BorderStyle.FixedSingle;
-            panelData.Dock = DockStyle.Fill;
-            panelData.Location = new Point(0, 68);
-            panelData.Name = "panelData";
-            panelData.Size = new Size(949, 430);
-            panelData.TabIndex = 65;
             // 
             // manageMedForm
             // 

@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
+using System.Drawing.Imaging;
 
 namespace GUI
 {
@@ -48,7 +49,10 @@ namespace GUI
         private byte[] ImageToByteArray(PictureBox pictureBox)
         {
             MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            //pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            Image img = pictureBox.Image;
+            MessageBox.Show(img.RawFormat.ToString());
+            img.Save(memoryStream, img.RawFormat);
             return memoryStream.ToArray();
         }
 

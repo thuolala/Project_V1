@@ -21,7 +21,7 @@ namespace GUI
         private void manageMedForm_Load(object sender, EventArgs e)
         {
             // Set up the SQL connection and command
-            string connectionString = "Data Source=(local)\\SQLEXPRESS;Initial Catalog=Pharmacity; Integrated Security=True";
+            string connectionString = "Data Source=(local);Initial Catalog=Pharmacity; Integrated Security=True";
             string sql = "SELECT name, price, sl FROM MED"; // Replace "MyTable" with the name of your table
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -89,6 +89,11 @@ namespace GUI
         {
             addMedicineForm f = new addMedicineForm();
             f.ShowDialog();
+        }
+
+        private void panelData_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

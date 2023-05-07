@@ -7,10 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Web;
+using System.Net.Mail;
+
 using BLL;
 using DAL;
 using DTO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Net.Mail;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Runtime.InteropServices.JavaScript;
+using System.Net;
 
 namespace GUI
 {
@@ -185,6 +192,58 @@ namespace GUI
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SendEmail(MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
+        {
+            //cau hinh gui mail 
+            string resetPass = "ajsiHADJKi";
+            string subject = "Đặt lại mật khẩu";
+            string body = "Mật khẩu mới của bạn là: " + resetPass + "\n Vui lòng không chia sẻ mật khẩu cho bất kỳ ai vì lý do bảo mật.";
+
+            SmtpClient mailClient = new SmtpClient();
+            mailClient.Host = "smtp.gmail.com";
+            System.Net.NetworkCredential ntcd = new NetworkCredential();
+            ntcd.UserName = "phamthushame2002@gmail.com";
+            ntcd.Password = "fygytoplntkxpznu";
+            mailClient.Credentials = ntcd;
+            mailClient.EnableSsl = true;
+            mailClient.Port = 587;
+
+            MailMessage msgMail;
+            msgMail = new MailMessage();
+            msgMail.From = from;
+            msgMail.To.Add(to);
+            foreach (MailAddress addr in cc)
+            {
+                msgMail.CC.Add(addr);
+            }
+            if (bcc != null)
+            {
+                foreach (MailAddress addr in bcc)
+                {
+                    msgMail.Bcc.Add(addr);
+                }
+            }
+            msgMail.Subject = subject;
+            msgMail.Body = body;
+            msgMail.IsBodyHtml = true;
+            mailClient.Send(msgMail);
+            msgMail.Dispose();
+
+            MessageBox.Show("Your Email Has Send!");
+        }
+
+        private void linkLabelForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Taikhoan test = taikhoanBLL.getAccountByUname(username.Text);
+            string email = nhanvienBLL.getNVById(test.Id).Email;
+
+            MailAddress from = new MailAddress("phamthushame2002@gmail.com", "Pharmacity");
+            MailAddress to = new MailAddress(email, nhanvienBLL.getNVById(test.Id).Name);
+            List<MailAddress> cc = new List<MailAddress>();
+            cc.Add(new MailAddress("phamthushame2002@gmail.com", "Pharmacity"));
+            SendEmail(from, to, cc);
         }
     }
 }

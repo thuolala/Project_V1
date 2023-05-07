@@ -219,6 +219,7 @@
             linkLabelForgotPass.TabIndex = 19;
             linkLabelForgotPass.TabStop = true;
             linkLabelForgotPass.Text = "Quên mật khẩu?";
+            linkLabelForgotPass.LinkClicked += linkLabelForgotPass_LinkClicked;
             // 
             // label4
             // 
