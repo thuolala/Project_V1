@@ -140,9 +140,14 @@ namespace GUI
                 messBox.Focus();
             }
         }
-        
+
+        private void answerDetailContainer_SizeChanged(object sender, EventArgs e)
+        {
+            //answerDetailContainer.Controls.Clear();
+            //loadData();
+        }
         //Gửi bằng nút enter, shift enter thêm dòng mới
-        private void messBox_KeyDown(object sender, KeyEventArgs e)
+        private void messBox_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter && e.Modifiers == Keys.Shift)
             {
@@ -152,15 +157,8 @@ namespace GUI
             else if (e.KeyCode == Keys.Enter)
             {
                 sendButton_Click(sender, e);
-                e.Handled = true; 
+                e.Handled = true;
             }
         }
-
-        private void answerDetailContainer_SizeChanged(object sender, EventArgs e)
-        {
-            //answerDetailContainer.Controls.Clear();
-            //loadData();
-        }
-
     }
 }

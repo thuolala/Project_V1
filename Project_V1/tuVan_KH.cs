@@ -159,7 +159,6 @@ namespace GUI
                 //Chuyển form và biểu diễn
                 detailsAnswer showAns = new detailsAnswer(list);
                     //Câu hỏi
-                showAns.questionLbl.Text = questioncontent;
                 showAns.dateQuestion.Text = questionDate;
                 string username = getDataTable.getNameCus(questioncontent, questionDate);
                 if (username != "-1")
@@ -171,6 +170,8 @@ namespace GUI
                     showAns.userNameQuestion.Text = "Unknown";
                 }
                 showAns.questionLbl.Text = questioncontent;
+                showAns.questionLbl.SelectionStart = 0;
+                showAns.questionLbl.SelectionLength = 0;
                 //Lấy ID của câu hỏi
                 showAns.keyId = getDataTable.getIdQuestion(questioncontent, questionDate);
                 showAns.ShowDialog();

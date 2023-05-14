@@ -12,8 +12,8 @@ namespace GUI
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new adminForm());
-            Application.Run(new tuVan_KH());
-            //Application.Run(new nhanVienTV());
+            //Application.Run(new tuVan_KH());
+            Application.Run(new nhanVienTV());
             //Application.Run(new test());
 
         }

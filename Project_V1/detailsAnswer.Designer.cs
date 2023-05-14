@@ -34,6 +34,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             this.panel5 = new System.Windows.Forms.Panel();
             this.answerContainer = new System.Windows.Forms.FlowLayoutPanel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -45,8 +47,8 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.containQuestionTB = new System.Windows.Forms.TableLayoutPanel();
             this.containUserQuestionDetails = new System.Windows.Forms.TableLayoutPanel();
-            this.questionLbl = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.userNameQuestion = new System.Windows.Forms.Label();
+            this.questionLbl = new Guna.UI2.WinForms.Guna2TextBox();
             this.dateQuestion = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -198,31 +200,18 @@
             // 
             this.containUserQuestionDetails.ColumnCount = 1;
             this.containUserQuestionDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.containUserQuestionDetails.Controls.Add(this.questionLbl, 0, 1);
             this.containUserQuestionDetails.Controls.Add(this.userNameQuestion, 0, 0);
+            this.containUserQuestionDetails.Controls.Add(this.questionLbl, 0, 1);
             this.containUserQuestionDetails.Controls.Add(this.dateQuestion, 0, 2);
             this.containUserQuestionDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.containUserQuestionDetails.Location = new System.Drawing.Point(77, 3);
             this.containUserQuestionDetails.Name = "containUserQuestionDetails";
             this.containUserQuestionDetails.RowCount = 3;
             this.containUserQuestionDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.07018F));
-            this.containUserQuestionDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.12281F));
-            this.containUserQuestionDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.92982F));
+            this.containUserQuestionDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 53.96825F));
+            this.containUserQuestionDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 18.25397F));
             this.containUserQuestionDetails.Size = new System.Drawing.Size(834, 126);
             this.containUserQuestionDetails.TabIndex = 10;
-            // 
-            // questionLbl
-            // 
-            this.questionLbl.AutoSize = false;
-            this.questionLbl.BackColor = System.Drawing.Color.Transparent;
-            this.questionLbl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.questionLbl.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionLbl.Location = new System.Drawing.Point(3, 38);
-            this.questionLbl.Name = "questionLbl";
-            this.questionLbl.Size = new System.Drawing.Size(828, 56);
-            this.questionLbl.TabIndex = 8;
-            this.questionLbl.Text = "CÂU HỎI";
-            this.questionLbl.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // userNameQuestion
             // 
@@ -236,12 +225,40 @@
             this.userNameQuestion.Text = "usernameofquestion";
             this.userNameQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // questionLbl
+            // 
+            this.questionLbl.BorderRadius = 10;
+            this.questionLbl.CustomizableEdges = customizableEdges5;
+            this.questionLbl.DefaultText = "";
+            this.questionLbl.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.questionLbl.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.questionLbl.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.questionLbl.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.questionLbl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.questionLbl.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.questionLbl.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.questionLbl.ForeColor = System.Drawing.Color.Navy;
+            this.questionLbl.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.questionLbl.Location = new System.Drawing.Point(4, 40);
+            this.questionLbl.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.questionLbl.Multiline = true;
+            this.questionLbl.Name = "questionLbl";
+            this.questionLbl.PasswordChar = '\0';
+            this.questionLbl.PlaceholderForeColor = System.Drawing.Color.White;
+            this.questionLbl.PlaceholderText = "";
+            this.questionLbl.ReadOnly = true;
+            this.questionLbl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.questionLbl.SelectedText = "";
+            this.questionLbl.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            this.questionLbl.Size = new System.Drawing.Size(826, 57);
+            this.questionLbl.TabIndex = 11;
+            // 
             // dateQuestion
             // 
             this.dateQuestion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateQuestion.Location = new System.Drawing.Point(3, 97);
+            this.dateQuestion.Location = new System.Drawing.Point(3, 102);
             this.dateQuestion.Name = "dateQuestion";
-            this.dateQuestion.Size = new System.Drawing.Size(828, 29);
+            this.dateQuestion.Size = new System.Drawing.Size(828, 24);
             this.dateQuestion.TabIndex = 10;
             this.dateQuestion.Text = "dateofquestion";
             // 
@@ -265,7 +282,7 @@
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 3);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            this.guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges7;
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(62, 120);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -380,7 +397,6 @@
         private TableLayoutPanel containQuestionTB;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private TableLayoutPanel containUserQuestionDetails;
-        public Guna.UI2.WinForms.Guna2HtmlLabel questionLbl;
         public Label userNameQuestion;
         public Label dateQuestion;
         private TableLayoutPanel tableLayoutPanel1;
@@ -388,5 +404,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel giaidapLbl;
         private TableLayoutPanel tableLayoutPanel6;
         private TableLayoutPanel tableLayoutPanel2;
+        public Guna.UI2.WinForms.Guna2TextBox questionLbl;
     }
 }

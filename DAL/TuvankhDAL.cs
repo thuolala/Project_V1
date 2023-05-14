@@ -220,7 +220,7 @@ namespace DAL
         {
             List<string[]> hotnews = new List<string[]>();
             conn.Open();
-            string sql = "SELECT TOP 3 * FROM Question WHERE CreatedTime >= DATEADD(DAY, -2, GETDATE()) AND CreatedTime <= DATEADD(DAY, -1, GETDATE());";
+            string sql = "SELECT TOP 3 * FROM Question WHERE CreatedTime >= DATEADD(DAY, -1, GETDATE()) AND CreatedTime <= DATEADD(DAY, -0, GETDATE());";
             SqlCommand cmd = new SqlCommand(sql, conn);
             SqlDataReader dr = cmd.ExecuteReader();
 

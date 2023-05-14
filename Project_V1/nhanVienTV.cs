@@ -156,6 +156,9 @@ namespace GUI
                 ansDetailQuestion showAns = new ansDetailQuestion(list);
                 //Hiển thị câu hỏi
                 showAns.questionLbl.Text = questioncontent;
+                showAns.questionLbl.SelectionStart = 0;
+                showAns.questionLbl.SelectionLength = 0;
+
                 showAns.dateQuestion.Text = questionDate;
                 string username = getAnswerBLL.getNameCus(questioncontent, questionDate);
                 if (username != "-1")
@@ -168,6 +171,7 @@ namespace GUI
                 }
 
                 showAns.keyId = getAnswerBLL.getIdQuestion(questioncontent, questionDate);
+                showAns.messBox.Select(); // Tập trung vào TextBox messBox
                 showAns.ShowDialog();
             }
         }
