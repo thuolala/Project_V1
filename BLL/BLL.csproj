@@ -53,6 +53,7 @@
     <Compile Include="NhanvienBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaikhoanBLL.cs" />
+    <Compile Include="TuvankhBLL.cs" />
     <Compile Include="VitriBLL.cs" />
   </ItemGroup>
   <ItemGroup>

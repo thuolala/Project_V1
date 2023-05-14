@@ -12,6 +12,6 @@ namespace DAL
     }
     public class DatabaseAccess
     {
-        public SqlConnection conn = new SqlConnection(@"Data Source=ADMIN\PHAMTHU;Initial Catalog=Pharmacity; Integrated Security=True");
+        public SqlConnection conn = new SqlConnection(@"Data Source=SPIDERMAN\SQLEXPRESS;Initial Catalog=Pharmacity;Integrated Security=True");
     }
 }

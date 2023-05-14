@@ -54,6 +54,7 @@
     <Compile Include="NhanvienDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaikhoanDAL.cs" />
+    <Compile Include="TuvankhDAL.cs" />
     <Compile Include="VitriDAL.cs" />
   </ItemGroup>
   <ItemGroup>
