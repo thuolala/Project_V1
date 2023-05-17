@@ -123,5 +123,10 @@ namespace GUI
             loadAll();
             searchAction();
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

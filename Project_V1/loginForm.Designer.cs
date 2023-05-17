@@ -38,6 +38,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelLogin = new Guna.UI2.WinForms.Guna2Panel();
@@ -54,16 +60,15 @@
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
-            mini = new PictureBox();
-            exit = new PictureBox();
             pictureBox1 = new PictureBox();
+            guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
+            guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
+            exit = new Guna.UI2.WinForms.Guna2ControlBox();
             panelLogin.SuspendLayout();
             panelPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             panelUname.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)mini).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)exit).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -265,32 +270,6 @@
             label2.TabIndex = 15;
             label2.Text = "Đăng nhập vào tài khoản";
             // 
-            // mini
-            // 
-            mini.BackColor = Color.Transparent;
-            mini.Image = Properties.Resources.mini;
-            mini.Location = new Point(792, 16);
-            mini.Margin = new Padding(3, 4, 3, 4);
-            mini.Name = "mini";
-            mini.Size = new Size(20, 20);
-            mini.SizeMode = PictureBoxSizeMode.AutoSize;
-            mini.TabIndex = 7;
-            mini.TabStop = false;
-            mini.Click += mini_Click;
-            // 
-            // exit
-            // 
-            exit.BackColor = Color.Transparent;
-            exit.Image = Properties.Resources.exit;
-            exit.Location = new Point(822, 16);
-            exit.Margin = new Padding(3, 4, 3, 4);
-            exit.Name = "exit";
-            exit.Size = new Size(20, 20);
-            exit.SizeMode = PictureBoxSizeMode.AutoSize;
-            exit.TabIndex = 5;
-            exit.TabStop = false;
-            exit.Click += exit_Click;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
@@ -303,13 +282,68 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // guna2ControlBox2
+            // 
+            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox2.Animated = true;
+            guna2ControlBox2.BackColor = Color.Transparent;
+            guna2ControlBox2.BorderColor = Color.FromArgb(3, 49, 90);
+            guna2ControlBox2.BorderRadius = 1;
+            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            guna2ControlBox2.CustomizableEdges = customizableEdges10;
+            guna2ControlBox2.FillColor = Color.Transparent;
+            guna2ControlBox2.IconColor = Color.White;
+            guna2ControlBox2.Location = new Point(737, 12);
+            guna2ControlBox2.Name = "guna2ControlBox2";
+            guna2ControlBox2.PressedColor = Color.FromArgb(3, 49, 90);
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            guna2ControlBox2.Size = new Size(32, 32);
+            guna2ControlBox2.TabIndex = 7;
+            // 
+            // guna2ControlBox1
+            // 
+            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.Animated = true;
+            guna2ControlBox1.BackColor = Color.Transparent;
+            guna2ControlBox1.BorderColor = Color.FromArgb(3, 49, 90);
+            guna2ControlBox1.BorderRadius = 1;
+            guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            guna2ControlBox1.CustomizableEdges = customizableEdges12;
+            guna2ControlBox1.FillColor = Color.Transparent;
+            guna2ControlBox1.IconColor = Color.White;
+            guna2ControlBox1.Location = new Point(775, 12);
+            guna2ControlBox1.Name = "guna2ControlBox1";
+            guna2ControlBox1.PressedColor = Color.FromArgb(3, 49, 90);
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna2ControlBox1.Size = new Size(32, 32);
+            guna2ControlBox1.TabIndex = 6;
+            // 
+            // exit
+            // 
+            exit.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            exit.Animated = true;
+            exit.BackColor = Color.Transparent;
+            exit.BorderColor = Color.FromArgb(3, 49, 90);
+            exit.BorderRadius = 1;
+            exit.CustomizableEdges = customizableEdges14;
+            exit.FillColor = Color.Transparent;
+            exit.IconColor = Color.White;
+            exit.Location = new Point(813, 12);
+            exit.Name = "exit";
+            exit.PressedColor = Color.FromArgb(3, 49, 90);
+            exit.PressedDepth = 50;
+            exit.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            exit.Size = new Size(32, 32);
+            exit.TabIndex = 5;
+            // 
             // loginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg__1_;
             ClientSize = new Size(857, 622);
-            Controls.Add(mini);
+            Controls.Add(guna2ControlBox2);
+            Controls.Add(guna2ControlBox1);
             Controls.Add(exit);
             Controls.Add(pictureBox1);
             Controls.Add(panelLogin);
@@ -331,19 +365,14 @@
             panelUname.ResumeLayout(false);
             panelUname.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)mini).EndInit();
-            ((System.ComponentModel.ISupportInitialize)exit).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2ResizeForm guna2ResizeForm1;
         private Guna.UI2.WinForms.Guna2Panel panelLogin;
-        private PictureBox mini;
-        private PictureBox exit;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel panelUname;
         private LinkLabel linkLabelForgotPass;
@@ -358,5 +387,8 @@
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2ImageButton btnShowPass;
         private Label errorLogin;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
+        private Guna.UI2.WinForms.Guna2ControlBox exit;
     }
 }

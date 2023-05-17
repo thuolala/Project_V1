@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(welcomeForm));
             pictureBox1 = new PictureBox();
             timer1 = new System.Windows.Forms.Timer(components);
             panel1 = new Panel();
-            panel2 = new Panel();
+            panel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             label3 = new Label();
             label2 = new Label();
             pictureBox2 = new PictureBox();
@@ -77,12 +79,14 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.SteelBlue;
+            panel2.CustomizableEdges = customizableEdges1;
+            panel2.FillColor = Color.FromArgb(80, 149, 146);
+            panel2.FillColor2 = Color.FromArgb(3, 49, 90);
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
+            panel2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             panel2.Size = new Size(143, 25);
-            panel2.TabIndex = 9;
+            panel2.TabIndex = 10;
             // 
             // label3
             // 
@@ -181,11 +185,11 @@
         private PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private Panel panel1;
-        private Panel panel2;
         private Label label3;
         private Label label2;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Label label1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panel2;
     }
 }

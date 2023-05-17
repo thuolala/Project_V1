@@ -63,8 +63,6 @@ namespace GUI
                     graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
                 }
             }
-
-            MessageBox.Show(destImage.Width.ToString());
             return destImage;
         }
 

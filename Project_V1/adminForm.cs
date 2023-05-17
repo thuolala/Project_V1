@@ -201,12 +201,12 @@ namespace GUI
             btnEmployee.BackColor = SystemColors.Control;
             changeColor(sender, e);
 
-            panelShow.Controls.Clear();
+            panelDisplay.Controls.Clear();
             manageEmployee manageEmp = new manageEmployee();
             manageEmp.TopLevel = false;
             manageEmp.Dock = DockStyle.Fill;
             manageEmp.Show();
-            panelShow.Controls.Add(manageEmp);
+            panelDisplay.Controls.Add(manageEmp);
             manageEmp.BringToFront();
         }
 
@@ -215,12 +215,12 @@ namespace GUI
             btnCustomer.BackColor = SystemColors.Control;
             changeColor(sender, e);
 
-            panelShow.Controls.Clear();
+            panelDisplay.Controls.Clear();
             manageCusForm manageCus = new manageCusForm();
             manageCus.TopLevel = false;
             manageCus.Dock = DockStyle.Fill;
             manageCus.Show();
-            panelShow.Controls.Add(manageCus);
+            panelDisplay.Controls.Add(manageCus);
             manageCus.BringToFront();
         }
 
@@ -229,10 +229,10 @@ namespace GUI
             btnInfo.BackColor = SystemColors.Control;
             changeColor(sender, e);
 
-            panelShow.Controls.Clear();
+            panelDisplay.Controls.Clear();
             selfEditForm info = new selfEditForm(nv, tk);
             info.TopLevel = false;
-            panelShow.Controls.Add(info);
+            panelDisplay.Controls.Add(info);
             info.Dock = DockStyle.Fill;
             info.Show();
         }
