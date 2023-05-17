@@ -21,5 +21,10 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void addMedicineForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

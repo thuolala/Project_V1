@@ -42,6 +42,7 @@
             panelDisplay = new FlowLayoutPanel();
             panelPos = new Guna.UI2.WinForms.Guna2Panel();
             panelTop = new Panel();
+            btnRefresh = new PictureBox();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             logout = new PictureBox();
             panelSearch = new Panel();
@@ -50,6 +51,7 @@
             panelEmp.SuspendLayout();
             panelShow.SuspendLayout();
             panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logout).BeginInit();
             panelSearch.SuspendLayout();
             SuspendLayout();
@@ -61,29 +63,34 @@
             panelEmp.CustomizableEdges = customizableEdges8;
             panelEmp.Dock = DockStyle.Fill;
             panelEmp.Location = new Point(0, 0);
+            panelEmp.Margin = new Padding(3, 4, 3, 4);
             panelEmp.Name = "panelEmp";
             panelEmp.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            panelEmp.Size = new Size(973, 634);
+            panelEmp.Size = new Size(1112, 845);
             panelEmp.TabIndex = 0;
             // 
             // panelShow
             // 
+            panelShow.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panelShow.Controls.Add(panelDisplay);
             panelShow.Controls.Add(panelPos);
             panelShow.CustomizableEdges = customizableEdges3;
-            panelShow.Location = new Point(0, 67);
+            panelShow.Location = new Point(0, 89);
+            panelShow.Margin = new Padding(3, 4, 3, 4);
             panelShow.Name = "panelShow";
             panelShow.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            panelShow.Size = new Size(973, 567);
+            panelShow.Size = new Size(1112, 756);
             panelShow.TabIndex = 1;
             // 
             // panelDisplay
             // 
             panelDisplay.AutoScroll = true;
+            panelDisplay.BackColor = SystemColors.Control;
             panelDisplay.Dock = DockStyle.Fill;
-            panelDisplay.Location = new Point(0, 52);
+            panelDisplay.Location = new Point(0, 69);
+            panelDisplay.Margin = new Padding(3, 4, 3, 4);
             panelDisplay.Name = "panelDisplay";
-            panelDisplay.Size = new Size(973, 515);
+            panelDisplay.Size = new Size(1112, 687);
             panelDisplay.TabIndex = 1;
             // 
             // panelPos
@@ -91,23 +98,40 @@
             panelPos.CustomizableEdges = customizableEdges1;
             panelPos.Dock = DockStyle.Top;
             panelPos.Location = new Point(0, 0);
+            panelPos.Margin = new Padding(3, 4, 3, 4);
             panelPos.Name = "panelPos";
             panelPos.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            panelPos.Size = new Size(973, 52);
+            panelPos.Size = new Size(1112, 69);
             panelPos.TabIndex = 0;
             // 
             // panelTop
             // 
-            panelTop.BackColor = Color.FromArgb(182, 228, 226);
+            panelTop.BackColor = Color.FromArgb(80, 149, 146);
+            panelTop.Controls.Add(btnRefresh);
             panelTop.Controls.Add(btnAdd);
             panelTop.Controls.Add(logout);
             panelTop.Controls.Add(panelSearch);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
-            panelTop.Size = new Size(973, 67);
+            panelTop.Size = new Size(1112, 89);
             panelTop.TabIndex = 0;
             panelTop.Paint += panelTop_Paint;
+            // 
+            // btnRefresh
+            // 
+            btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnRefresh.BackColor = Color.Transparent;
+            btnRefresh.Image = Properties.Resources.refresh_button1;
+            btnRefresh.Location = new Point(860, 27);
+            btnRefresh.Margin = new Padding(3, 4, 3, 4);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(32, 32);
+            btnRefresh.SizeMode = PictureBoxSizeMode.AutoSize;
+            btnRefresh.TabIndex = 63;
+            btnRefresh.TabStop = false;
+            btnRefresh.Click += btnRefresh_Click;
             // 
             // btnAdd
             // 
@@ -120,13 +144,15 @@
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAdd.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdd.FillColor2 = Color.FromArgb(128, 255, 128);
+            btnAdd.FillColor = Color.FromArgb(182, 228, 226);
+            btnAdd.FillColor2 = Color.FromArgb(3, 49, 90);
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(786, 12);
+            btnAdd.Location = new Point(898, 16);
+            btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
             btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnAdd.Size = new Size(175, 41);
+            btnAdd.Size = new Size(200, 55);
             btnAdd.TabIndex = 60;
             btnAdd.Text = "Thêm nhân viên";
             btnAdd.Click += btnAdd_Click;
@@ -135,22 +161,25 @@
             // 
             logout.BackColor = Color.Transparent;
             logout.Image = Properties.Resources.logout4;
-            logout.Location = new Point(3, 12);
+            logout.Location = new Point(21, 27);
+            logout.Margin = new Padding(3, 4, 3, 4);
             logout.Name = "logout";
             logout.Size = new Size(32, 32);
             logout.SizeMode = PictureBoxSizeMode.AutoSize;
             logout.TabIndex = 28;
             logout.TabStop = false;
+            logout.Click += logout_Click;
             // 
             // panelSearch
             // 
             panelSearch.BackColor = Color.Azure;
             panelSearch.Controls.Add(btnSearch);
             panelSearch.Controls.Add(search);
-            panelSearch.Location = new Point(41, 12);
+            panelSearch.Location = new Point(88, 16);
+            panelSearch.Margin = new Padding(3, 4, 3, 4);
             panelSearch.Name = "panelSearch";
             panelSearch.RightToLeft = RightToLeft.No;
-            panelSearch.Size = new Size(327, 39);
+            panelSearch.Size = new Size(374, 52);
             panelSearch.TabIndex = 27;
             // 
             // btnSearch
@@ -161,12 +190,13 @@
             btnSearch.ImageOffset = new Point(0, 0);
             btnSearch.ImageRotate = 0F;
             btnSearch.ImageSize = new Size(20, 20);
-            btnSearch.Location = new Point(297, 8);
+            btnSearch.Location = new Point(339, 11);
+            btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
             btnSearch.PressedState.Image = Properties.Resources.search;
             btnSearch.PressedState.ImageSize = new Size(64, 64);
             btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            btnSearch.Size = new Size(20, 20);
+            btnSearch.Size = new Size(23, 27);
             btnSearch.TabIndex = 12;
             // 
             // search
@@ -175,25 +205,28 @@
             search.BorderStyle = BorderStyle.None;
             search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             search.ForeColor = Color.FromArgb(0, 0, 64);
-            search.Location = new Point(4, 8);
+            search.Location = new Point(16, 11);
+            search.Margin = new Padding(3, 4, 3, 4);
             search.Name = "search";
             search.PlaceholderText = "Tìm kiếm theo tên/ID";
-            search.Size = new Size(287, 22);
+            search.Size = new Size(328, 27);
             search.TabIndex = 11;
             // 
             // manageEmployee
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(973, 634);
+            ClientSize = new Size(1112, 845);
             Controls.Add(panelEmp);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "manageEmployee";
             Load += manageEmployee_Load;
             panelEmp.ResumeLayout(false);
             panelShow.ResumeLayout(false);
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
             ((System.ComponentModel.ISupportInitialize)logout).EndInit();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
@@ -212,5 +245,6 @@
         private Guna.UI2.WinForms.Guna2Panel panelPos;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private FlowLayoutPanel panelDisplay;
+        private PictureBox btnRefresh;
     }
 }

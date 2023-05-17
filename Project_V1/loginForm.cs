@@ -38,21 +38,7 @@ namespace GUI
         Taikhoan tk = new Taikhoan();
         Nhanvien nv = new Nhanvien();
 
-        private void test_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Separator1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2CustomGradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+        //show password
         private void btnShowPass_Click(object sender, EventArgs e)
         {
             if (password.UseSystemPasswordChar)
@@ -65,6 +51,7 @@ namespace GUI
             }
         }
 
+        //move fucntion
         private void loginF_MouseDown(object sender, MouseEventArgs e)
         {
             mouse = true;
@@ -167,33 +154,21 @@ namespace GUI
         {
 
             checkUser(sender, e);
-
-            /*
-            if (username.Text.Equals("admin"))
-            {
-                openAdmin(sender, e);
-            }
-            if (username.Text.Equals("bh"))
-            {
-                openNVBH(sender, e);
-            }
-            if (username.Text.Equals("kho"))
-            {
-                openNVKho(sender, e);
-            }
-            */
         }
 
+        //minimize
         private void mini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //exit
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //send mail forgot pass
         private void SendEmail(MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
         {
             //cau hinh gui mail 
@@ -244,6 +219,11 @@ namespace GUI
             List<MailAddress> cc = new List<MailAddress>();
             cc.Add(new MailAddress("phamthushame2002@gmail.com", "Pharmacity"));
             SendEmail(from, to, cc);
+        }
+
+        private void loginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

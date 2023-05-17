@@ -74,7 +74,7 @@ namespace GUI
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
-            manageEmpForm manageEmp = new manageEmpForm();
+            manageEmployee manageEmp = new manageEmployee();
             manageEmp.TopLevel = false;
             manageEmp.Dock = DockStyle.Fill;
             manageEmp.Show();
@@ -106,6 +106,11 @@ namespace GUI
             panelShow.Controls.Add(info);
             info.Dock = DockStyle.Fill;
             info.Show();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

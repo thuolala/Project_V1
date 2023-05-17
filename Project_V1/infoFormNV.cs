@@ -137,5 +137,28 @@ namespace GUI
                 this.Close();
             }
         }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+            OpenImage();
+        }
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Xác nhận xóa nhân viên '" + this.nv.Name + "' ?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                if (nvBLL.deleteNV(this.nv.Id) && tkBLL.deleteAccount(this.nv.Id))
+                {
+                    MessageBox.Show("Xóa thành công");
+                    this.Close();
+                }
+            }
+            else
+            {
+                // User clicked No or closed the dialog, do something else here
+            }
+        }
     }
 }

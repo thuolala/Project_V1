@@ -158,14 +158,14 @@
             availableQuantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             availableQuantity.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             availableQuantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            availableQuantity.Location = new Point(128, 1);
-            availableQuantity.Margin = new Padding(4);
+            availableQuantity.Location = new Point(146, 1);
+            availableQuantity.Margin = new Padding(5);
             availableQuantity.Name = "availableQuantity";
             availableQuantity.PasswordChar = '\0';
             availableQuantity.PlaceholderText = "";
             availableQuantity.SelectedText = "";
             availableQuantity.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            availableQuantity.Size = new Size(169, 32);
+            availableQuantity.Size = new Size(193, 43);
             availableQuantity.TabIndex = 38;
             // 
             // label4
@@ -173,9 +173,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(0, 0, 64);
-            label4.Location = new Point(3, 6);
+            label4.Location = new Point(3, 8);
             label4.Name = "label4";
-            label4.Size = new Size(73, 21);
+            label4.Size = new Size(92, 28);
             label4.TabIndex = 21;
             label4.Text = "Số lượng";
             // 
@@ -191,11 +191,10 @@
             guna2CustomGradientPanel6.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel6.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel6.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel6.Location = new Point(3, 214);
-            guna2CustomGradientPanel6.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel6.Location = new Point(3, 285);
             guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             guna2CustomGradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            guna2CustomGradientPanel6.Size = new Size(479, 34);
+            guna2CustomGradientPanel6.Size = new Size(547, 45);
             guna2CustomGradientPanel6.TabIndex = 55;
             // 
             // label8
@@ -203,9 +202,9 @@
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label8.ForeColor = Color.DarkGray;
-            label8.Location = new Point(304, 6);
+            label8.Location = new Point(347, 8);
             label8.Name = "label8";
-            label8.Size = new Size(46, 21);
+            label8.Size = new Size(59, 28);
             label8.TabIndex = 81;
             label8.Text = "đồng";
             // 
@@ -221,15 +220,15 @@
             unitPrice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             unitPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             unitPrice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            unitPrice.Location = new Point(128, 1);
-            unitPrice.Margin = new Padding(4);
+            unitPrice.Location = new Point(146, 1);
+            unitPrice.Margin = new Padding(5);
             unitPrice.Name = "unitPrice";
             unitPrice.PasswordChar = '\0';
             unitPrice.PlaceholderText = "";
             unitPrice.RightToLeft = RightToLeft.No;
             unitPrice.SelectedText = "";
             unitPrice.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            unitPrice.Size = new Size(169, 32);
+            unitPrice.Size = new Size(193, 43);
             unitPrice.TabIndex = 38;
             // 
             // label5
@@ -237,9 +236,9 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = Color.FromArgb(0, 0, 64);
-            label5.Location = new Point(3, 6);
+            label5.Location = new Point(3, 8);
             label5.Name = "label5";
-            label5.Size = new Size(65, 21);
+            label5.Size = new Size(81, 28);
             label5.TabIndex = 21;
             label5.Text = "Đơn giá";
             // 
@@ -255,11 +254,10 @@
             guna2CustomGradientPanel7.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel7.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel7.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel7.Location = new Point(3, 255);
-            guna2CustomGradientPanel7.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel7.Location = new Point(3, 340);
             guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
             guna2CustomGradientPanel7.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2CustomGradientPanel7.Size = new Size(479, 34);
+            guna2CustomGradientPanel7.Size = new Size(547, 45);
             guna2CustomGradientPanel7.TabIndex = 56;
             // 
             // comboboxDosUnit
@@ -274,11 +272,10 @@
             comboboxDosUnit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboboxDosUnit.ForeColor = Color.FromArgb(68, 88, 112);
             comboboxDosUnit.ItemHeight = 30;
-            comboboxDosUnit.Location = new Point(304, 1);
-            comboboxDosUnit.Margin = new Padding(3, 2, 3, 2);
+            comboboxDosUnit.Location = new Point(347, 1);
             comboboxDosUnit.Name = "comboboxDosUnit";
             comboboxDosUnit.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            comboboxDosUnit.Size = new Size(122, 36);
+            comboboxDosUnit.Size = new Size(139, 36);
             comboboxDosUnit.TabIndex = 40;
             // 
             // doseage
@@ -293,15 +290,15 @@
             doseage.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             doseage.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             doseage.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            doseage.Location = new Point(128, 1);
-            doseage.Margin = new Padding(4);
+            doseage.Location = new Point(146, 1);
+            doseage.Margin = new Padding(5);
             doseage.Name = "doseage";
             doseage.PasswordChar = '\0';
             doseage.PlaceholderText = "";
             doseage.RightToLeft = RightToLeft.No;
             doseage.SelectedText = "";
             doseage.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            doseage.Size = new Size(169, 32);
+            doseage.Size = new Size(193, 43);
             doseage.TabIndex = 39;
             // 
             // label6
@@ -309,9 +306,9 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label6.ForeColor = Color.FromArgb(0, 0, 64);
-            label6.Location = new Point(3, 6);
+            label6.Location = new Point(3, 8);
             label6.Name = "label6";
-            label6.Size = new Size(88, 21);
+            label6.Size = new Size(110, 28);
             label6.TabIndex = 21;
             label6.Text = "Hàm lượng";
             // 
@@ -329,10 +326,11 @@
             btnReset.FillColor2 = Color.Silver;
             btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(464, 664);
+            btnReset.Location = new Point(530, 885);
+            btnReset.Margin = new Padding(3, 4, 3, 4);
             btnReset.Name = "btnReset";
             btnReset.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnReset.Size = new Size(175, 41);
+            btnReset.Size = new Size(200, 55);
             btnReset.TabIndex = 77;
             btnReset.Text = "Hủy";
             // 
@@ -341,9 +339,9 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.FromArgb(0, 0, 64);
-            label1.Location = new Point(3, 6);
+            label1.Location = new Point(3, 8);
             label1.Name = "label1";
-            label1.Size = new Size(97, 21);
+            label1.Size = new Size(122, 28);
             label1.TabIndex = 21;
             label1.Text = "Nhóm thuốc";
             // 
@@ -351,7 +349,8 @@
             // 
             exit.BackColor = Color.Transparent;
             exit.Image = Properties.Resources.exit;
-            exit.Location = new Point(818, 12);
+            exit.Location = new Point(935, 16);
+            exit.Margin = new Padding(3, 4, 3, 4);
             exit.Name = "exit";
             exit.Size = new Size(20, 20);
             exit.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -370,9 +369,9 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label9.ForeColor = Color.DarkGray;
-            label9.Location = new Point(284, 20);
+            label9.Location = new Point(325, 27);
             label9.Name = "label9";
-            label9.Size = new Size(282, 30);
+            label9.Size = new Size(362, 38);
             label9.TabIndex = 79;
             label9.Text = "Nhập thông tin thuốc mới";
             // 
@@ -389,10 +388,11 @@
             btnSave.FillColor2 = Color.FromArgb(128, 255, 128);
             btnSave.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnSave.ForeColor = Color.White;
-            btnSave.Location = new Point(644, 664);
+            btnSave.Location = new Point(736, 885);
+            btnSave.Margin = new Padding(3, 4, 3, 4);
             btnSave.Name = "btnSave";
             btnSave.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSave.Size = new Size(175, 41);
+            btnSave.Size = new Size(200, 55);
             btnSave.TabIndex = 76;
             btnSave.Text = "Lưu";
             // 
@@ -417,11 +417,10 @@
             guna2CustomGradientPanel8.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel8.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel8.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel8.Location = new Point(337, 90);
-            guna2CustomGradientPanel8.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel8.Location = new Point(385, 120);
             guna2CustomGradientPanel8.Name = "guna2CustomGradientPanel8";
             guna2CustomGradientPanel8.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            guna2CustomGradientPanel8.Size = new Size(486, 557);
+            guna2CustomGradientPanel8.Size = new Size(555, 743);
             guna2CustomGradientPanel8.TabIndex = 74;
             // 
             // guna2CustomGradientPanel11
@@ -435,11 +434,10 @@
             guna2CustomGradientPanel11.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel11.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel11.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel11.Location = new Point(3, 483);
-            guna2CustomGradientPanel11.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel11.Location = new Point(3, 644);
             guna2CustomGradientPanel11.Name = "guna2CustomGradientPanel11";
             guna2CustomGradientPanel11.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2CustomGradientPanel11.Size = new Size(479, 67);
+            guna2CustomGradientPanel11.Size = new Size(547, 89);
             guna2CustomGradientPanel11.TabIndex = 59;
             // 
             // contraindication
@@ -454,14 +452,14 @@
             contraindication.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             contraindication.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             contraindication.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            contraindication.Location = new Point(128, 1);
-            contraindication.Margin = new Padding(4);
+            contraindication.Location = new Point(146, 1);
+            contraindication.Margin = new Padding(5);
             contraindication.Name = "contraindication";
             contraindication.PasswordChar = '\0';
             contraindication.PlaceholderText = "";
             contraindication.SelectedText = "";
             contraindication.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            contraindication.Size = new Size(350, 65);
+            contraindication.Size = new Size(400, 87);
             contraindication.TabIndex = 38;
             // 
             // label14
@@ -469,9 +467,9 @@
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label14.ForeColor = Color.FromArgb(0, 0, 64);
-            label14.Location = new Point(3, 24);
+            label14.Location = new Point(3, 32);
             label14.Name = "label14";
-            label14.Size = new Size(115, 21);
+            label14.Size = new Size(144, 28);
             label14.TabIndex = 21;
             label14.Text = "Chống chỉ định";
             // 
@@ -486,11 +484,10 @@
             guna2CustomGradientPanel10.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel10.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel10.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel10.Location = new Point(3, 411);
-            guna2CustomGradientPanel10.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel10.Location = new Point(3, 548);
             guna2CustomGradientPanel10.Name = "guna2CustomGradientPanel10";
             guna2CustomGradientPanel10.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2CustomGradientPanel10.Size = new Size(479, 67);
+            guna2CustomGradientPanel10.Size = new Size(547, 89);
             guna2CustomGradientPanel10.TabIndex = 58;
             // 
             // indication
@@ -505,14 +502,14 @@
             indication.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             indication.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             indication.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            indication.Location = new Point(128, 1);
-            indication.Margin = new Padding(4);
+            indication.Location = new Point(146, 1);
+            indication.Margin = new Padding(5);
             indication.Name = "indication";
             indication.PasswordChar = '\0';
             indication.PlaceholderText = "";
             indication.SelectedText = "";
             indication.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            indication.Size = new Size(350, 65);
+            indication.Size = new Size(400, 87);
             indication.TabIndex = 38;
             // 
             // label13
@@ -520,9 +517,9 @@
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label13.ForeColor = Color.FromArgb(0, 0, 64);
-            label13.Location = new Point(3, 23);
+            label13.Location = new Point(3, 31);
             label13.Name = "label13";
-            label13.Size = new Size(68, 21);
+            label13.Size = new Size(84, 28);
             label13.TabIndex = 21;
             label13.Text = "Chỉ định";
             // 
@@ -537,11 +534,10 @@
             guna2CustomGradientPanel9.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel9.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel9.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel9.Location = new Point(3, 296);
-            guna2CustomGradientPanel9.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel9.Location = new Point(3, 395);
             guna2CustomGradientPanel9.Name = "guna2CustomGradientPanel9";
             guna2CustomGradientPanel9.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna2CustomGradientPanel9.Size = new Size(479, 111);
+            guna2CustomGradientPanel9.Size = new Size(547, 148);
             guna2CustomGradientPanel9.TabIndex = 57;
             // 
             // ingredients
@@ -556,14 +552,14 @@
             ingredients.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             ingredients.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             ingredients.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            ingredients.Location = new Point(128, 1);
-            ingredients.Margin = new Padding(4);
+            ingredients.Location = new Point(146, 1);
+            ingredients.Margin = new Padding(5);
             ingredients.Name = "ingredients";
             ingredients.PasswordChar = '\0';
             ingredients.PlaceholderText = "";
             ingredients.SelectedText = "";
             ingredients.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            ingredients.Size = new Size(350, 107);
+            ingredients.Size = new Size(400, 143);
             ingredients.TabIndex = 38;
             // 
             // label10
@@ -571,9 +567,9 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label10.ForeColor = Color.FromArgb(0, 0, 64);
-            label10.Location = new Point(3, 45);
+            label10.Location = new Point(3, 60);
             label10.Name = "label10";
-            label10.Size = new Size(92, 21);
+            label10.Size = new Size(114, 28);
             label10.TabIndex = 21;
             label10.Text = "Thành phần";
             // 
@@ -589,11 +585,10 @@
             guna2CustomGradientPanel5.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel5.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel5.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel5.Location = new Point(3, 174);
-            guna2CustomGradientPanel5.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel5.Location = new Point(3, 232);
             guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            guna2CustomGradientPanel5.Size = new Size(479, 34);
+            guna2CustomGradientPanel5.Size = new Size(547, 45);
             guna2CustomGradientPanel5.TabIndex = 54;
             // 
             // label12
@@ -601,9 +596,9 @@
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label12.ForeColor = Color.DarkGray;
-            label12.Location = new Point(304, 6);
+            label12.Location = new Point(347, 8);
             label12.Name = "label12";
-            label12.Size = new Size(37, 21);
+            label12.Size = new Size(47, 28);
             label12.TabIndex = 82;
             label12.Text = "hộp";
             // 
@@ -618,11 +613,10 @@
             guna2CustomGradientPanel4.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel4.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel4.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel4.Location = new Point(3, 134);
-            guna2CustomGradientPanel4.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel4.Location = new Point(3, 179);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            guna2CustomGradientPanel4.Size = new Size(479, 34);
+            guna2CustomGradientPanel4.Size = new Size(547, 45);
             guna2CustomGradientPanel4.TabIndex = 53;
             // 
             // expiredDate
@@ -633,13 +627,12 @@
             expiredDate.FillColor = Color.White;
             expiredDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             expiredDate.Format = DateTimePickerFormat.Long;
-            expiredDate.Location = new Point(128, 1);
-            expiredDate.Margin = new Padding(3, 2, 3, 2);
+            expiredDate.Location = new Point(146, 1);
             expiredDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             expiredDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             expiredDate.Name = "expiredDate";
             expiredDate.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            expiredDate.Size = new Size(350, 32);
+            expiredDate.Size = new Size(400, 43);
             expiredDate.TabIndex = 42;
             expiredDate.Value = new DateTime(2023, 4, 20, 4, 16, 16, 514);
             // 
@@ -648,9 +641,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 0, 64);
-            label3.Location = new Point(3, 6);
+            label3.Location = new Point(3, 8);
             label3.Name = "label3";
-            label3.Size = new Size(41, 21);
+            label3.Size = new Size(51, 28);
             label3.TabIndex = 21;
             label3.Text = "HSD";
             // 
@@ -665,11 +658,10 @@
             guna2CustomGradientPanel3.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel3.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel3.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel3.Location = new Point(3, 93);
-            guna2CustomGradientPanel3.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel3.Location = new Point(3, 124);
             guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             guna2CustomGradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            guna2CustomGradientPanel3.Size = new Size(479, 34);
+            guna2CustomGradientPanel3.Size = new Size(547, 45);
             guna2CustomGradientPanel3.TabIndex = 52;
             // 
             // produceDate
@@ -680,13 +672,12 @@
             produceDate.FillColor = Color.White;
             produceDate.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             produceDate.Format = DateTimePickerFormat.Long;
-            produceDate.Location = new Point(128, 1);
-            produceDate.Margin = new Padding(3, 2, 3, 2);
+            produceDate.Location = new Point(146, 1);
             produceDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             produceDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             produceDate.Name = "produceDate";
             produceDate.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            produceDate.Size = new Size(350, 32);
+            produceDate.Size = new Size(400, 43);
             produceDate.TabIndex = 41;
             produceDate.Value = new DateTime(2023, 4, 20, 4, 16, 16, 514);
             // 
@@ -695,9 +686,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 0, 64);
-            label2.Location = new Point(3, 6);
+            label2.Location = new Point(3, 8);
             label2.Name = "label2";
-            label2.Size = new Size(40, 21);
+            label2.Size = new Size(50, 28);
             label2.TabIndex = 21;
             label2.Text = "NSX";
             // 
@@ -712,11 +703,10 @@
             guna2CustomGradientPanel2.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel2.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel2.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel2.Location = new Point(3, 52);
-            guna2CustomGradientPanel2.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel2.Location = new Point(3, 69);
             guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             guna2CustomGradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            guna2CustomGradientPanel2.Size = new Size(479, 34);
+            guna2CustomGradientPanel2.Size = new Size(547, 45);
             guna2CustomGradientPanel2.TabIndex = 51;
             // 
             // comboboxMedicineType
@@ -731,11 +721,10 @@
             comboboxMedicineType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             comboboxMedicineType.ForeColor = Color.FromArgb(68, 88, 112);
             comboboxMedicineType.ItemHeight = 30;
-            comboboxMedicineType.Location = new Point(128, 1);
-            comboboxMedicineType.Margin = new Padding(3, 2, 3, 2);
+            comboboxMedicineType.Location = new Point(146, 1);
             comboboxMedicineType.Name = "comboboxMedicineType";
             comboboxMedicineType.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            comboboxMedicineType.Size = new Size(350, 36);
+            comboboxMedicineType.Size = new Size(399, 36);
             comboboxMedicineType.TabIndex = 23;
             // 
             // guna2CustomGradientPanel1
@@ -749,11 +738,10 @@
             guna2CustomGradientPanel1.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel1.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel1.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel1.Location = new Point(3, 12);
-            guna2CustomGradientPanel1.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel1.Location = new Point(3, 16);
             guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             guna2CustomGradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            guna2CustomGradientPanel1.Size = new Size(479, 34);
+            guna2CustomGradientPanel1.Size = new Size(547, 45);
             guna2CustomGradientPanel1.TabIndex = 50;
             // 
             // medName
@@ -768,14 +756,14 @@
             medName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             medName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             medName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            medName.Location = new Point(128, 1);
-            medName.Margin = new Padding(4);
+            medName.Location = new Point(146, 1);
+            medName.Margin = new Padding(5);
             medName.Name = "medName";
             medName.PasswordChar = '\0';
             medName.PlaceholderText = "";
             medName.SelectedText = "";
             medName.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            medName.Size = new Size(350, 32);
+            medName.Size = new Size(400, 43);
             medName.TabIndex = 39;
             // 
             // label11
@@ -783,9 +771,9 @@
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label11.ForeColor = Color.FromArgb(0, 0, 64);
-            label11.Location = new Point(3, 6);
+            label11.Location = new Point(3, 8);
             label11.Name = "label11";
-            label11.Size = new Size(76, 21);
+            label11.Size = new Size(96, 28);
             label11.TabIndex = 21;
             label11.Text = "Tên thuốc";
             // 
@@ -794,9 +782,9 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.FromArgb(0, 0, 64);
-            label7.Location = new Point(3, 6);
+            label7.Location = new Point(3, 8);
             label7.Name = "label7";
-            label7.Size = new Size(0, 21);
+            label7.Size = new Size(0, 28);
             label7.TabIndex = 21;
             // 
             // btnUploadPic
@@ -813,10 +801,11 @@
             btnUploadPic.FillColor2 = Color.FromArgb(192, 255, 255);
             btnUploadPic.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUploadPic.ForeColor = Color.White;
-            btnUploadPic.Location = new Point(74, 412);
+            btnUploadPic.Location = new Point(85, 549);
+            btnUploadPic.Margin = new Padding(3, 4, 3, 4);
             btnUploadPic.Name = "btnUploadPic";
             btnUploadPic.ShadowDecoration.CustomizableEdges = customizableEdges52;
-            btnUploadPic.Size = new Size(176, 41);
+            btnUploadPic.Size = new Size(201, 55);
             btnUploadPic.TabIndex = 73;
             btnUploadPic.Text = "Tải hình";
             // 
@@ -830,18 +819,19 @@
             // 
             medicinePic.CustomizableEdges = customizableEdges1;
             medicinePic.ImageRotate = 0F;
-            medicinePic.Location = new Point(26, 90);
+            medicinePic.Location = new Point(30, 120);
+            medicinePic.Margin = new Padding(3, 4, 3, 4);
             medicinePic.Name = "medicinePic";
             medicinePic.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            medicinePic.Size = new Size(280, 300);
+            medicinePic.Size = new Size(320, 400);
             medicinePic.TabIndex = 80;
             medicinePic.TabStop = false;
             // 
             // addMedicineForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 730);
+            ClientSize = new Size(971, 973);
             Controls.Add(medicinePic);
             Controls.Add(btnReset);
             Controls.Add(exit);
@@ -850,7 +840,9 @@
             Controls.Add(guna2CustomGradientPanel8);
             Controls.Add(btnUploadPic);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "addMedicineForm";
+            Load += addMedicineForm_Load;
             guna2CustomGradientPanel6.ResumeLayout(false);
             guna2CustomGradientPanel6.PerformLayout();
             guna2CustomGradientPanel7.ResumeLayout(false);

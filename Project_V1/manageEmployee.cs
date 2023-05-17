@@ -59,7 +59,8 @@ namespace GUI
                 _ava = (byte[])dt.Rows[i]["AVATAR"];
 
                 Nhanvien nvien = new Nhanvien(_id, _name, _gender, _birthday, _hometown, _phone, _email, _idpos, _ava);
-                listItem[i] = new empItem(nvien);
+                Taikhoan tkhoan = tkBLL.getAccountById(_id);
+                listItem[i] = new empItem(nvien, tkhoan);
                 panelDisplay.Controls.Add(listItem[i]);
             }
         }
@@ -79,9 +80,31 @@ namespace GUI
 
         }
 
+        //close and open login form
+        private void openLogin(object sender, EventArgs e)
+        {
+            this.Hide();
+            loginForm f = new loginForm();
+            f.FormClosed += (sender, e) => this.Close();
+            f.Show();
+        }
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            addEmpForm f = new addEmpForm();
+            f.ShowDialog();
+        }
 
+        private void logout_Click(object sender, EventArgs e)
+        {
+            openLogin(sender, e);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            panelDisplay.Controls.Clear();
+            loadAll();
         }
     }
 }

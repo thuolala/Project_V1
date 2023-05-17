@@ -82,10 +82,11 @@
             panelLogin.Controls.Add(label3);
             panelLogin.Controls.Add(label2);
             panelLogin.CustomizableEdges = customizableEdges8;
-            panelLogin.Location = new Point(110, 144);
+            panelLogin.Location = new Point(126, 192);
+            panelLogin.Margin = new Padding(3, 4, 3, 4);
             panelLogin.Name = "panelLogin";
             panelLogin.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            panelLogin.Size = new Size(530, 379);
+            panelLogin.Size = new Size(606, 505);
             panelLogin.TabIndex = 0;
             // 
             // errorLogin
@@ -93,9 +94,9 @@
             errorLogin.AutoSize = true;
             errorLogin.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
             errorLogin.ForeColor = Color.Red;
-            errorLogin.Location = new Point(35, 236);
+            errorLogin.Location = new Point(40, 315);
             errorLogin.Name = "errorLogin";
-            errorLogin.Size = new Size(12, 17);
+            errorLogin.Size = new Size(15, 23);
             errorLogin.TabIndex = 23;
             errorLogin.Text = " ";
             // 
@@ -109,13 +110,15 @@
             btnLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             btnLogin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnLogin.FillColor2 = Color.FromArgb(128, 255, 128);
+            btnLogin.FillColor = Color.FromArgb(105, 175, 172);
+            btnLogin.FillColor2 = Color.FromArgb(3, 49, 90);
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(34, 268);
+            btnLogin.Location = new Point(39, 357);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnLogin.Size = new Size(460, 41);
+            btnLogin.Size = new Size(526, 55);
             btnLogin.TabIndex = 22;
             btnLogin.Text = "Đăng nhập";
             btnLogin.Click += btnLogin_Click;
@@ -130,10 +133,11 @@
             panelPass.Controls.Add(password);
             panelPass.Controls.Add(pictureBox3);
             panelPass.CustomizableEdges = customizableEdges4;
-            panelPass.Location = new Point(35, 193);
+            panelPass.Location = new Point(40, 257);
+            panelPass.Margin = new Padding(3, 4, 3, 4);
             panelPass.Name = "panelPass";
             panelPass.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            panelPass.Size = new Size(460, 40);
+            panelPass.Size = new Size(526, 53);
             panelPass.TabIndex = 21;
             // 
             // btnShowPass
@@ -144,11 +148,12 @@
             btnShowPass.ImageOffset = new Point(0, 0);
             btnShowPass.ImageRotate = 0F;
             btnShowPass.ImageSize = new Size(20, 20);
-            btnShowPass.Location = new Point(425, 9);
+            btnShowPass.Location = new Point(486, 12);
+            btnShowPass.Margin = new Padding(3, 4, 3, 4);
             btnShowPass.Name = "btnShowPass";
             btnShowPass.PressedState.ImageSize = new Size(64, 64);
             btnShowPass.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            btnShowPass.Size = new Size(20, 20);
+            btnShowPass.Size = new Size(23, 27);
             btnShowPass.TabIndex = 5;
             btnShowPass.Click += btnShowPass_Click;
             // 
@@ -156,16 +161,18 @@
             // 
             password.BorderStyle = BorderStyle.None;
             password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            password.Location = new Point(42, 9);
+            password.Location = new Point(48, 12);
+            password.Margin = new Padding(3, 4, 3, 4);
             password.Name = "password";
-            password.Size = new Size(377, 22);
+            password.Size = new Size(431, 27);
             password.TabIndex = 4;
             password.UseSystemPasswordChar = true;
             // 
             // pictureBox3
             // 
             pictureBox3.Image = Properties.Resources.key;
-            pictureBox3.Location = new Point(4, 7);
+            pictureBox3.Location = new Point(5, 9);
+            pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(32, 32);
             pictureBox3.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -181,26 +188,29 @@
             panelUname.Controls.Add(username);
             panelUname.Controls.Add(pictureBox2);
             panelUname.CustomizableEdges = customizableEdges6;
-            panelUname.Location = new Point(35, 119);
+            panelUname.Location = new Point(40, 159);
+            panelUname.Margin = new Padding(3, 4, 3, 4);
             panelUname.Name = "panelUname";
             panelUname.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            panelUname.Size = new Size(460, 40);
+            panelUname.Size = new Size(526, 53);
             panelUname.TabIndex = 20;
             // 
             // username
             // 
             username.BorderStyle = BorderStyle.None;
             username.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            username.Location = new Point(42, 9);
+            username.Location = new Point(48, 12);
+            username.Margin = new Padding(3, 4, 3, 4);
             username.Name = "username";
-            username.Size = new Size(414, 22);
+            username.Size = new Size(473, 27);
             username.TabIndex = 3;
             // 
             // pictureBox2
             // 
             pictureBox2.ErrorImage = null;
             pictureBox2.Image = Properties.Resources.user;
-            pictureBox2.Location = new Point(4, 7);
+            pictureBox2.Location = new Point(5, 9);
+            pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(32, 32);
             pictureBox2.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -213,9 +223,9 @@
             linkLabelForgotPass.Cursor = Cursors.Hand;
             linkLabelForgotPass.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabelForgotPass.LinkColor = Color.LimeGreen;
-            linkLabelForgotPass.Location = new Point(393, 247);
+            linkLabelForgotPass.Location = new Point(449, 329);
             linkLabelForgotPass.Name = "linkLabelForgotPass";
-            linkLabelForgotPass.Size = new Size(102, 17);
+            linkLabelForgotPass.Size = new Size(137, 23);
             linkLabelForgotPass.TabIndex = 19;
             linkLabelForgotPass.TabStop = true;
             linkLabelForgotPass.Text = "Quên mật khẩu?";
@@ -226,9 +236,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label4.ForeColor = Color.FromArgb(0, 0, 64);
-            label4.Location = new Point(35, 169);
+            label4.Location = new Point(40, 225);
             label4.Name = "label4";
-            label4.Size = new Size(75, 21);
+            label4.Size = new Size(94, 28);
             label4.TabIndex = 17;
             label4.Text = "Mật khẩu";
             // 
@@ -237,9 +247,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label3.ForeColor = Color.FromArgb(0, 0, 64);
-            label3.Location = new Point(35, 95);
+            label3.Location = new Point(40, 127);
             label3.Name = "label3";
-            label3.Size = new Size(111, 21);
+            label3.Size = new Size(140, 28);
             label3.TabIndex = 16;
             label3.Text = "Tên đăng nhập";
             // 
@@ -248,9 +258,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.FromArgb(0, 0, 64);
-            label2.Location = new Point(123, 31);
+            label2.Location = new Point(141, 41);
             label2.Name = "label2";
-            label2.Size = new Size(283, 32);
+            label2.Size = new Size(349, 41);
             label2.TabIndex = 15;
             label2.Text = "Đăng nhập vào tài khoản";
             // 
@@ -258,7 +268,8 @@
             // 
             mini.BackColor = Color.Transparent;
             mini.Image = Properties.Resources.mini;
-            mini.Location = new Point(693, 12);
+            mini.Location = new Point(792, 16);
+            mini.Margin = new Padding(3, 4, 3, 4);
             mini.Name = "mini";
             mini.Size = new Size(20, 20);
             mini.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -270,7 +281,8 @@
             // 
             exit.BackColor = Color.Transparent;
             exit.Image = Properties.Resources.exit;
-            exit.Location = new Point(719, 12);
+            exit.Location = new Point(822, 16);
+            exit.Margin = new Padding(3, 4, 3, 4);
             exit.Name = "exit";
             exit.Size = new Size(20, 20);
             exit.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -282,27 +294,29 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.pmc_logo;
-            pictureBox1.Location = new Point(12, 30);
+            pictureBox1.Location = new Point(14, 40);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(102, 39);
+            pictureBox1.Size = new Size(117, 52);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
             // loginForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg__1_;
-            ClientSize = new Size(750, 630);
+            ClientSize = new Size(857, 840);
             Controls.Add(mini);
             Controls.Add(exit);
             Controls.Add(pictureBox1);
             Controls.Add(panelLogin);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "loginForm";
             Text = "Pharmacity";
-            Load += test_Load;
+            Load += loginForm_Load;
             MouseDown += loginF_MouseDown;
             MouseMove += loginF_MouseMove;
             MouseUp += loginF_MouseUp;

@@ -43,26 +43,24 @@ namespace GUI
             mouse = false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void welcomeForm_Load(object sender, EventArgs e)
         {
 
         }
 
+        //exit 
         private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        //minimize
         private void mini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
+        //timer
         private void timer1_Tick(object sender, EventArgs e)
         {
             panel2.Width += 5;
@@ -73,11 +71,6 @@ namespace GUI
                 f.Show();
                 this.Hide();
             }
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -72,7 +72,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // mini
             // 
@@ -120,7 +119,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(125, 19);
             panel2.TabIndex = 9;
-            panel2.Paint += panel2_Paint;
             // 
             // label3
             // 

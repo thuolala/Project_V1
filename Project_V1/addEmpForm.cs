@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
 using System.Drawing.Imaging;
+using System.Drawing.Drawing2D;
 
 namespace GUI
 {
@@ -35,15 +36,44 @@ namespace GUI
             this.Close();
         }
 
+        //resize image to 
+        public Image ResizeImageByPercentage(Image image, int percentage)
+        {
+            int newWidth = (int)(image.Width * percentage / 100.0);
+            int newHeight = (int)(image.Height * percentage / 100.0);
+
+            var destRect = new Rectangle(0, 0, newWidth, newHeight);
+            var destImage = new Bitmap(newWidth, newHeight);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+
+            MessageBox.Show(destImage.Width.ToString());
+            return destImage;
+        }
+
         private Image CloneImage(string path)
         {
             Image result;
             using (Bitmap original = new Bitmap(path))
             {
                 result = (Bitmap)original.Clone();
-
             };
-            return result;
+            return ResizeImageByPercentage(result, 75);
         }
 
         private byte[] ImageToByteArray(PictureBox pictureBox)
@@ -51,8 +81,8 @@ namespace GUI
             MemoryStream memoryStream = new MemoryStream();
             //pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
             Image img = pictureBox.Image;
-            MessageBox.Show(img.RawFormat.ToString());
-            img.Save(memoryStream, img.RawFormat);
+            //MessageBox.Show(img.RawFormat.ToString());
+            img.Save(memoryStream, ImageFormat.Png);
             return memoryStream.ToArray();
         }
 
@@ -68,11 +98,6 @@ namespace GUI
                 avatar.ImageLocation = filePath;
                 img = ImageToByteArray(avatar);
             }
-        }
-
-        private void btnUploadPic_Click(object sender, EventArgs e)
-        {
-            OpenImage();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -111,6 +136,16 @@ namespace GUI
                 MessageBox.Show("Thêm thành công");
                 this.Close();
             }
+        }
+
+        private void addEmpForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void avatar_Click(object sender, EventArgs e)
+        {
+            OpenImage();
         }
     }
 }
