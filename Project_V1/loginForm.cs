@@ -122,33 +122,49 @@ namespace GUI
             tk = taikhoanBLL.getAccountByUname(username.Text);
             nv = nhanvienBLL.getNVById(tk.Id);
             int per = tk.Permission;
-
-            if (username.Text == "" || tk.Userame.Equals(username.Text) == false)
+            if (username.Text == "" && string.IsNullOrEmpty(password.Text))
             {
-                errorLogin.Text = "Tên đăng nhập sai!";
-            }
-            else if (string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == false)
-            {
-                errorLogin.Text = "Mật khẩu sai!";
+                errorLogin.Text = "Tên đăng nhập và mật khẩu không được trống!";
+                panelUname.BorderColor = Color.Red;
+                panelPass.BorderColor = Color.Red;
             }
             else
             {
-                if (per == 2)
+                panelUname.BorderColor = Color.FromArgb(94, 148, 255);
+                panelPass.BorderColor = Color.FromArgb(94, 148, 255);
+
+                if ((username.Text == "" || tk.Userame.Equals(username.Text) == false) && ((!string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == true)))
                 {
-                    openAdmin(sender, e, nv, tk);
+                    errorLogin.Text = "Tên đăng nhập sai!";
+                    panelUname.BorderColor = Color.Red;
+                    panelPass.BorderColor = Color.FromArgb(94, 148, 255);
                 }
-                if (per == 1)
+                else if ((string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == false) && (username.Text != "" || tk.Userame.Equals(username.Text) == true))
                 {
-                    if (nv.Idpos.Equals("BH"))
+                    errorLogin.Text = "Mật khẩu sai!";
+                    panelUname.BorderColor = Color.FromArgb(94, 148, 255);
+                    panelPass.BorderColor = Color.Red;
+                }
+                else
+                {
+                    if (per == 2)
                     {
-                        openNVBH(sender, e, nv, tk);
+                        openAdmin(sender, e, nv, tk);
                     }
-                    if (nv.Idpos.Equals("KHO"))
+                    if (per == 1)
                     {
-                        openNVKho(sender, e, nv, tk);
+                        if (nv.Idpos.Equals("BH"))
+                        {
+                            openNVBH(sender, e, nv, tk);
+                        }
+                        if (nv.Idpos.Equals("KHO"))
+                        {
+                            openNVKho(sender, e, nv, tk);
+                        }
                     }
                 }
             }
+
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -185,14 +201,6 @@ namespace GUI
         private void loginForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void btnRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            registerForm f = new registerForm();
-            f.FormClosed += (sender, e) => this.Close();
-            f.Show();
         }
     }
 }

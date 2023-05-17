@@ -157,7 +157,7 @@
             btnEmployee.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnEmployee.FillColor = Color.Transparent;
             btnEmployee.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnEmployee.ForeColor = Color.FromArgb(182, 228, 226);
+            btnEmployee.ForeColor = Color.White;
             btnEmployee.Image = Properties.Resources.teamwork;
             btnEmployee.ImageAlign = HorizontalAlignment.Left;
             btnEmployee.ImageOffset = new Point(4, 0);
@@ -182,7 +182,7 @@
             btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnCustomer.FillColor = Color.Transparent;
             btnCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnCustomer.ForeColor = Color.FromArgb(182, 228, 226);
+            btnCustomer.ForeColor = Color.White;
             btnCustomer.Image = Properties.Resources.customer_review;
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
             btnCustomer.ImageOffset = new Point(4, 0);
@@ -207,7 +207,7 @@
             btnMoney.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnMoney.FillColor = Color.Transparent;
             btnMoney.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnMoney.ForeColor = Color.FromArgb(182, 228, 226);
+            btnMoney.ForeColor = Color.White;
             btnMoney.Image = Properties.Resources.bar_chart;
             btnMoney.ImageAlign = HorizontalAlignment.Left;
             btnMoney.ImageOffset = new Point(4, 0);
@@ -231,7 +231,7 @@
             btnInfo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnInfo.FillColor = Color.Transparent;
             btnInfo.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnInfo.ForeColor = Color.FromArgb(182, 228, 226);
+            btnInfo.ForeColor = Color.White;
             btnInfo.Image = Properties.Resources.pencil;
             btnInfo.ImageAlign = HorizontalAlignment.Left;
             btnInfo.ImageOffset = new Point(4, 0);
@@ -305,7 +305,7 @@
             btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnLogout.FillColor = Color.Transparent;
             btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLogout.ForeColor = Color.FromArgb(182, 228, 226);
+            btnLogout.ForeColor = Color.White;
             btnLogout.Image = Properties.Resources.logout5;
             btnLogout.ImageAlign = HorizontalAlignment.Left;
             btnLogout.ImageOffset = new Point(4, 0);
@@ -330,7 +330,7 @@
             btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDashboard.FillColor = Color.Transparent;
             btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDashboard.ForeColor = Color.FromArgb(182, 228, 226);
+            btnDashboard.ForeColor = Color.White;
             btnDashboard.Image = Properties.Resources.dashboard;
             btnDashboard.ImageAlign = HorizontalAlignment.Left;
             btnDashboard.ImageOffset = new Point(4, 0);

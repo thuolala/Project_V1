@@ -120,7 +120,7 @@
             btnRefresh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnRefresh.BackColor = Color.Transparent;
             btnRefresh.Image = Properties.Resources.refresh_button1;
-            btnRefresh.Location = new Point(860, 27);
+            btnRefresh.Location = new Point(860, 30);
             btnRefresh.Margin = new Padding(3, 4, 3, 4);
             btnRefresh.Name = "btnRefresh";
             btnRefresh.Size = new Size(32, 32);
@@ -140,7 +140,7 @@
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAdd.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             btnAdd.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAdd.FillColor = Color.FromArgb(182, 228, 226);
+            btnAdd.FillColor = Color.FromArgb(105, 175, 172);
             btnAdd.FillColor2 = Color.FromArgb(3, 49, 90);
             btnAdd.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdd.ForeColor = Color.White;

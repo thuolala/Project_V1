@@ -57,7 +57,6 @@
             mini = new PictureBox();
             exit = new PictureBox();
             pictureBox1 = new PictureBox();
-            btnRegister = new LinkLabel();
             panelLogin.SuspendLayout();
             panelPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -75,7 +74,6 @@
             panelLogin.BorderColor = Color.FromArgb(94, 148, 255);
             panelLogin.BorderRadius = 10;
             panelLogin.BorderThickness = 1;
-            panelLogin.Controls.Add(btnRegister);
             panelLogin.Controls.Add(errorLogin);
             panelLogin.Controls.Add(btnLogin);
             panelLogin.Controls.Add(panelPass);
@@ -89,7 +87,7 @@
             panelLogin.Margin = new Padding(3, 4, 3, 4);
             panelLogin.Name = "panelLogin";
             panelLogin.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            panelLogin.Size = new Size(606, 505);
+            panelLogin.Size = new Size(606, 474);
             panelLogin.TabIndex = 0;
             // 
             // errorLogin
@@ -117,7 +115,7 @@
             btnLogin.FillColor2 = Color.FromArgb(3, 49, 90);
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(40, 374);
+            btnLogin.Location = new Point(40, 370);
             btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -226,7 +224,7 @@
             linkLabelForgotPass.Cursor = Cursors.Hand;
             linkLabelForgotPass.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabelForgotPass.LinkColor = Color.LimeGreen;
-            linkLabelForgotPass.Location = new Point(429, 329);
+            linkLabelForgotPass.Location = new Point(429, 315);
             linkLabelForgotPass.Name = "linkLabelForgotPass";
             linkLabelForgotPass.Size = new Size(137, 23);
             linkLabelForgotPass.TabIndex = 19;
@@ -305,20 +303,6 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // btnRegister
-            // 
-            btnRegister.AutoSize = true;
-            btnRegister.Cursor = Cursors.Hand;
-            btnRegister.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegister.LinkColor = Color.FromArgb(3, 49, 90);
-            btnRegister.Location = new Point(40, 329);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(114, 23);
-            btnRegister.TabIndex = 24;
-            btnRegister.TabStop = true;
-            btnRegister.Text = "Đăng ký ngay";
-            btnRegister.LinkClicked += btnRegister_LinkClicked;
-            // 
             // loginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -374,6 +358,5 @@
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2ImageButton btnShowPass;
         private Label errorLogin;
-        private LinkLabel btnRegister;
     }
 }

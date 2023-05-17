@@ -66,8 +66,141 @@ namespace GUI
             f.Show();
         }
 
+        private void adminForm_Load(object sender, EventArgs e)
+        {
+            displayName.Text = nv.Name;
+        }
+
+        //change color of button 
+        private void changeColor(object sender, EventArgs e)
+        {
+            if (sender == btnDashboard)
+            {
+                btnDashboard.BackColor = SystemColors.Control;
+                btnDashboard.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnEmployee)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnEmployee.BackColor = SystemColors.Control;
+                btnEmployee.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnCustomer)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = SystemColors.Control;
+                btnCustomer.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnMoney)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMoney.BackColor = SystemColors.Control;
+                btnMoney.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnInfo)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = SystemColors.Control;
+                btnInfo.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnLogout)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = SystemColors.Control;
+                btnLogout.ForeColor = Color.FromArgb(3, 49, 90);
+            }
+        }
+
         private void btnEmployee_Click(object sender, EventArgs e)
         {
+            btnEmployee.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
             panelShow.Controls.Clear();
             manageEmployee manageEmp = new manageEmployee();
             manageEmp.TopLevel = false;
@@ -77,13 +210,11 @@ namespace GUI
             manageEmp.BringToFront();
         }
 
-        private void adminForm_Load(object sender, EventArgs e)
-        {
-            displayName.Text = nv.Name;
-        }
-
         private void btnCustomer_Click(object sender, EventArgs e)
         {
+            btnCustomer.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
             panelShow.Controls.Clear();
             manageCusForm manageCus = new manageCusForm();
             manageCus.TopLevel = false;
@@ -95,6 +226,9 @@ namespace GUI
 
         private void btnInfo_Click(object sender, EventArgs e)
         {
+            btnInfo.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
             panelShow.Controls.Clear();
             selfEditForm info = new selfEditForm(nv, tk);
             info.TopLevel = false;
@@ -105,11 +239,15 @@ namespace GUI
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            btnDashboard.BackColor = SystemColors.Control;
+            changeColor(sender, e);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            btnLogout.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
             openLogin(sender, e);
         }
 
