@@ -44,7 +44,6 @@
             panelTop = new Panel();
             btnRefresh = new PictureBox();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
-            logout = new PictureBox();
             panelSearch = new Panel();
             btnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
             search = new TextBox();
@@ -52,7 +51,6 @@
             panelShow.SuspendLayout();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)logout).BeginInit();
             panelSearch.SuspendLayout();
             SuspendLayout();
             // 
@@ -109,7 +107,6 @@
             panelTop.BackColor = Color.FromArgb(80, 149, 146);
             panelTop.Controls.Add(btnRefresh);
             panelTop.Controls.Add(btnAdd);
-            panelTop.Controls.Add(logout);
             panelTop.Controls.Add(panelSearch);
             panelTop.Dock = DockStyle.Top;
             panelTop.Location = new Point(0, 0);
@@ -117,7 +114,6 @@
             panelTop.Name = "panelTop";
             panelTop.Size = new Size(1112, 89);
             panelTop.TabIndex = 0;
-            panelTop.Paint += panelTop_Paint;
             // 
             // btnRefresh
             // 
@@ -157,29 +153,16 @@
             btnAdd.Text = "Thêm nhân viên";
             btnAdd.Click += btnAdd_Click;
             // 
-            // logout
-            // 
-            logout.BackColor = Color.Transparent;
-            logout.Image = Properties.Resources.logout4;
-            logout.Location = new Point(21, 27);
-            logout.Margin = new Padding(3, 4, 3, 4);
-            logout.Name = "logout";
-            logout.Size = new Size(32, 32);
-            logout.SizeMode = PictureBoxSizeMode.AutoSize;
-            logout.TabIndex = 28;
-            logout.TabStop = false;
-            logout.Click += logout_Click;
-            // 
             // panelSearch
             // 
             panelSearch.BackColor = Color.Azure;
             panelSearch.Controls.Add(btnSearch);
             panelSearch.Controls.Add(search);
-            panelSearch.Location = new Point(88, 16);
+            panelSearch.Location = new Point(12, 19);
             panelSearch.Margin = new Padding(3, 4, 3, 4);
             panelSearch.Name = "panelSearch";
             panelSearch.RightToLeft = RightToLeft.No;
-            panelSearch.Size = new Size(374, 52);
+            panelSearch.Size = new Size(406, 52);
             panelSearch.TabIndex = 27;
             // 
             // btnSearch
@@ -190,7 +173,7 @@
             btnSearch.ImageOffset = new Point(0, 0);
             btnSearch.ImageRotate = 0F;
             btnSearch.ImageSize = new Size(20, 20);
-            btnSearch.Location = new Point(339, 11);
+            btnSearch.Location = new Point(371, 11);
             btnSearch.Margin = new Padding(3, 4, 3, 4);
             btnSearch.Name = "btnSearch";
             btnSearch.PressedState.Image = Properties.Resources.search;
@@ -209,7 +192,7 @@
             search.Margin = new Padding(3, 4, 3, 4);
             search.Name = "search";
             search.PlaceholderText = "Tìm kiếm theo tên/ID";
-            search.Size = new Size(328, 27);
+            search.Size = new Size(349, 27);
             search.TabIndex = 11;
             // 
             // manageEmployee
@@ -227,7 +210,6 @@
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
-            ((System.ComponentModel.ISupportInitialize)logout).EndInit();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
             ResumeLayout(false);
@@ -240,7 +222,6 @@
         private Panel panelSearch;
         private Guna.UI2.WinForms.Guna2ImageButton btnSearch;
         private TextBox search;
-        private PictureBox logout;
         private Guna.UI2.WinForms.Guna2Panel panelShow;
         private Guna.UI2.WinForms.Guna2Panel panelPos;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;

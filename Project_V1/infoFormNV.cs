@@ -30,8 +30,19 @@ namespace GUI
             InitializeComponent();
         }
 
+        //load combobox pos 
+        private void loadComboBox()
+        {
+            DataTable dt = vtBLL.getAllVitri();
+            comboboxPosition.DataSource = dt;
+            comboboxPosition.DisplayMember = dt.Columns["TEN"].ToString();
+            comboboxPosition.ValueMember = dt.Columns["ID"].ToString();
+        }
+
         private void infoForm_Load(object sender, EventArgs e)
         {
+            loadComboBox();
+
             labelID.Text = nv.Id;
             labelPos.Text = vtBLL.getVTName(nv.Idpos);
             fullname.Text = nv.Name;
@@ -47,6 +58,7 @@ namespace GUI
             hometown.Text = nv.Hometown;
             phone.Text = nv.Phone;
             email.Text = nv.Email;
+            comboboxPosition.SelectedValue = nv.Idpos;
             using (MemoryStream stream = new MemoryStream(nv.Avatar))
             {
                 Image image = Image.FromStream(stream);
@@ -118,7 +130,7 @@ namespace GUI
             string nvHome = hometown.Text;
             string nvPhone = phone.Text;
             string nvEmail = email.Text;
-            string nvPos = "BH";
+            string nvPos = comboboxPosition.SelectedValue.ToString();
             byte[] nvAva = ImageToByteArray(avatar);
 
             //set nhan vien

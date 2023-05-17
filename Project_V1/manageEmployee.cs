@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -65,21 +66,6 @@ namespace GUI
             }
         }
 
-        private void manageEmployee_Load(object sender, EventArgs e)
-        {
-            loadAll();
-        }
-
-        private void panelTop_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panelDisplay_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         //close and open login form
         private void openLogin(object sender, EventArgs e)
         {
@@ -88,7 +74,6 @@ namespace GUI
             f.FormClosed += (sender, e) => this.Close();
             f.Show();
         }
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -105,6 +90,37 @@ namespace GUI
         {
             panelDisplay.Controls.Clear();
             loadAll();
+        }
+
+        //search event 
+        //Get data for search box by Name 
+        private List<String> getSearchSource()
+        {
+            DataTable dt = nvBLL.getAllName();
+            dt.Merge(nvBLL.getAllId());
+            List<String> searchSource = new List<String>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                searchSource.Add(dt.Rows[i].ToString());
+            }
+            return searchSource;
+        }
+
+        //parse autosource  
+        private void searchAction()
+        {
+            AutoCompleteStringCollection searchSource = new AutoCompleteStringCollection();
+            searchSource.AddRange(getSearchSource().ToArray());
+
+            search.AutoCompleteCustomSource = searchSource;
+            search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void manageEmployee_Load(object sender, EventArgs e)
+        {
+            loadAll();
+            searchAction();
         }
     }
 }

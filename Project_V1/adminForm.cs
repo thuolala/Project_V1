@@ -66,11 +66,6 @@ namespace GUI
             f.Show();
         }
 
-        private void logout_Click(object sender, EventArgs e)
-        {
-            openLogin(sender, e);
-        }
-
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             panelShow.Controls.Clear();
@@ -111,6 +106,11 @@ namespace GUI
         private void btnDashboard_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            openLogin(sender, e);
         }
     }
 }

@@ -117,6 +117,7 @@
             avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             label9 = new Label();
+            labelID = new Label();
             guna2CustomGradientPanel3.SuspendLayout();
             guna2CustomGradientPanel4.SuspendLayout();
             guna2CustomGradientPanel9.SuspendLayout();
@@ -788,11 +789,23 @@
             label9.TabIndex = 71;
             label9.Text = "Thêm nhân viên";
             // 
+            // labelID
+            // 
+            labelID.AutoSize = true;
+            labelID.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelID.ForeColor = Color.DarkGray;
+            labelID.Location = new Point(75, 259);
+            labelID.Name = "labelID";
+            labelID.Size = new Size(54, 31);
+            labelID.TabIndex = 72;
+            labelID.Text = "(ID)";
+            // 
             // addEmpForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(699, 980);
+            Controls.Add(labelID);
             Controls.Add(label9);
             Controls.Add(guna2CustomGradientPanel9);
             Controls.Add(btnSave);
@@ -876,5 +889,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnReset;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
         private Label label9;
+        private Label labelID;
     }
 }

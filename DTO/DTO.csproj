@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Handle.cs" />
     <Compile Include="Khachhang.cs" />
     <Compile Include="Nhanvien.cs" />
     <Compile Include="Nhomthuoc.cs" />

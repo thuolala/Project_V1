@@ -57,6 +57,70 @@ namespace DAL
             return nv;
         }
 
+        //get nv by any name of id
+        public DataTable getAllNVByNameId(string ID, string sname)
+        {
+            Nhanvien nv = new Nhanvien();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Nhanvien WHERE IDNV LIKE '%" + ID + "%' OR HOTEN LIKE '%" + sname + "%'", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //get nv name
+        public DataTable getAllName()
+        {
+            Nhanvien nv = new Nhanvien();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT HOTEN FROM Nhanvien", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //get nv id
+        public DataTable getAllId()
+        {
+            Nhanvien nv = new Nhanvien();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT IDNV FROM Nhanvien", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
+        //get auto id 
+        public string getAutoID()
+        {
+            string idnv = "";
+            try
+            {
+                conn.Open();
+
+                //Get id
+                SqlCommand cmd = new SqlCommand("Return_IDNV", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    idnv = dt.Rows[0][0].ToString();
+                }
+                da.Dispose();
+            }
+            catch (Exception e)
+            {
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return idnv;
+        }
+
         //them nv 
         public bool addNV(Nhanvien nv)
         {

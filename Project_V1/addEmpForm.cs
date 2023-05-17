@@ -25,6 +25,8 @@ namespace GUI
         Nhanvien nv;
         TaikhoanBLL tkBLL = new TaikhoanBLL();
         Taikhoan tk;
+        VitriBLL vtBLL = new VitriBLL();
+        Vitri vt;
 
         public addEmpForm()
         {
@@ -118,7 +120,7 @@ namespace GUI
             string nvHome = hometown.Text;
             string nvPhone = phone.Text;
             string nvEmail = email.Text;
-            string nvPos = "BH";
+            string nvPos = comboboxPosition.SelectedValue.ToString();
             byte[] nvAva = ImageToByteArray(avatar);
 
             //set nhan vien
@@ -138,9 +140,26 @@ namespace GUI
             }
         }
 
+        //Get auto id 
+        private string getID()
+        {
+            string idnv = nvBLL.getAutoID();
+            return idnv;
+        }
+
+        //load combobox pos 
+        private void loadComboBox()
+        {
+            DataTable dt = vtBLL.getAllVitri();
+            comboboxPosition.DataSource = dt;
+            comboboxPosition.DisplayMember = dt.Columns["TEN"].ToString();
+            comboboxPosition.ValueMember = dt.Columns["ID"].ToString();
+        }
+
         private void addEmpForm_Load(object sender, EventArgs e)
         {
-
+            labelID.Text = getID();
+            loadComboBox();
         }
 
         private void avatar_Click(object sender, EventArgs e)

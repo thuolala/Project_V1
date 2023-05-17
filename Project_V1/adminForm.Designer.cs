@@ -42,6 +42,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -61,6 +63,7 @@
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            btnLogout = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -267,6 +270,7 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(3, 49, 90);
+            panelMenu.Controls.Add(btnLogout);
             panelMenu.Controls.Add(btnDashboard);
             panelMenu.Controls.Add(guna2Separator1);
             panelMenu.Controls.Add(guna2CirclePictureBox1);
@@ -278,14 +282,14 @@
             panelMenu.Controls.Add(displayName);
             panelMenu.Controls.Add(btnMenu);
             panelMenu.Controls.Add(pictureBox4);
-            panelMenu.CustomizableEdges = customizableEdges16;
+            panelMenu.CustomizableEdges = customizableEdges18;
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.MaximumSize = new Size(270, 0);
             panelMenu.MinimumSize = new Size(53, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges19;
             panelMenu.Size = new Size(270, 845);
             panelMenu.TabIndex = 0;
             // 
@@ -293,7 +297,7 @@
             // 
             btnDashboard.Animated = true;
             btnDashboard.BackColor = Color.Transparent;
-            btnDashboard.CustomizableEdges = customizableEdges14;
+            btnDashboard.CustomizableEdges = customizableEdges16;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -307,12 +311,37 @@
             btnDashboard.Location = new Point(3, 201);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.RightToLeft = RightToLeft.No;
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges17;
             btnDashboard.Size = new Size(270, 56);
             btnDashboard.TabIndex = 14;
             btnDashboard.Text = "  Dashboard";
             btnDashboard.TextAlign = HorizontalAlignment.Left;
             btnDashboard.Click += btnDashboard_Click;
+            // 
+            // btnLogout
+            // 
+            btnLogout.Animated = true;
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.CustomizableEdges = customizableEdges14;
+            btnLogout.DisabledState.BorderColor = Color.DarkGray;
+            btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnLogout.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnLogout.FillColor = Color.Transparent;
+            btnLogout.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogout.ForeColor = Color.FromArgb(182, 228, 226);
+            btnLogout.Image = Properties.Resources.logout5;
+            btnLogout.ImageAlign = HorizontalAlignment.Left;
+            btnLogout.ImageOffset = new Point(4, 0);
+            btnLogout.Location = new Point(0, 511);
+            btnLogout.Name = "btnLogout";
+            btnLogout.RightToLeft = RightToLeft.No;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btnLogout.Size = new Size(270, 56);
+            btnLogout.TabIndex = 19;
+            btnLogout.Text = "  Đăng xuất";
+            btnLogout.TextAlign = HorizontalAlignment.Left;
+            btnLogout.Click += btnLogout_Click;
             // 
             // adminForm
             // 
@@ -349,5 +378,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2Panel panelMenu;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }

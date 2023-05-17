@@ -20,7 +20,7 @@ namespace BLL
             return nvDAL.getAllNV();
         }
 
-        //get all nv 
+        //get all nv by pos
         public DataTable getNVByPos(string idPos)
         {
             return nvDAL.getNVByPos(idPos);
@@ -30,6 +30,12 @@ namespace BLL
         public Nhanvien getNVById(string nID)
         {
             return nvDAL.getNVById(nID);
+        }
+
+        //get auto id 
+        public string getAutoID()
+        {
+            return nvDAL.getAutoID();
         }
 
         //them nv 
@@ -56,6 +62,24 @@ namespace BLL
             Nhanvien nv = new Nhanvien();
             nv = this.getNVById(id);
             return nv.Idpos;
+        }
+
+        //get nv by any name of id
+        public DataTable getAllNVByNameId(string ID, string sname)
+        {
+            return nvDAL.getAllNVByNameId(ID, sname);   
+        }
+
+        //get nv name
+        public DataTable getAllName()
+        {
+            return nvDAL.getAllName();
+        }
+
+        //get nv id
+        public DataTable getAllId()
+        {
+            return nvDAL.getAllId();
         }
     }
 }
