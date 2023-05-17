@@ -37,6 +37,7 @@ namespace GUI
         NhanvienBLL nhanvienBLL = new NhanvienBLL();
         Taikhoan tk = new Taikhoan();
         Nhanvien nv = new Nhanvien();
+        Handle handle = new Handle();
 
         //show password
         private void btnShowPass_Click(object sender, EventArgs e)
@@ -118,8 +119,8 @@ namespace GUI
         private void checkUser(object sender, EventArgs e)
         {
             //Select
-            Taikhoan tk = taikhoanBLL.getAccountByUname(username.Text);
-            Nhanvien nv = nhanvienBLL.getNVById(tk.Id);
+            tk = taikhoanBLL.getAccountByUname(username.Text);
+            nv = nhanvienBLL.getNVById(tk.Id);
             int per = tk.Permission;
 
             if (username.Text == "" || tk.Userame.Equals(username.Text) == false)
@@ -152,7 +153,6 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
             checkUser(sender, e);
         }
 
@@ -169,61 +169,30 @@ namespace GUI
         }
 
         //send mail forgot pass
-        private void SendEmail(MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
-        {
-            //cau hinh gui mail 
-            string resetPass = "ajsiHADJKi";
-            string subject = "Đặt lại mật khẩu";
-            string body = "Mật khẩu mới của bạn là: " + resetPass + "\n Vui lòng không chia sẻ mật khẩu cho bất kỳ ai vì lý do bảo mật.";
-
-            SmtpClient mailClient = new SmtpClient();
-            mailClient.Host = "smtp.gmail.com";
-            System.Net.NetworkCredential ntcd = new NetworkCredential();
-            ntcd.UserName = "phamthushame2002@gmail.com";
-            ntcd.Password = "fygytoplntkxpznu";
-            mailClient.Credentials = ntcd;
-            mailClient.EnableSsl = true;
-            mailClient.Port = 587;
-
-            MailMessage msgMail;
-            msgMail = new MailMessage();
-            msgMail.From = from;
-            msgMail.To.Add(to);
-            foreach (MailAddress addr in cc)
-            {
-                msgMail.CC.Add(addr);
-            }
-            if (bcc != null)
-            {
-                foreach (MailAddress addr in bcc)
-                {
-                    msgMail.Bcc.Add(addr);
-                }
-            }
-            msgMail.Subject = subject;
-            msgMail.Body = body;
-            msgMail.IsBodyHtml = true;
-            mailClient.Send(msgMail);
-            msgMail.Dispose();
-
-            MessageBox.Show("Your Email Has Send!");
-        }
-
         private void linkLabelForgotPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Taikhoan test = taikhoanBLL.getAccountByUname(username.Text);
             string email = nhanvienBLL.getNVById(test.Id).Email;
 
-            MailAddress from = new MailAddress("phamthushame2002@gmail.com", "Pharmacity");
+            MailAddress from = new MailAddress("extractteam123@gmail.com", "Pharmacity");
             MailAddress to = new MailAddress(email, nhanvienBLL.getNVById(test.Id).Name);
             List<MailAddress> cc = new List<MailAddress>();
             cc.Add(new MailAddress("phamthushame2002@gmail.com", "Pharmacity"));
-            SendEmail(from, to, cc);
+            handle.SendEmail(from, to, cc);
+            MessageBox.Show("Mail đã được gửi!");
         }
 
         private void loginForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            registerForm f = new registerForm();
+            f.FormClosed += (sender, e) => this.Close();
+            f.Show();
         }
     }
 }

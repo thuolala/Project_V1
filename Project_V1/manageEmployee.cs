@@ -96,12 +96,13 @@ namespace GUI
         //Get data for search box by Name 
         private List<String> getSearchSource()
         {
-            DataTable dt = nvBLL.getAllName();
-            dt.Merge(nvBLL.getAllId());
+            DataTable dt1 = nvBLL.getAllName();
+            DataTable dt2 = nvBLL.getAllId();
             List<String> searchSource = new List<String>();
-            for (int i = 0; i < dt.Rows.Count; i++)
+            for (int i = 0; i < dt1.Rows.Count; i++)
             {
-                searchSource.Add(dt.Rows[i].ToString());
+                searchSource.Add(dt1.Rows[i]["HOTEN"].ToString());
+                searchSource.Add(dt2.Rows[i]["IDNV"].ToString());
             }
             return searchSource;
         }

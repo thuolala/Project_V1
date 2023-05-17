@@ -112,5 +112,10 @@ namespace GUI
         {
             openLogin(sender, e);
         }
+
+        private void adminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

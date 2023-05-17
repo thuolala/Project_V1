@@ -102,6 +102,19 @@ namespace GUI
             }
         }
 
+        //get per
+        private int getPer()
+        {
+            if (comboboxPosition.SelectedValue.Equals("AD"))
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             string nvName = fullname.Text;
@@ -128,7 +141,7 @@ namespace GUI
 
             string uname = username.Text;
             string pass = password.Text;
-            int per = 1;
+            int per = getPer();
 
             //set taikhoan
             tk = new Taikhoan(uname, pass, per);

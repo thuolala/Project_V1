@@ -89,7 +89,7 @@
             panelDisplay.Margin = new Padding(3, 4, 3, 4);
             panelDisplay.Name = "panelDisplay";
             panelDisplay.Size = new Size(1112, 687);
-            panelDisplay.TabIndex = 1;
+            panelDisplay.TabIndex = 0;
             // 
             // panelPos
             // 

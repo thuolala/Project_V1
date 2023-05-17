@@ -122,7 +122,7 @@
             Controls.Add(empPos);
             Controls.Add(empName);
             Controls.Add(empPic);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(10, 5, 10, 5);
             Name = "empItem";
             Size = new Size(424, 119);
             Load += empItem_Load;

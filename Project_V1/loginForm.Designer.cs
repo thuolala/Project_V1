@@ -38,6 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(loginForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelLogin = new Guna.UI2.WinForms.Guna2Panel();
             errorLogin = new Label();
@@ -56,6 +57,7 @@
             mini = new PictureBox();
             exit = new PictureBox();
             pictureBox1 = new PictureBox();
+            btnRegister = new LinkLabel();
             panelLogin.SuspendLayout();
             panelPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -73,6 +75,7 @@
             panelLogin.BorderColor = Color.FromArgb(94, 148, 255);
             panelLogin.BorderRadius = 10;
             panelLogin.BorderThickness = 1;
+            panelLogin.Controls.Add(btnRegister);
             panelLogin.Controls.Add(errorLogin);
             panelLogin.Controls.Add(btnLogin);
             panelLogin.Controls.Add(panelPass);
@@ -82,7 +85,7 @@
             panelLogin.Controls.Add(label3);
             panelLogin.Controls.Add(label2);
             panelLogin.CustomizableEdges = customizableEdges8;
-            panelLogin.Location = new Point(126, 192);
+            panelLogin.Location = new Point(125, 66);
             panelLogin.Margin = new Padding(3, 4, 3, 4);
             panelLogin.Name = "panelLogin";
             panelLogin.ShadowDecoration.CustomizableEdges = customizableEdges9;
@@ -114,7 +117,7 @@
             btnLogin.FillColor2 = Color.FromArgb(3, 49, 90);
             btnLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(39, 357);
+            btnLogin.Location = new Point(40, 374);
             btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -223,7 +226,7 @@
             linkLabelForgotPass.Cursor = Cursors.Hand;
             linkLabelForgotPass.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             linkLabelForgotPass.LinkColor = Color.LimeGreen;
-            linkLabelForgotPass.Location = new Point(449, 329);
+            linkLabelForgotPass.Location = new Point(429, 329);
             linkLabelForgotPass.Name = "linkLabelForgotPass";
             linkLabelForgotPass.Size = new Size(137, 23);
             linkLabelForgotPass.TabIndex = 19;
@@ -294,7 +297,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = Properties.Resources.pmc_logo;
-            pictureBox1.Location = new Point(14, 40);
+            pictureBox1.Location = new Point(12, 16);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(117, 52);
@@ -302,19 +305,35 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // btnRegister
+            // 
+            btnRegister.AutoSize = true;
+            btnRegister.Cursor = Cursors.Hand;
+            btnRegister.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegister.LinkColor = Color.FromArgb(3, 49, 90);
+            btnRegister.Location = new Point(40, 329);
+            btnRegister.Name = "btnRegister";
+            btnRegister.Size = new Size(114, 23);
+            btnRegister.TabIndex = 24;
+            btnRegister.TabStop = true;
+            btnRegister.Text = "Đăng ký ngay";
+            btnRegister.LinkClicked += btnRegister_LinkClicked;
+            // 
             // loginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.bg__1_;
-            ClientSize = new Size(857, 840);
+            ClientSize = new Size(857, 622);
             Controls.Add(mini);
             Controls.Add(exit);
             Controls.Add(pictureBox1);
             Controls.Add(panelLogin);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "loginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pharmacity";
             Load += loginForm_Load;
             MouseDown += loginF_MouseDown;
@@ -355,5 +374,6 @@
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2ImageButton btnShowPass;
         private Label errorLogin;
+        private LinkLabel btnRegister;
     }
 }

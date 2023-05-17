@@ -49,5 +49,17 @@ namespace BLL
         {
             return taikhoanDAL.deleteAccount(id);
         }
+
+        //get all uname 
+        public List<String> getAllUName()
+        {
+            return taikhoanDAL.getAllUName();
+        }
+
+        //get all pass
+        public List<String> getAllPass()
+        {
+            return taikhoanDAL.getAllPass();
+        }
     }
 }

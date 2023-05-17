@@ -59,6 +59,36 @@ namespace DAL
             return taikhoan;
         }
 
+        //get all uname 
+        public List<String> getAllUName()
+        {
+            List<string> listUName = new List<string>();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT TENDANGNHAP FROM Taikhoan", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                listUName.Add(dt.Rows[i]["TENDANGNHAP"].ToString());
+            }
+            return listUName;
+        }
+
+        //get all pass
+        public List<String> getAllPass()
+        {
+            List<string> listPass = new List<string>();
+
+            SqlDataAdapter da = new SqlDataAdapter("SELECT MATKHAU FROM Taikhoan", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                listPass.Add(dt.Rows[i]["MATKHAU"].ToString());
+            }
+            return listPass;
+        }
+
         //them account 
         public bool addAccount(Taikhoan tk)
         {

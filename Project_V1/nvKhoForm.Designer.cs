@@ -45,6 +45,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nvKhoForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
             search = new TextBox();
@@ -348,8 +349,10 @@
             Controls.Add(panelShow);
             Controls.Add(panelTop);
             Controls.Add(panelMenu);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "nvKhoForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pharmacity";
             Load += nvKhoForm_Load;
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();

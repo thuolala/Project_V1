@@ -28,447 +28,468 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label2 = new System.Windows.Forms.Label();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.loginLink = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnRegis = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.checkBoxRemember = new System.Windows.Forms.CheckBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dob = new System.Windows.Forms.DateTimePicker();
-            this.radioButtonFemale = new System.Windows.Forms.RadioButton();
-            this.radioButtonMale = new System.Windows.Forms.RadioButton();
-            this.phone = new System.Windows.Forms.TextBox();
-            this.hometown = new System.Windows.Forms.TextBox();
-            this.fullname = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.confirmPass = new System.Windows.Forms.TextBox();
-            this.password = new System.Windows.Forms.TextBox();
-            this.email = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.mini = new System.Windows.Forms.PictureBox();
-            this.exit = new System.Windows.Forms.PictureBox();
-            this.panel1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).BeginInit();
-            this.SuspendLayout();
+            label2 = new Label();
+            linkLabel2 = new LinkLabel();
+            panel1 = new Panel();
+            loginLink = new LinkLabel();
+            linkLabel1 = new LinkLabel();
+            label1 = new Label();
+            btnReset = new Button();
+            btnRegis = new Button();
+            label11 = new Label();
+            checkBoxRemember = new CheckBox();
+            groupBox2 = new GroupBox();
+            dob = new DateTimePicker();
+            radioButtonFemale = new RadioButton();
+            radioButtonMale = new RadioButton();
+            phone = new TextBox();
+            hometown = new TextBox();
+            fullname = new TextBox();
+            label10 = new Label();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            groupBox1 = new GroupBox();
+            confirmPass = new TextBox();
+            password = new TextBox();
+            email = new TextBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            pictureBox1 = new PictureBox();
+            mini = new PictureBox();
+            exit = new PictureBox();
+            panel1.SuspendLayout();
+            groupBox2.SuspendLayout();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)mini).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)exit).BeginInit();
+            SuspendLayout();
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(22, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 32);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Đăng ký";
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(0, 0, 64);
+            label2.Location = new Point(25, 19);
+            label2.Name = "label2";
+            label2.Size = new Size(257, 41);
+            label2.TabIndex = 3;
+            label2.Text = "Đăng ký tài khoản";
             // 
             // linkLabel2
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel2.Location = new System.Drawing.Point(240, 312);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(0, 17);
-            this.linkLabel2.TabIndex = 13;
+            linkLabel2.AutoSize = true;
+            linkLabel2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel2.Location = new Point(274, 416);
+            linkLabel2.Name = "linkLabel2";
+            linkLabel2.Size = new Size(0, 23);
+            linkLabel2.TabIndex = 13;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.loginLink);
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnReset);
-            this.panel1.Controls.Add(this.btnRegis);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.checkBoxRemember);
-            this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.linkLabel2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(114, 29);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(572, 573);
-            this.panel1.TabIndex = 3;
+            panel1.BackColor = Color.White;
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(loginLink);
+            panel1.Controls.Add(linkLabel1);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(btnReset);
+            panel1.Controls.Add(btnRegis);
+            panel1.Controls.Add(label11);
+            panel1.Controls.Add(checkBoxRemember);
+            panel1.Controls.Add(groupBox2);
+            panel1.Controls.Add(groupBox1);
+            panel1.Controls.Add(linkLabel2);
+            panel1.Controls.Add(label2);
+            panel1.Location = new Point(130, 39);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(653, 763);
+            panel1.TabIndex = 3;
             // 
             // loginLink
             // 
-            this.loginLink.AutoSize = true;
-            this.loginLink.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginLink.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.loginLink.LinkColor = System.Drawing.Color.LimeGreen;
-            this.loginLink.Location = new System.Drawing.Point(294, 533);
-            this.loginLink.Name = "loginLink";
-            this.loginLink.Size = new System.Drawing.Size(104, 17);
-            this.loginLink.TabIndex = 29;
-            this.loginLink.TabStop = true;
-            this.loginLink.Text = "Đăng nhập ngay";
-            this.loginLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.loginLink_LinkClicked);
+            loginLink.AutoSize = true;
+            loginLink.Cursor = Cursors.Hand;
+            loginLink.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            loginLink.LinkColor = Color.LimeGreen;
+            loginLink.Location = new Point(336, 711);
+            loginLink.Name = "loginLink";
+            loginLink.Size = new Size(137, 23);
+            loginLink.TabIndex = 29;
+            loginLink.TabStop = true;
+            loginLink.Text = "Đăng nhập ngay";
+            loginLink.LinkClicked += loginLink_LinkClicked;
             // 
             // linkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.linkLabel1.Location = new System.Drawing.Point(365, 533);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(0, 17);
-            this.linkLabel1.TabIndex = 28;
+            linkLabel1.AutoSize = true;
+            linkLabel1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            linkLabel1.Location = new Point(417, 711);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(0, 23);
+            linkLabel1.TabIndex = 28;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(174, 533);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 17);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Đã có tài khoản?";
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(0, 0, 64);
+            label1.Location = new Point(199, 711);
+            label1.Name = "label1";
+            label1.Size = new Size(138, 23);
+            label1.TabIndex = 27;
+            label1.Text = "Đã có tài khoản?";
             // 
             // btnReset
             // 
-            this.btnReset.BackColor = System.Drawing.Color.Gainsboro;
-            this.btnReset.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.btnReset.Location = new System.Drawing.Point(272, 475);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(128, 41);
-            this.btnReset.TabIndex = 26;
-            this.btnReset.Text = "Hủy";
-            this.btnReset.UseVisualStyleBackColor = false;
+            btnReset.BackColor = Color.Gainsboro;
+            btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnReset.ForeColor = Color.FromArgb(0, 0, 64);
+            btnReset.Location = new Point(311, 633);
+            btnReset.Margin = new Padding(3, 4, 3, 4);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(146, 55);
+            btnReset.TabIndex = 26;
+            btnReset.Text = "Hủy";
+            btnReset.UseVisualStyleBackColor = false;
             // 
             // btnRegis
             // 
-            this.btnRegis.BackColor = System.Drawing.Color.SteelBlue;
-            this.btnRegis.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegis.ForeColor = System.Drawing.Color.White;
-            this.btnRegis.Location = new System.Drawing.Point(416, 475);
-            this.btnRegis.Name = "btnRegis";
-            this.btnRegis.Size = new System.Drawing.Size(128, 41);
-            this.btnRegis.TabIndex = 25;
-            this.btnRegis.Text = "Đăng ký";
-            this.btnRegis.UseVisualStyleBackColor = false;
-            this.btnRegis.Click += new System.EventHandler(this.btnRegis_Click);
+            btnRegis.BackColor = Color.SteelBlue;
+            btnRegis.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRegis.ForeColor = Color.White;
+            btnRegis.Location = new Point(475, 633);
+            btnRegis.Margin = new Padding(3, 4, 3, 4);
+            btnRegis.Name = "btnRegis";
+            btnRegis.Size = new Size(146, 55);
+            btnRegis.TabIndex = 25;
+            btnRegis.Text = "Đăng ký";
+            btnRegis.UseVisualStyleBackColor = false;
+            btnRegis.Click += btnRegis_Click;
             // 
             // label11
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(131, 444);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(148, 17);
-            this.label11.TabIndex = 24;
-            this.label11.Text = "Điều khoản và Dịch vụ";
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.FromArgb(0, 0, 64);
+            label11.Location = new Point(150, 592);
+            label11.Name = "label11";
+            label11.Size = new Size(189, 23);
+            label11.TabIndex = 24;
+            label11.Text = "Điều khoản và Dịch vụ";
             // 
             // checkBoxRemember
             // 
-            this.checkBoxRemember.AutoSize = true;
-            this.checkBoxRemember.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxRemember.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.checkBoxRemember.Location = new System.Drawing.Point(24, 443);
-            this.checkBoxRemember.Name = "checkBoxRemember";
-            this.checkBoxRemember.Size = new System.Drawing.Size(110, 21);
-            this.checkBoxRemember.TabIndex = 16;
-            this.checkBoxRemember.Text = "Tôi đồng ý với";
-            this.checkBoxRemember.UseVisualStyleBackColor = true;
+            checkBoxRemember.AutoSize = true;
+            checkBoxRemember.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            checkBoxRemember.ForeColor = Color.FromArgb(0, 0, 64);
+            checkBoxRemember.Location = new Point(27, 591);
+            checkBoxRemember.Margin = new Padding(3, 4, 3, 4);
+            checkBoxRemember.Name = "checkBoxRemember";
+            checkBoxRemember.Size = new Size(138, 27);
+            checkBoxRemember.TabIndex = 16;
+            checkBoxRemember.Text = "Tôi đồng ý với";
+            checkBoxRemember.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dob);
-            this.groupBox2.Controls.Add(this.radioButtonFemale);
-            this.groupBox2.Controls.Add(this.radioButtonMale);
-            this.groupBox2.Controls.Add(this.phone);
-            this.groupBox2.Controls.Add(this.hometown);
-            this.groupBox2.Controls.Add(this.fullname);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Location = new System.Drawing.Point(24, 224);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(520, 204);
-            this.groupBox2.TabIndex = 15;
-            this.groupBox2.TabStop = false;
+            groupBox2.Controls.Add(dob);
+            groupBox2.Controls.Add(radioButtonFemale);
+            groupBox2.Controls.Add(radioButtonMale);
+            groupBox2.Controls.Add(phone);
+            groupBox2.Controls.Add(hometown);
+            groupBox2.Controls.Add(fullname);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(label6);
+            groupBox2.Location = new Point(27, 299);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(594, 272);
+            groupBox2.TabIndex = 15;
+            groupBox2.TabStop = false;
             // 
             // dob
             // 
-            this.dob.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dob.Location = new System.Drawing.Point(170, 82);
-            this.dob.Name = "dob";
-            this.dob.Size = new System.Drawing.Size(329, 29);
-            this.dob.TabIndex = 23;
+            dob.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            dob.Location = new Point(194, 109);
+            dob.Margin = new Padding(3, 4, 3, 4);
+            dob.Name = "dob";
+            dob.Size = new Size(375, 34);
+            dob.TabIndex = 23;
             // 
             // radioButtonFemale
             // 
-            this.radioButtonFemale.AutoSize = true;
-            this.radioButtonFemale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonFemale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.radioButtonFemale.Location = new System.Drawing.Point(238, 54);
-            this.radioButtonFemale.Name = "radioButtonFemale";
-            this.radioButtonFemale.Size = new System.Drawing.Size(49, 25);
-            this.radioButtonFemale.TabIndex = 22;
-            this.radioButtonFemale.TabStop = true;
-            this.radioButtonFemale.Text = "Nữ";
-            this.radioButtonFemale.UseVisualStyleBackColor = true;
+            radioButtonFemale.AutoSize = true;
+            radioButtonFemale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonFemale.ForeColor = Color.FromArgb(0, 0, 64);
+            radioButtonFemale.Location = new Point(272, 72);
+            radioButtonFemale.Margin = new Padding(3, 4, 3, 4);
+            radioButtonFemale.Name = "radioButtonFemale";
+            radioButtonFemale.Size = new Size(60, 32);
+            radioButtonFemale.TabIndex = 22;
+            radioButtonFemale.TabStop = true;
+            radioButtonFemale.Text = "Nữ";
+            radioButtonFemale.UseVisualStyleBackColor = true;
             // 
             // radioButtonMale
             // 
-            this.radioButtonMale.AutoSize = true;
-            this.radioButtonMale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radioButtonMale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.radioButtonMale.Location = new System.Drawing.Point(170, 54);
-            this.radioButtonMale.Name = "radioButtonMale";
-            this.radioButtonMale.Size = new System.Drawing.Size(62, 25);
-            this.radioButtonMale.TabIndex = 21;
-            this.radioButtonMale.TabStop = true;
-            this.radioButtonMale.Text = "Nam";
-            this.radioButtonMale.UseVisualStyleBackColor = true;
+            radioButtonMale.AutoSize = true;
+            radioButtonMale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            radioButtonMale.ForeColor = Color.FromArgb(0, 0, 64);
+            radioButtonMale.Location = new Point(194, 72);
+            radioButtonMale.Margin = new Padding(3, 4, 3, 4);
+            radioButtonMale.Name = "radioButtonMale";
+            radioButtonMale.Size = new Size(75, 32);
+            radioButtonMale.TabIndex = 21;
+            radioButtonMale.TabStop = true;
+            radioButtonMale.Text = "Nam";
+            radioButtonMale.UseVisualStyleBackColor = true;
             // 
             // phone
             // 
-            this.phone.BackColor = System.Drawing.Color.White;
-            this.phone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.phone.Location = new System.Drawing.Point(170, 152);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(329, 29);
-            this.phone.TabIndex = 20;
+            phone.BackColor = Color.White;
+            phone.BorderStyle = BorderStyle.FixedSingle;
+            phone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            phone.Location = new Point(194, 203);
+            phone.Margin = new Padding(3, 4, 3, 4);
+            phone.Name = "phone";
+            phone.Size = new Size(376, 34);
+            phone.TabIndex = 20;
             // 
             // hometown
             // 
-            this.hometown.BackColor = System.Drawing.Color.White;
-            this.hometown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.hometown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hometown.Location = new System.Drawing.Point(170, 117);
-            this.hometown.Name = "hometown";
-            this.hometown.Size = new System.Drawing.Size(329, 29);
-            this.hometown.TabIndex = 19;
+            hometown.BackColor = Color.White;
+            hometown.BorderStyle = BorderStyle.FixedSingle;
+            hometown.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            hometown.Location = new Point(194, 156);
+            hometown.Margin = new Padding(3, 4, 3, 4);
+            hometown.Name = "hometown";
+            hometown.Size = new Size(376, 34);
+            hometown.TabIndex = 19;
             // 
             // fullname
             // 
-            this.fullname.BackColor = System.Drawing.Color.White;
-            this.fullname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fullname.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fullname.Location = new System.Drawing.Point(170, 22);
-            this.fullname.Name = "fullname";
-            this.fullname.Size = new System.Drawing.Size(329, 29);
-            this.fullname.TabIndex = 13;
+            fullname.BackColor = Color.White;
+            fullname.BorderStyle = BorderStyle.FixedSingle;
+            fullname.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            fullname.Location = new Point(194, 29);
+            fullname.Margin = new Padding(3, 4, 3, 4);
+            fullname.Name = "fullname";
+            fullname.Size = new Size(376, 34);
+            fullname.TabIndex = 13;
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(22, 154);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 21);
-            this.label10.TabIndex = 17;
-            this.label10.Text = "Số điện thoại";
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.ForeColor = Color.FromArgb(0, 0, 64);
+            label10.Location = new Point(25, 205);
+            label10.Name = "label10";
+            label10.Size = new Size(128, 28);
+            label10.TabIndex = 17;
+            label10.Text = "Số điện thoại";
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(24, 125);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 21);
-            this.label9.TabIndex = 16;
-            this.label9.Text = "Quê quán";
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.ForeColor = Color.FromArgb(0, 0, 64);
+            label9.Location = new Point(27, 167);
+            label9.Name = "label9";
+            label9.Size = new Size(97, 28);
+            label9.TabIndex = 16;
+            label9.Text = "Quê quán";
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(24, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 21);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Ngày sinh";
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.ForeColor = Color.FromArgb(0, 0, 64);
+            label8.Location = new Point(27, 120);
+            label8.Name = "label8";
+            label8.Size = new Size(99, 28);
+            label8.TabIndex = 15;
+            label8.Text = "Ngày sinh";
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(22, 56);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 21);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "Giới tính";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.ForeColor = Color.FromArgb(0, 0, 64);
+            label7.Location = new Point(25, 75);
+            label7.Name = "label7";
+            label7.Size = new Size(87, 28);
+            label7.TabIndex = 14;
+            label7.Text = "Giới tính";
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(24, 24);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(76, 21);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Họ và tên";
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label6.ForeColor = Color.FromArgb(0, 0, 64);
+            label6.Location = new Point(27, 32);
+            label6.Name = "label6";
+            label6.Size = new Size(96, 28);
+            label6.TabIndex = 13;
+            label6.Text = "Họ và tên";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.confirmPass);
-            this.groupBox1.Controls.Add(this.password);
-            this.groupBox1.Controls.Add(this.email);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(24, 49);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(520, 158);
-            this.groupBox1.TabIndex = 14;
-            this.groupBox1.TabStop = false;
+            groupBox1.Controls.Add(confirmPass);
+            groupBox1.Controls.Add(password);
+            groupBox1.Controls.Add(email);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Location = new Point(27, 65);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(594, 211);
+            groupBox1.TabIndex = 14;
+            groupBox1.TabStop = false;
             // 
             // confirmPass
             // 
-            this.confirmPass.BackColor = System.Drawing.Color.White;
-            this.confirmPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.confirmPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confirmPass.Location = new System.Drawing.Point(170, 112);
-            this.confirmPass.Name = "confirmPass";
-            this.confirmPass.Size = new System.Drawing.Size(329, 29);
-            this.confirmPass.TabIndex = 12;
+            confirmPass.BackColor = Color.White;
+            confirmPass.BorderStyle = BorderStyle.FixedSingle;
+            confirmPass.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            confirmPass.Location = new Point(194, 149);
+            confirmPass.Margin = new Padding(3, 4, 3, 4);
+            confirmPass.Name = "confirmPass";
+            confirmPass.Size = new Size(376, 34);
+            confirmPass.TabIndex = 12;
             // 
             // password
             // 
-            this.password.BackColor = System.Drawing.Color.White;
-            this.password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.password.Location = new System.Drawing.Point(170, 66);
-            this.password.Name = "password";
-            this.password.Size = new System.Drawing.Size(329, 29);
-            this.password.TabIndex = 11;
+            password.BackColor = Color.White;
+            password.BorderStyle = BorderStyle.FixedSingle;
+            password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            password.Location = new Point(194, 88);
+            password.Margin = new Padding(3, 4, 3, 4);
+            password.Name = "password";
+            password.Size = new Size(376, 34);
+            password.TabIndex = 11;
             // 
             // email
             // 
-            this.email.BackColor = System.Drawing.Color.White;
-            this.email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.email.Location = new System.Drawing.Point(170, 22);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(329, 29);
-            this.email.TabIndex = 9;
+            email.BackColor = Color.White;
+            email.BorderStyle = BorderStyle.FixedSingle;
+            email.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            email.Location = new Point(194, 29);
+            email.Margin = new Padding(3, 4, 3, 4);
+            email.Name = "email";
+            email.Size = new Size(376, 34);
+            email.TabIndex = 9;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(22, 112);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 21);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Xác nhận mật khẩu";
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.FromArgb(0, 0, 64);
+            label5.Location = new Point(25, 149);
+            label5.Name = "label5";
+            label5.Size = new Size(177, 28);
+            label5.TabIndex = 8;
+            label5.Text = "Xác nhận mật khẩu";
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(22, 66);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 21);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Mật khẩu";
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.ForeColor = Color.FromArgb(0, 0, 64);
+            label4.Location = new Point(25, 88);
+            label4.Name = "label4";
+            label4.Size = new Size(94, 28);
+            label4.TabIndex = 7;
+            label4.Text = "Mật khẩu";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(22, 22);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 21);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Email";
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.FromArgb(0, 0, 64);
+            label3.Location = new Point(25, 29);
+            label3.Name = "label3";
+            label3.Size = new Size(59, 28);
+            label3.TabIndex = 5;
+            label3.Text = "Email";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.pmc_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(102, 39);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Image = Properties.Resources.pmc_logo;
+            pictureBox1.Location = new Point(5, 20);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(117, 52);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
             // 
             // mini
             // 
-            this.mini.BackColor = System.Drawing.Color.Transparent;
-            this.mini.Image = global::GUI.Properties.Resources.mini;
-            this.mini.Location = new System.Drawing.Point(692, 12);
-            this.mini.Name = "mini";
-            this.mini.Size = new System.Drawing.Size(20, 20);
-            this.mini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.mini.TabIndex = 8;
-            this.mini.TabStop = false;
-            this.mini.Click += new System.EventHandler(this.mini_Click);
+            mini.BackColor = Color.Transparent;
+            mini.Image = Properties.Resources.mini;
+            mini.Location = new Point(791, 16);
+            mini.Margin = new Padding(3, 4, 3, 4);
+            mini.Name = "mini";
+            mini.Size = new Size(20, 20);
+            mini.SizeMode = PictureBoxSizeMode.AutoSize;
+            mini.TabIndex = 8;
+            mini.TabStop = false;
+            mini.Click += mini_Click;
             // 
             // exit
             // 
-            this.exit.BackColor = System.Drawing.Color.Transparent;
-            this.exit.Image = global::GUI.Properties.Resources.exit;
-            this.exit.Location = new System.Drawing.Point(718, 12);
-            this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(20, 20);
-            this.exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.exit.TabIndex = 7;
-            this.exit.TabStop = false;
-            this.exit.Click += new System.EventHandler(this.exit_Click);
+            exit.BackColor = Color.Transparent;
+            exit.Image = Properties.Resources.exit;
+            exit.Location = new Point(821, 16);
+            exit.Margin = new Padding(3, 4, 3, 4);
+            exit.Name = "exit";
+            exit.Size = new Size(20, 20);
+            exit.SizeMode = PictureBoxSizeMode.AutoSize;
+            exit.TabIndex = 7;
+            exit.TabStop = false;
+            exit.Click += exit_Click;
             // 
             // registerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SeaGreen;
-            this.BackgroundImage = global::GUI.Properties.Resources.bg__1_;
-            this.ClientSize = new System.Drawing.Size(750, 630);
-            this.Controls.Add(this.mini);
-            this.Controls.Add(this.exit);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "registerForm";
-            this.Text = "Register";
-            this.Load += new System.EventHandler(this.registerForm_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.registerForm_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.registerForm_MouseMove);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.exit)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.SeaGreen;
+            BackgroundImage = Properties.Resources.bg__1_;
+            ClientSize = new Size(857, 840);
+            Controls.Add(mini);
+            Controls.Add(exit);
+            Controls.Add(pictureBox1);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "registerForm";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Register";
+            Load += registerForm_Load;
+            MouseDown += registerForm_MouseDown;
+            MouseMove += registerForm_MouseMove;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)mini).EndInit();
+            ((System.ComponentModel.ISupportInitialize)exit).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

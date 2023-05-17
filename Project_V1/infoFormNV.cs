@@ -111,6 +111,19 @@ namespace GUI
             OpenImage();
         }
 
+        //get per
+        private int getPer()
+        {
+            if (comboboxPosition.SelectedValue.Equals("AD"))
+            {
+                return 2;
+            }
+            else
+            {
+                return 1;
+            }
+        }
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string id = labelID.Text;
@@ -138,7 +151,7 @@ namespace GUI
 
             string uname = username.Text;
             string pass = password.Text;
-            int per = 1;
+            int per = getPer();
 
             //set taikhoan
             tk = new Taikhoan(id, uname, pass, per);

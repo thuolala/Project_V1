@@ -44,10 +44,11 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
             timerMenu = new System.Windows.Forms.Timer(components);
@@ -62,8 +63,8 @@
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
-            btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             panelMenu.SuspendLayout();
@@ -293,31 +294,6 @@
             panelMenu.Size = new Size(270, 845);
             panelMenu.TabIndex = 0;
             // 
-            // btnDashboard
-            // 
-            btnDashboard.Animated = true;
-            btnDashboard.BackColor = Color.Transparent;
-            btnDashboard.CustomizableEdges = customizableEdges16;
-            btnDashboard.DisabledState.BorderColor = Color.DarkGray;
-            btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDashboard.FillColor = Color.Transparent;
-            btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDashboard.ForeColor = Color.FromArgb(182, 228, 226);
-            btnDashboard.Image = Properties.Resources.dashboard;
-            btnDashboard.ImageAlign = HorizontalAlignment.Left;
-            btnDashboard.ImageOffset = new Point(4, 0);
-            btnDashboard.Location = new Point(3, 201);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.RightToLeft = RightToLeft.No;
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges17;
-            btnDashboard.Size = new Size(270, 56);
-            btnDashboard.TabIndex = 14;
-            btnDashboard.Text = "  Dashboard";
-            btnDashboard.TextAlign = HorizontalAlignment.Left;
-            btnDashboard.Click += btnDashboard_Click;
-            // 
             // btnLogout
             // 
             btnLogout.Animated = true;
@@ -343,6 +319,31 @@
             btnLogout.TextAlign = HorizontalAlignment.Left;
             btnLogout.Click += btnLogout_Click;
             // 
+            // btnDashboard
+            // 
+            btnDashboard.Animated = true;
+            btnDashboard.BackColor = Color.Transparent;
+            btnDashboard.CustomizableEdges = customizableEdges16;
+            btnDashboard.DisabledState.BorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDashboard.FillColor = Color.Transparent;
+            btnDashboard.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDashboard.ForeColor = Color.FromArgb(182, 228, 226);
+            btnDashboard.Image = Properties.Resources.dashboard;
+            btnDashboard.ImageAlign = HorizontalAlignment.Left;
+            btnDashboard.ImageOffset = new Point(4, 0);
+            btnDashboard.Location = new Point(3, 201);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.RightToLeft = RightToLeft.No;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            btnDashboard.Size = new Size(270, 56);
+            btnDashboard.TabIndex = 14;
+            btnDashboard.Text = "  Dashboard";
+            btnDashboard.TextAlign = HorizontalAlignment.Left;
+            btnDashboard.Click += btnDashboard_Click;
+            // 
             // adminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -350,9 +351,12 @@
             ClientSize = new Size(1382, 845);
             Controls.Add(panelShow);
             Controls.Add(panelMenu);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "adminForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Pharmacity";
+            FormClosing += adminForm_FormClosing;
             Load += adminForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();

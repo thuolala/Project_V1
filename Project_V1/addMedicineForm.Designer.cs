@@ -831,7 +831,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(971, 973);
+            ClientSize = new Size(971, 960);
             Controls.Add(medicinePic);
             Controls.Add(btnReset);
             Controls.Add(exit);
@@ -842,6 +842,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
             Name = "addMedicineForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += addMedicineForm_Load;
             guna2CustomGradientPanel6.ResumeLayout(false);
             guna2CustomGradientPanel6.PerformLayout();
