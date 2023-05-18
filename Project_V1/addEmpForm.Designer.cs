@@ -191,7 +191,6 @@
             fullname.ShadowDecoration.CustomizableEdges = customizableEdges46;
             fullname.Size = new Size(427, 43);
             fullname.TabIndex = 38;
-            fullname.Validating += fullname_Validating;
             // 
             // guna2CustomGradientPanel3
             // 
@@ -231,7 +230,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(0, 0, 64);
+            label2.ForeColor = Color.FromArgb(3, 49, 90);
             label2.Location = new Point(3, 8);
             label2.Name = "label2";
             label2.Size = new Size(99, 28);
@@ -242,7 +241,7 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.ForeColor = Color.FromArgb(0, 0, 64);
+            label11.ForeColor = Color.FromArgb(3, 49, 90);
             label11.Location = new Point(3, 8);
             label11.Name = "label11";
             label11.Size = new Size(71, 28);
@@ -292,7 +291,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(0, 0, 64);
+            label3.ForeColor = Color.FromArgb(3, 49, 90);
             label3.Location = new Point(3, 8);
             label3.Name = "label3";
             label3.Size = new Size(97, 28);
@@ -361,7 +360,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.ForeColor = Color.FromArgb(0, 0, 64);
+            label14.ForeColor = Color.FromArgb(3, 49, 90);
             label14.Location = new Point(3, 8);
             label14.Name = "label14";
             label14.Size = new Size(171, 28);
@@ -411,7 +410,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.ForeColor = Color.FromArgb(0, 0, 64);
+            label13.ForeColor = Color.FromArgb(3, 49, 90);
             label13.Location = new Point(3, 8);
             label13.Name = "label13";
             label13.Size = new Size(94, 28);
@@ -461,7 +460,7 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.FromArgb(0, 0, 64);
+            label10.ForeColor = Color.FromArgb(3, 49, 90);
             label10.Location = new Point(3, 8);
             label10.Name = "label10";
             label10.Size = new Size(140, 28);
@@ -511,7 +510,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(0, 0, 64);
+            label4.ForeColor = Color.FromArgb(3, 49, 90);
             label4.Location = new Point(3, 8);
             label4.Name = "label4";
             label4.Size = new Size(47, 28);
@@ -561,7 +560,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(0, 0, 64);
+            label5.ForeColor = Color.FromArgb(3, 49, 90);
             label5.Location = new Point(3, 8);
             label5.Name = "label5";
             label5.Size = new Size(59, 28);
@@ -608,7 +607,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(0, 0, 64);
+            label6.ForeColor = Color.FromArgb(3, 49, 90);
             label6.Location = new Point(3, 8);
             label6.Name = "label6";
             label6.Size = new Size(53, 28);
@@ -642,7 +641,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(0, 0, 64);
+            label1.ForeColor = Color.FromArgb(3, 49, 90);
             label1.Location = new Point(3, 8);
             label1.Name = "label1";
             label1.Size = new Size(87, 28);
@@ -756,7 +755,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(0, 0, 64);
+            label8.ForeColor = Color.FromArgb(3, 49, 90);
             label8.Location = new Point(3, 8);
             label8.Name = "label8";
             label8.Size = new Size(93, 28);
@@ -828,7 +827,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.DarkGray;
+            label9.ForeColor = Color.FromArgb(3, 49, 90);
             label9.Location = new Point(235, 13);
             label9.Name = "label9";
             label9.Size = new Size(228, 38);
@@ -839,7 +838,7 @@
             // 
             labelID.AutoSize = true;
             labelID.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point);
-            labelID.ForeColor = Color.DarkGray;
+            labelID.ForeColor = Color.FromArgb(3, 49, 90);
             labelID.Location = new Point(72, 235);
             labelID.Name = "labelID";
             labelID.Size = new Size(54, 31);

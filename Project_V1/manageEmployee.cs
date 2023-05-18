@@ -1,6 +1,7 @@
 ﻿using BLL;
 using DTO;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,11 +28,9 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void loadAll()
+        private void loadBy(DataTable dt)
         {
-            //get all nv
-            DataTable dt = new DataTable();
-            dt = nvBLL.getAllNV();
+            panelDisplay.Controls.Clear();
 
             //define nv
             string _id;
@@ -68,6 +67,15 @@ namespace GUI
             }
         }
 
+        //load All 
+        public void loadAll()
+        {
+            //get all nv
+            DataTable dt = new DataTable();
+            dt = nvBLL.getAllNV();
+            loadBy(dt);
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             addEmpForm f = new addEmpForm();
@@ -84,13 +92,11 @@ namespace GUI
         //Get data for search box by Name 
         private List<String> getSearchSource()
         {
-            DataTable dt1 = nvBLL.getAllName();
-            DataTable dt2 = nvBLL.getAllId();
+            DataTable dt = nvBLL.getAllName();
             List<String> searchSource = new List<String>();
-            for (int i = 0; i < dt1.Rows.Count; i++)
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                searchSource.Add(dt1.Rows[i]["HOTEN"].ToString());
-                searchSource.Add(dt2.Rows[i]["IDNV"].ToString());
+                searchSource.Add(dt.Rows[i]["HOTEN"].ToString());
             }
             return searchSource;
         }
@@ -106,15 +112,71 @@ namespace GUI
             search.AutoCompleteSource = AutoCompleteSource.CustomSource;
         }
 
+        //load combobox pos 
+        private void loadComboBox()
+        {
+            string fitem = "Tất cả";
+            string fvalue = "ALL";
+
+            DataTable dt = vtBLL.getAllVitri();
+            Dictionary<string, string> listPos = new Dictionary<string, string>();
+            listPos.Add(fitem, fvalue);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                listPos.Add(row["TEN"].ToString(), row["ID"].ToString());
+            }
+
+            List<KeyValuePair<string, string>> list = listPos.ToList();
+
+            comboboxPos.DataSource = list;
+            comboboxPos.DisplayMember = "Key";
+            comboboxPos.ValueMember = "Value";
+
+            comboboxPos.SelectedIndex = 0;
+        }
+
         private void manageEmployee_Load(object sender, EventArgs e)
         {
-            loadAll();
+            loadComboBox();
             searchAction();
+            loadAll();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboboxPos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //clear
+            panelDisplay.Controls.Clear();
+            search.Text = "";
+
+            //get by pos
+            string pos = comboboxPos.SelectedValue.ToString();
+            if (pos.Equals("ALL"))
+            {
+                loadAll();
+            }
+            else
+            {
+                DataTable dt = new DataTable();
+                dt = nvBLL.getNVByPos(pos);
+                loadBy(dt);
+            }
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            //clear
+            panelDisplay.Controls.Clear();
+            comboboxPos.SelectedIndex = 0;
+
+            DataTable dt = new DataTable();
+            dt = nvBLL.getNVByName(search.Text);
+            loadBy(dt);
         }
     }
 }

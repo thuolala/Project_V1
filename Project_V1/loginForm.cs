@@ -214,7 +214,7 @@ namespace GUI
             MailAddress to = new MailAddress(email, nhanvienBLL.getNVById(test.Id).Name);
             List<MailAddress> cc = new List<MailAddress>();
             cc.Add(new MailAddress("extractteam123@gmail.com", "Pharmacity"));
-            handle.SendEmail(from, to, cc);
+            handle.SendEmail(test, from, to, cc);
             MessageBox.Show("Mail đã được gửi!");
         }
 

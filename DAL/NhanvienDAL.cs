@@ -32,6 +32,15 @@ namespace DAL
             return dt;
         }
 
+        //get all nv by name
+        public DataTable getNVByName(string name)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Nhanvien WHERE HOTEN LIKE N'%" + name + "%'", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
         //get nv by id 
         public Nhanvien getNVById(string ID)
         {

@@ -91,11 +91,11 @@
             empPic.BorderRadius = 10;
             empPic.CustomizableEdges = customizableEdges3;
             empPic.ImageRotate = 0F;
-            empPic.Location = new Point(3, 4);
+            empPic.Location = new Point(3, 11);
             empPic.Margin = new Padding(3, 4, 3, 4);
             empPic.Name = "empPic";
             empPic.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            empPic.Size = new Size(91, 107);
+            empPic.Size = new Size(90, 100);
             empPic.TabIndex = 88;
             empPic.TabStop = false;
             empPic.Click += empPic_Click;

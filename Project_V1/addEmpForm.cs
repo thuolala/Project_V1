@@ -128,11 +128,6 @@ namespace GUI
             }
         }
 
-        private bool ContainsNonAlphabeticChars(string input)
-        {
-            Regex regex = new Regex("[^a-zA-Z]");
-            return regex.IsMatch(input);
-        }
         private bool ContainsNonNumber(string input)
         {
             Regex regex = new Regex("[^0-9]");
@@ -144,11 +139,6 @@ namespace GUI
             if (fullname.Text == "")
             {
                 errorInput.Text = "Họ tên không được trống!";
-                return false;
-            }
-            else if (ContainsNonAlphabeticChars(fullname.Text))
-            {
-                errorInput.Text = "Họ tên không được chứa ký tự đặc biệt!";
                 return false;
             }
             else
@@ -207,7 +197,7 @@ namespace GUI
                 errorInput.Text = "Email không được trống!";
                 return false;
             }
-            else if (email.Text.StartsWith("@") || email.Text.EndsWith("@"))
+            else if (email.Text.IndexOf("@") == 0 || email.Text.IndexOf("@") == email.Text.Length - 1)
             {
                 errorInput.Text = "Email sai định dạng!";
                 return false;
@@ -220,19 +210,21 @@ namespace GUI
 
         private bool checkInput()
         {
+            bool c = checkConfirmPass();
             bool f = checkFullname();
+            bool g = checkGender();
             bool t = checkTown();
             bool p = checkPhone();
             bool e = checkEmail();
 
             bool res = false;
-            if (f && t && p && p && e)
+            if (c && f && g && t && p && p && e)
             {
                 res = true;
             }
             else
             {
-                if(f == false || t == false || p == false || e == false)
+                if (c || f == false || g == false || t == false || p == false || e == false)
                 {
                     res = false;
                 }

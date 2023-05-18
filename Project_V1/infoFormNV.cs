@@ -7,6 +7,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BLL;
@@ -71,6 +72,7 @@ namespace GUI
 
             username.Text = tk.Userame;
             password.Text = tk.Password;
+            confirmPass.Text = tk.Password;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -160,7 +162,125 @@ namespace GUI
             }
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private bool checkConfirmPass()
+        {
+            if (password.Text.Equals(confirmPass.Text))
+            {
+                return true;
+            }
+            else
+            {
+                errorInput.Text = "Mật khẩu không trùng khớp!";
+                return false;
+            }
+        }
+
+        private bool ContainsNonNumber(string input)
+        {
+            Regex regex = new Regex("[^0-9]");
+            return regex.IsMatch(input);
+        }
+
+        private bool checkFullname()
+        {
+            if (fullname.Text == "")
+            {
+                errorInput.Text = "Họ tên không được trống!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkGender()
+        {
+            if (radbtnMale.Checked == false && radbtnFemale.Checked == false)
+            {
+                errorInput.Text = "Vui lòng chọn giới tính!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkTown()
+        {
+            if (hometown.Text == "")
+            {
+                errorInput.Text = "Quê quán không được trống!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkPhone()
+        {
+            if (phone.Text == "")
+            {
+                errorInput.Text = "SĐT không được trống!";
+                return false;
+            }
+            else if (ContainsNonNumber(phone.Text))
+            {
+                errorInput.Text = "SĐT sai định dạng!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private bool checkEmail()
+        {
+            if (email.Text == "")
+            {
+                errorInput.Text = "Email không được trống!";
+                return false;
+            }
+            else if (email.Text.IndexOf("@") == 0 || email.Text.IndexOf("@") == email.Text.Length - 1)
+            {
+                errorInput.Text = "Email sai định dạng!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkInput()
+        {
+            bool c = checkConfirmPass();
+            bool f = checkFullname();
+            bool g = checkGender();
+            bool t = checkTown();
+            bool p = checkPhone();
+            bool e = checkEmail();
+
+            bool res = false;
+            if (c && f && g && t && p && p && e)
+            {
+                res = true;
+            }
+            else
+            {
+                if (c || f == false || g == false || t == false || p == false || e == false)
+                {
+                    res = false;
+                }
+            }
+
+            return res;
+        }
+
+        private void updateNV()
         {
             string id = labelID.Text;
             string nvName = fullname.Text;
@@ -181,13 +301,14 @@ namespace GUI
             string nvEmail = email.Text;
             string nvPos = comboboxPosition.SelectedValue.ToString();
             DateTime created = date_created.Value;
-            byte[] nvAva = img;
+            byte[] nvAva = ImageToByteArray(avatar.Image);
 
             //set nhan vien
             nv = new Nhanvien(id, nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, created, nvAva);
 
             string uname = username.Text;
             string pass = password.Text;
+            string confirmP = confirmPass.Text;
             int per = getPer();
 
             //set taikhoan
@@ -197,6 +318,14 @@ namespace GUI
             {
                 MessageBox.Show("Cập nhật thành công");
                 this.Close();
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            if (checkInput())
+            {
+                updateNV();
             }
         }
 

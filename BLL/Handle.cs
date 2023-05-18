@@ -5,6 +5,7 @@ using System.Net.Mail;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using DTO; 
 
 namespace BLL
 {
@@ -16,6 +17,7 @@ namespace BLL
     public class Handle
     {
         TaikhoanBLL tkBLL = new TaikhoanBLL();
+        Taikhoan tk = new Taikhoan();
 
         //Random password
         public string generatePass()
@@ -48,7 +50,7 @@ namespace BLL
         }
 
         //Send mail 
-        public void SendEmail(MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
+        public void SendEmail(Taikhoan test, MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
         {
             //cau hinh gui mail 
             string resetPass = randomPass();
@@ -83,6 +85,11 @@ namespace BLL
             msgMail.Body = body;
             msgMail.IsBodyHtml = true;
             mailClient.Send(msgMail);
+
+            //update mk 
+            tk = new Taikhoan(test.Id, test.Userame, resetPass, test.Permission);
+            tkBLL.updateAccount(tk);
+
             msgMail.Dispose();
         }
     }

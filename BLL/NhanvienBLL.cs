@@ -32,6 +32,12 @@ namespace BLL
             return nvDAL.getNVByPos(idPos);
         }
 
+        //get all nv by name
+        public DataTable getNVByName(string name)
+        {
+            return nvDAL.getNVByName(name);
+        }
+
         //count each
         public int countEach(string idPos)
         {
