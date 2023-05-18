@@ -322,6 +322,7 @@ namespace GUI
 
         private void addEmpForm_Load(object sender, EventArgs e)
         {
+            date_created.Value = DateTime.Now;
             loadComboBox();
             setID();
         }
@@ -346,11 +347,36 @@ namespace GUI
             {
                 errorInput.Text = "Tên đăng nhập đã tồn tại!";
             }
+            if (username.Text == "")
+            {
+                errorInput.Text = "";
+            }
         }
 
         private void username_TextChanged(object sender, EventArgs e)
         {
             getByUName();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            fullname.Text = "";
+            if (radbtnFemale.Checked)
+            {
+                radbtnFemale.Checked = false;
+            }
+            else if (radbtnMale.Checked)
+            {
+                radbtnMale.Checked = false;
+            }
+            dob.Value = DateTime.Now;
+            hometown.Text = "";
+            phone.Text = "";
+            comboboxPosition.SelectedIndex = 0;
+            date_created.Value = DateTime.Now;
+            username.Text = "";
+            password.Text = "";
+            confirmPass.Text = "";
         }
     }
 }

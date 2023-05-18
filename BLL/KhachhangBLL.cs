@@ -32,6 +32,12 @@ namespace BLL
             return khDAL.getKHById(id);
         }
 
+        //get kh by phone
+        public DataTable getKHByPhone(string phoneN)
+        {
+            return khDAL.getKHByPhone(phoneN);
+        }
+
         //them kh
         public bool addKH(Khachhang kh)
         {
@@ -48,6 +54,12 @@ namespace BLL
         public string getAutoID()
         {
             return khDAL.getAutoID();
+        }
+
+        //get all phone
+        public DataTable getAllPhone()
+        {
+            return khDAL.getAllPhone();
         }
     }
 }

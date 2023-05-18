@@ -81,7 +81,6 @@ namespace DAL
         //get nv name
         public DataTable getAllName()
         {
-            Nhanvien nv = new Nhanvien();
             SqlDataAdapter da = new SqlDataAdapter("SELECT HOTEN FROM Nhanvien", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -92,7 +91,6 @@ namespace DAL
         //get nv id
         public DataTable getAllId()
         {
-            Nhanvien nv = new Nhanvien();
             SqlDataAdapter da = new SqlDataAdapter("SELECT IDNV FROM Nhanvien", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);

@@ -823,6 +823,7 @@
             btnReset.Size = new Size(200, 55);
             btnReset.TabIndex = 69;
             btnReset.Text = "Hủy";
+            btnReset.Click += btnReset_Click;
             // 
             // label9
             // 

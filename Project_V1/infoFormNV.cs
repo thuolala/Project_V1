@@ -354,7 +354,20 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-
+            fullname.Text = "";
+            if (radbtnFemale.Checked)
+            {
+                radbtnFemale.Checked = false;
+            }
+            else if (radbtnMale.Checked)
+            {
+                radbtnMale.Checked = false;
+            }
+            hometown.Text = "";
+            phone.Text = "";
+            comboboxPosition.SelectedIndex = 0;
+            password.Text = "";
+            confirmPass.Text = "";
         }
     }
 }

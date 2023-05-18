@@ -130,7 +130,6 @@ namespace GUI
                     panelUname.BorderColor = Color.Red;
                     panelPass.BorderColor = Color.Red;
                 }
-
                 else
                 {
                     panelUname.BorderColor = Color.FromArgb(3, 49, 90);
@@ -209,13 +208,9 @@ namespace GUI
         {
             Taikhoan test = taikhoanBLL.getAccountByUname(username.Text);
             string email = nhanvienBLL.getNVById(test.Id).Email;
-
-            MailAddress from = new MailAddress("extractteam123@gmail.com", "Pharmacity");
-            MailAddress to = new MailAddress(email, nhanvienBLL.getNVById(test.Id).Name);
-            List<MailAddress> cc = new List<MailAddress>();
-            cc.Add(new MailAddress("extractteam123@gmail.com", "Pharmacity"));
-            handle.SendEmail(test, from, to, cc);
-            MessageBox.Show("Mail đã được gửi!");
+            string fullname = nhanvienBLL.getNVById(test.Id).Name;
+            handle.SendEmail(test, email, fullname);
+            MessageBox.Show("Mật khẩu đã được gửi tới địa chỉ mail '" + email + "'");
         }
 
         private void loginForm_Load(object sender, EventArgs e)

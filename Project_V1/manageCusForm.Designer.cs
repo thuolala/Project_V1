@@ -147,6 +147,7 @@
             search.ShadowDecoration.CustomizableEdges = customizableEdges4;
             search.Size = new Size(371, 45);
             search.TabIndex = 67;
+            search.TextChanged += search_TextChanged;
             // 
             // empCount
             // 

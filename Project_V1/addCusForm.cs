@@ -51,6 +51,7 @@ namespace GUI
         private void addCusForm_Load(object sender, EventArgs e)
         {
             labelID.Text = khBLL.getAutoID();
+            date_created.Value = DateTime.Now;
         }
     }
 }

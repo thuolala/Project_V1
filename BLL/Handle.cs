@@ -50,9 +50,14 @@ namespace BLL
         }
 
         //Send mail 
-        public void SendEmail(Taikhoan test, MailAddress from, MailAddress to, List<MailAddress> cc, List<MailAddress> bcc = null)
+        public void SendEmail(Taikhoan test, string email, string fullname, List<MailAddress> bcc = null)
         {
             //cau hinh gui mail 
+            MailAddress from = new MailAddress("extractteam123@gmail.com", "Pharmacity");
+            MailAddress to = new MailAddress(email, fullname);
+            List<MailAddress> cc = new List<MailAddress>();
+            cc.Add(new MailAddress("extractteam123@gmail.com", "Pharmacity"));
+
             string resetPass = randomPass();
             string subject = "Đặt lại mật khẩu";
             string body = "Mật khẩu mới của bạn là: " + resetPass + "\n Vui lòng không chia sẻ mật khẩu cho bất kỳ ai vì lý do bảo mật.";

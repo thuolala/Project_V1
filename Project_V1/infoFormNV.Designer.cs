@@ -679,12 +679,13 @@
             confirmPass.Location = new Point(181, 1);
             confirmPass.Margin = new Padding(5);
             confirmPass.Name = "confirmPass";
-            confirmPass.PasswordChar = '\0';
+            confirmPass.PasswordChar = '●';
             confirmPass.PlaceholderText = "";
             confirmPass.SelectedText = "";
             confirmPass.ShadowDecoration.CustomizableEdges = customizableEdges10;
             confirmPass.Size = new Size(365, 43);
             confirmPass.TabIndex = 38;
+            confirmPass.UseSystemPasswordChar = true;
             // 
             // label14
             // 
@@ -729,12 +730,13 @@
             password.Location = new Point(181, 1);
             password.Margin = new Padding(5);
             password.Name = "password";
-            password.PasswordChar = '\0';
+            password.PasswordChar = '●';
             password.PlaceholderText = "";
             password.SelectedText = "";
             password.ShadowDecoration.CustomizableEdges = customizableEdges14;
             password.Size = new Size(365, 43);
             password.TabIndex = 38;
+            password.UseSystemPasswordChar = true;
             // 
             // label13
             // 

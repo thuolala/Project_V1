@@ -44,7 +44,7 @@ namespace DAL
         public Taikhoan getAccountByUName(string uname)
         {
             Taikhoan taikhoan = new Taikhoan();
-            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Taikhoan WHERE TENDANGNHAP LIKE '" + uname + "'", conn);
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Taikhoan WHERE TENDANGNHAP = '" + uname + "'", conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             if (dt.Rows.Count > 0)

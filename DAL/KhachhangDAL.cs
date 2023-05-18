@@ -45,6 +45,26 @@ namespace DAL
             return kh;
         }
 
+        //get kh by phone
+        public DataTable getKHByPhone(string phoneN)
+        {
+            Khachhang kh = new Khachhang();
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM Khachhang WHERE SDT LIKE '%" + phoneN + "%'", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        //get all phone
+        public DataTable getAllPhone()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SELECT SDT FROM Khachhang", conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            return dt;
+        }
+
         //them kh 
         public bool addKH(Khachhang kh)
         {

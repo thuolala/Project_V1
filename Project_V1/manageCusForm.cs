@@ -36,12 +36,8 @@ namespace GUI
         }
 
         //load all 
-        private void loadAll()
+        private void loadBy(DataTable dt)
         {
-            //get all nv
-            DataTable dt = new DataTable();
-            dt = khBLL.getAllKH();
-
             //define nv
             string _id;
             string _name;
@@ -68,9 +64,65 @@ namespace GUI
             }
         }
 
+        private void loadAll()
+        {
+            //get all nv
+            DataTable dt = new DataTable();
+            dt = khBLL.getAllKH();
+            loadBy(dt);
+        }
+        private void loadEach(string phone)
+        {
+            //get by phone
+            DataTable dt = new DataTable();
+            dt = khBLL.getKHByPhone(phone);
+            loadBy(dt);
+        }
+
         private void manageCusForm_Load(object sender, EventArgs e)
         {
+            searchAction();
             loadAll();
+        }
+
+        //search event 
+        //Get data for search box by phone
+        private List<String> getSearchSource()
+        {
+            DataTable dt = khBLL.getAllPhone();
+            List<String> searchSource = new List<String>();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                searchSource.Add(dt.Rows[i]["SDT"].ToString());
+            }
+            return searchSource;
+        }
+
+        //parse autosource  
+        private void searchAction()
+        {
+            AutoCompleteStringCollection searchSource = new AutoCompleteStringCollection();
+            searchSource.AddRange(getSearchSource().ToArray());
+
+            search.AutoCompleteCustomSource = searchSource;
+            search.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            search.AutoCompleteSource = AutoCompleteSource.CustomSource;
+        }
+
+        private void search_TextChanged(object sender, EventArgs e)
+        {
+            //clear
+            panelDisplay.Controls.Clear();
+
+            DataTable dt = new DataTable();
+            dt = khBLL.getKHByPhone(search.Text);
+            loadBy(dt);
+
+            if(search.Text == "")
+            {
+                panelDisplay.Controls.Clear();
+                loadAll();
+            }
         }
     }
 }
