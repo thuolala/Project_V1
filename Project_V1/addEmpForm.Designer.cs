@@ -455,6 +455,7 @@
             username.ShadowDecoration.CustomizableEdges = customizableEdges12;
             username.Size = new Size(365, 43);
             username.TabIndex = 38;
+            username.TextChanged += username_TextChanged;
             // 
             // label10
             // 

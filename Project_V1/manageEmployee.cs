@@ -86,6 +86,9 @@ namespace GUI
         {
             panelDisplay.Controls.Clear();
             loadAll();
+
+            comboboxPos.SelectedIndex = 0;
+            search.Text = "";
         }
 
         //search event 
@@ -172,7 +175,6 @@ namespace GUI
         {
             //clear
             panelDisplay.Controls.Clear();
-            comboboxPos.SelectedIndex = 0;
 
             DataTable dt = new DataTable();
             dt = nvBLL.getNVByName(search.Text);

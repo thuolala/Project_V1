@@ -335,5 +335,22 @@ namespace GUI
         {
             setID();
         }
+
+        //get by u name 
+        private void getByUName()
+        {
+            Taikhoan tkhoan = new Taikhoan();
+            tkhoan = tkBLL.getAccountByUname(username.Text);
+
+            if (tkhoan != null)
+            {
+                errorInput.Text = "Tên đăng nhập đã tồn tại!";
+            }
+        }
+
+        private void username_TextChanged(object sender, EventArgs e)
+        {
+            getByUName();
+        }
     }
 }
