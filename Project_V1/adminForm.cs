@@ -69,6 +69,13 @@ namespace GUI
         private void adminForm_Load(object sender, EventArgs e)
         {
             displayName.Text = nv.Name;
+
+            panelDisplay.Controls.Clear();
+            adminDashboard aD = new adminDashboard();
+            aD.TopLevel = false;
+            panelDisplay.Controls.Add(aD);
+            aD.Dock = DockStyle.Fill;
+            aD.Show();
         }
 
         //change color of button 
@@ -241,6 +248,13 @@ namespace GUI
         {
             btnDashboard.BackColor = SystemColors.Control;
             changeColor(sender, e);
+
+            panelDisplay.Controls.Clear();
+            adminDashboard aD = new adminDashboard();
+            aD.TopLevel = false;
+            panelDisplay.Controls.Add(aD);
+            aD.Dock = DockStyle.Fill;
+            aD.Show();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

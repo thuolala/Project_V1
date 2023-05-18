@@ -573,6 +573,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap teamwork__1_ {
+            get {
+                object obj = ResourceManager.GetObject("teamwork (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap trash_can {
             get {
                 object obj = ResourceManager.GetObject("trash-can", resourceCulture);

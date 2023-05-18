@@ -71,10 +71,10 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(panel2);
             panel1.Dock = DockStyle.Bottom;
-            panel1.Location = new Point(0, 597);
+            panel1.Location = new Point(0, 612);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(857, 25);
+            panel1.Size = new Size(857, 10);
             panel1.TabIndex = 8;
             // 
             // panel2

@@ -65,6 +65,7 @@
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
             panelDisplay = new Guna.UI2.WinForms.Guna2Panel();
             panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            notiCount = new Label();
             noti = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -118,6 +119,7 @@
             // panelTop
             // 
             panelTop.BackColor = Color.FromArgb(80, 149, 146);
+            panelTop.Controls.Add(notiCount);
             panelTop.Controls.Add(noti);
             panelTop.Controls.Add(guna2ControlBox2);
             panelTop.Controls.Add(guna2ControlBox1);
@@ -130,13 +132,25 @@
             panelTop.Size = new Size(1112, 36);
             panelTop.TabIndex = 0;
             // 
+            // notiCount
+            // 
+            notiCount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            notiCount.AutoSize = true;
+            notiCount.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            notiCount.ForeColor = Color.DarkRed;
+            notiCount.Location = new Point(960, 1);
+            notiCount.Name = "notiCount";
+            notiCount.Size = new Size(15, 17);
+            notiCount.TabIndex = 24;
+            notiCount.Text = "1";
+            // 
             // noti
             // 
             noti.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             noti.CustomizableEdges = customizableEdges3;
             noti.Image = Properties.Resources.notification1;
             noti.ImageRotate = 0F;
-            noti.Location = new Point(978, 5);
+            noti.Location = new Point(943, 5);
             noti.Name = "noti";
             noti.ShadowDecoration.CustomizableEdges = customizableEdges4;
             noti.Size = new Size(20, 20);
@@ -475,6 +489,7 @@
             Load += adminForm_Load;
             panelShow.ResumeLayout(false);
             panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)noti).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
@@ -507,5 +522,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2PictureBox noti;
+        private Label notiCount;
     }
 }
