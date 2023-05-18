@@ -439,6 +439,7 @@
             btnReset.Size = new Size(181, 55);
             btnReset.TabIndex = 77;
             btnReset.Text = "Hủy";
+            btnReset.Click += btnReset_Click;
             // 
             // btnUpdate
             // 

@@ -93,7 +93,6 @@
             panel7 = new Panel();
             displayPoint = new Label();
             label15 = new Label();
-            label16 = new Label();
             panel6 = new Panel();
             label11 = new Label();
             displayPos = new Label();
@@ -113,6 +112,7 @@
             fullname = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             avatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            errorInput = new Label();
             panelEdit.SuspendLayout();
             panelBottom.SuspendLayout();
             guna2CustomGradientPanel12.SuspendLayout();
@@ -141,18 +141,17 @@
             // 
             // panelEdit
             // 
-            panelEdit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panelEdit.Controls.Add(btnReset);
             panelEdit.Controls.Add(btnUpdate);
             panelEdit.Controls.Add(panelBottom);
             panelEdit.Controls.Add(panelTop);
             panelEdit.CustomizableEdges = customizableEdges35;
             panelEdit.Location = new Point(0, 0);
+            panelEdit.Margin = new Padding(3, 4, 3, 4);
             panelEdit.Name = "panelEdit";
             panelEdit.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            panelEdit.Size = new Size(973, 480);
+            panelEdit.Size = new Size(1112, 640);
             panelEdit.TabIndex = 0;
-            panelEdit.Paint += panelEdit_Paint;
             // 
             // btnReset
             // 
@@ -165,15 +164,17 @@
             btnReset.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             btnReset.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnReset.FillColor = Color.LightGray;
-            btnReset.FillColor2 = Color.Silver;
+            btnReset.FillColor2 = Color.FromArgb(152, 155, 156);
             btnReset.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(584, 414);
+            btnReset.Location = new Point(706, 548);
+            btnReset.Margin = new Padding(3, 4, 3, 4);
             btnReset.Name = "btnReset";
             btnReset.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnReset.Size = new Size(175, 41);
-            btnReset.TabIndex = 61;
+            btnReset.Size = new Size(181, 55);
+            btnReset.TabIndex = 79;
             btnReset.Text = "Hủy";
+            btnReset.Click += btnReset_Click;
             // 
             // btnUpdate
             // 
@@ -185,21 +186,25 @@
             btnUpdate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnUpdate.DisabledState.FillColor2 = Color.FromArgb(169, 169, 169);
             btnUpdate.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnUpdate.FillColor2 = Color.FromArgb(128, 255, 128);
+            btnUpdate.FillColor = Color.FromArgb(105, 175, 172);
+            btnUpdate.FillColor2 = Color.FromArgb(3, 49, 90);
             btnUpdate.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             btnUpdate.ForeColor = Color.White;
-            btnUpdate.Location = new Point(764, 414);
+            btnUpdate.Location = new Point(893, 548);
+            btnUpdate.Margin = new Padding(3, 4, 3, 4);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnUpdate.Size = new Size(175, 41);
-            btnUpdate.TabIndex = 60;
+            btnUpdate.Size = new Size(181, 55);
+            btnUpdate.TabIndex = 78;
             btnUpdate.Text = "Cập nhật";
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // panelBottom
             // 
-            panelBottom.BorderColor = Color.FromArgb(94, 148, 255);
+            panelBottom.BorderColor = Color.FromArgb(3, 49, 90);
             panelBottom.BorderRadius = 10;
             panelBottom.BorderThickness = 1;
+            panelBottom.Controls.Add(errorInput);
             panelBottom.Controls.Add(guna2CustomGradientPanel12);
             panelBottom.Controls.Add(guna2CustomGradientPanel11);
             panelBottom.Controls.Add(guna2CustomGradientPanel10);
@@ -207,10 +212,11 @@
             panelBottom.Controls.Add(guna2CustomGradientPanel5);
             panelBottom.Controls.Add(guna2CustomGradientPanel4);
             panelBottom.CustomizableEdges = customizableEdges25;
-            panelBottom.Location = new Point(12, 254);
+            panelBottom.Location = new Point(14, 339);
+            panelBottom.Margin = new Padding(3, 4, 3, 4);
             panelBottom.Name = "panelBottom";
             panelBottom.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            panelBottom.Size = new Size(949, 142);
+            panelBottom.Size = new Size(1085, 201);
             panelBottom.TabIndex = 1;
             // 
             // guna2CustomGradientPanel12
@@ -224,11 +230,10 @@
             guna2CustomGradientPanel12.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel12.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel12.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel12.Location = new Point(466, 89);
-            guna2CustomGradientPanel12.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel12.Location = new Point(533, 119);
             guna2CustomGradientPanel12.Name = "guna2CustomGradientPanel12";
             guna2CustomGradientPanel12.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna2CustomGradientPanel12.Size = new Size(468, 34);
+            guna2CustomGradientPanel12.Size = new Size(535, 45);
             guna2CustomGradientPanel12.TabIndex = 61;
             // 
             // password
@@ -243,24 +248,25 @@
             password.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            password.Location = new Point(158, 1);
-            password.Margin = new Padding(4);
+            password.Location = new Point(181, 1);
+            password.Margin = new Padding(5);
             password.Name = "password";
-            password.PasswordChar = '\0';
+            password.PasswordChar = '●';
             password.PlaceholderText = "";
             password.SelectedText = "";
             password.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            password.Size = new Size(303, 32);
+            password.Size = new Size(346, 43);
             password.TabIndex = 38;
+            password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(0, 0, 64);
-            label1.Location = new Point(3, 6);
+            label1.ForeColor = Color.FromArgb(3, 49, 90);
+            label1.Location = new Point(3, 8);
             label1.Name = "label1";
-            label1.Size = new Size(138, 21);
+            label1.Size = new Size(173, 28);
             label1.TabIndex = 21;
             label1.Text = "Thay đổi mật khẩu";
             // 
@@ -275,21 +281,20 @@
             guna2CustomGradientPanel11.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel11.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel11.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel11.Location = new Point(466, 51);
-            guna2CustomGradientPanel11.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel11.Location = new Point(533, 68);
             guna2CustomGradientPanel11.Name = "guna2CustomGradientPanel11";
             guna2CustomGradientPanel11.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna2CustomGradientPanel11.Size = new Size(468, 34);
+            guna2CustomGradientPanel11.Size = new Size(535, 45);
             guna2CustomGradientPanel11.TabIndex = 60;
             // 
             // displayPassword
             // 
             displayPassword.AutoSize = true;
             displayPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayPassword.ForeColor = Color.LightSteelBlue;
-            displayPassword.Location = new Point(158, 6);
+            displayPassword.ForeColor = Color.FromArgb(193, 200, 207);
+            displayPassword.Location = new Point(181, 8);
             displayPassword.Name = "displayPassword";
-            displayPassword.Size = new Size(20, 21);
+            displayPassword.Size = new Size(24, 28);
             displayPassword.TabIndex = 34;
             displayPassword.Text = "()";
             // 
@@ -297,10 +302,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(0, 0, 64);
-            label2.Location = new Point(3, 6);
+            label2.ForeColor = Color.FromArgb(3, 49, 90);
+            label2.Location = new Point(3, 8);
             label2.Name = "label2";
-            label2.Size = new Size(75, 21);
+            label2.Size = new Size(94, 28);
             label2.TabIndex = 21;
             label2.Text = "Mật khẩu";
             // 
@@ -315,21 +320,20 @@
             guna2CustomGradientPanel10.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel10.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel10.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel10.Location = new Point(466, 13);
-            guna2CustomGradientPanel10.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel10.Location = new Point(533, 17);
             guna2CustomGradientPanel10.Name = "guna2CustomGradientPanel10";
             guna2CustomGradientPanel10.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            guna2CustomGradientPanel10.Size = new Size(468, 34);
+            guna2CustomGradientPanel10.Size = new Size(535, 45);
             guna2CustomGradientPanel10.TabIndex = 59;
             // 
             // displayUsername
             // 
             displayUsername.AutoSize = true;
             displayUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayUsername.ForeColor = Color.LightSteelBlue;
-            displayUsername.Location = new Point(158, 5);
+            displayUsername.ForeColor = Color.FromArgb(193, 200, 207);
+            displayUsername.Location = new Point(181, 7);
             displayUsername.Name = "displayUsername";
-            displayUsername.Size = new Size(20, 21);
+            displayUsername.Size = new Size(24, 28);
             displayUsername.TabIndex = 33;
             displayUsername.Text = "()";
             // 
@@ -337,10 +341,10 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label10.ForeColor = Color.FromArgb(0, 0, 64);
-            label10.Location = new Point(3, 6);
+            label10.ForeColor = Color.FromArgb(3, 49, 90);
+            label10.Location = new Point(3, 8);
             label10.Name = "label10";
-            label10.Size = new Size(111, 21);
+            label10.Size = new Size(140, 28);
             label10.TabIndex = 21;
             label10.Text = "Tên đăng nhập";
             // 
@@ -355,11 +359,10 @@
             guna2CustomGradientPanel6.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel6.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel6.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel6.Location = new Point(14, 92);
-            guna2CustomGradientPanel6.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel6.Location = new Point(16, 123);
             guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             guna2CustomGradientPanel6.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2CustomGradientPanel6.Size = new Size(446, 34);
+            guna2CustomGradientPanel6.Size = new Size(510, 45);
             guna2CustomGradientPanel6.TabIndex = 58;
             // 
             // email
@@ -374,24 +377,24 @@
             email.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             email.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             email.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            email.Location = new Point(104, 1);
-            email.Margin = new Padding(4);
+            email.Location = new Point(119, 1);
+            email.Margin = new Padding(5);
             email.Name = "email";
             email.PasswordChar = '\0';
             email.PlaceholderText = "";
             email.SelectedText = "";
             email.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            email.Size = new Size(338, 32);
+            email.Size = new Size(386, 43);
             email.TabIndex = 38;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(0, 0, 64);
-            label5.Location = new Point(3, 6);
+            label5.ForeColor = Color.FromArgb(3, 49, 90);
+            label5.Location = new Point(3, 8);
             label5.Name = "label5";
-            label5.Size = new Size(48, 21);
+            label5.Size = new Size(59, 28);
             label5.TabIndex = 21;
             label5.Text = "Email";
             // 
@@ -406,11 +409,10 @@
             guna2CustomGradientPanel5.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel5.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel5.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel5.Location = new Point(14, 52);
-            guna2CustomGradientPanel5.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel5.Location = new Point(16, 69);
             guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             guna2CustomGradientPanel5.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            guna2CustomGradientPanel5.Size = new Size(446, 34);
+            guna2CustomGradientPanel5.Size = new Size(510, 45);
             guna2CustomGradientPanel5.TabIndex = 57;
             // 
             // phone
@@ -425,24 +427,24 @@
             phone.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             phone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             phone.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            phone.Location = new Point(104, 1);
-            phone.Margin = new Padding(4);
+            phone.Location = new Point(119, 1);
+            phone.Margin = new Padding(5);
             phone.Name = "phone";
             phone.PasswordChar = '\0';
             phone.PlaceholderText = "";
             phone.SelectedText = "";
             phone.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            phone.Size = new Size(338, 32);
+            phone.Size = new Size(386, 43);
             phone.TabIndex = 38;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(0, 0, 64);
-            label4.Location = new Point(3, 6);
+            label4.ForeColor = Color.FromArgb(3, 49, 90);
+            label4.Location = new Point(3, 8);
             label4.Name = "label4";
-            label4.Size = new Size(38, 21);
+            label4.Size = new Size(47, 28);
             label4.TabIndex = 21;
             label4.Text = "SĐT";
             // 
@@ -457,11 +459,10 @@
             guna2CustomGradientPanel4.FillColor2 = Color.Transparent;
             guna2CustomGradientPanel4.FillColor3 = Color.Transparent;
             guna2CustomGradientPanel4.FillColor4 = Color.Transparent;
-            guna2CustomGradientPanel4.Location = new Point(14, 12);
-            guna2CustomGradientPanel4.Margin = new Padding(3, 2, 3, 2);
+            guna2CustomGradientPanel4.Location = new Point(16, 16);
             guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             guna2CustomGradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            guna2CustomGradientPanel4.Size = new Size(446, 34);
+            guna2CustomGradientPanel4.Size = new Size(510, 45);
             guna2CustomGradientPanel4.TabIndex = 56;
             // 
             // hometown
@@ -476,43 +477,46 @@
             hometown.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             hometown.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             hometown.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            hometown.Location = new Point(104, 1);
-            hometown.Margin = new Padding(4);
+            hometown.Location = new Point(119, 1);
+            hometown.Margin = new Padding(5);
             hometown.Name = "hometown";
             hometown.PasswordChar = '\0';
             hometown.PlaceholderText = "";
             hometown.SelectedText = "";
             hometown.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            hometown.Size = new Size(338, 32);
+            hometown.Size = new Size(386, 43);
             hometown.TabIndex = 38;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(0, 0, 64);
-            label3.Location = new Point(3, 6);
+            label3.ForeColor = Color.FromArgb(3, 49, 90);
+            label3.Location = new Point(3, 8);
             label3.Name = "label3";
-            label3.Size = new Size(78, 21);
+            label3.Size = new Size(97, 28);
             label3.TabIndex = 21;
             label3.Text = "Quê quán";
             // 
             // panelTop
             // 
-            panelTop.BorderColor = Color.FromArgb(255, 128, 128);
+            panelTop.BorderColor = Color.FromArgb(3, 49, 90);
             panelTop.BorderRadius = 10;
-            panelTop.BorderThickness = 1;
             panelTop.Controls.Add(panelInfo);
             panelTop.Controls.Add(guna2Panel1);
             panelTop.CustomizableEdges = customizableEdges33;
-            panelTop.Location = new Point(12, 30);
+            panelTop.Location = new Point(14, 40);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            panelTop.Size = new Size(949, 205);
+            panelTop.Size = new Size(1085, 273);
             panelTop.TabIndex = 0;
             // 
             // panelInfo
             // 
+            panelInfo.BorderColor = Color.FromArgb(3, 49, 90);
+            panelInfo.BorderRadius = 10;
+            panelInfo.BorderThickness = 1;
             panelInfo.Controls.Add(panel7);
             panelInfo.Controls.Add(panel6);
             panelInfo.Controls.Add(panel5);
@@ -522,30 +526,31 @@
             panelInfo.Controls.Add(fullname);
             panelInfo.CustomizableEdges = customizableEdges27;
             panelInfo.Dock = DockStyle.Fill;
-            panelInfo.Location = new Point(200, 0);
+            panelInfo.Location = new Point(229, 0);
+            panelInfo.Margin = new Padding(3, 4, 3, 4);
             panelInfo.Name = "panelInfo";
             panelInfo.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            panelInfo.Size = new Size(749, 205);
+            panelInfo.Size = new Size(856, 273);
             panelInfo.TabIndex = 1;
             // 
             // panel7
             // 
             panel7.Controls.Add(displayPoint);
             panel7.Controls.Add(label15);
-            panel7.Controls.Add(label16);
-            panel7.Location = new Point(269, 162);
+            panel7.Location = new Point(396, 216);
+            panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(234, 29);
+            panel7.Size = new Size(267, 39);
             panel7.TabIndex = 28;
             // 
             // displayPoint
             // 
             displayPoint.AutoSize = true;
             displayPoint.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayPoint.ForeColor = Color.LightSteelBlue;
-            displayPoint.Location = new Point(122, 0);
+            displayPoint.ForeColor = Color.FromArgb(193, 200, 207);
+            displayPoint.Location = new Point(140, 3);
             displayPoint.Name = "displayPoint";
-            displayPoint.Size = new Size(20, 21);
+            displayPoint.Size = new Size(24, 28);
             displayPoint.TabIndex = 22;
             displayPoint.Text = "()";
             // 
@@ -554,40 +559,30 @@
             label15.AutoSize = true;
             label15.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label15.ForeColor = Color.MediumSeaGreen;
-            label15.Location = new Point(3, 0);
+            label15.Location = new Point(3, 3);
             label15.Name = "label15";
-            label15.Size = new Size(112, 21);
+            label15.Size = new Size(139, 28);
             label15.TabIndex = 9;
             label15.Text = "Điểm tích lũy";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.ForeColor = Color.LightSteelBlue;
-            label16.Location = new Point(99, 0);
-            label16.Name = "label16";
-            label16.Size = new Size(22, 21);
-            label16.TabIndex = 10;
-            label16.Text = "()";
             // 
             // panel6
             // 
             panel6.Controls.Add(label11);
             panel6.Controls.Add(displayPos);
-            panel6.Location = new Point(266, 57);
+            panel6.Location = new Point(396, 76);
+            panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(234, 29);
+            panel6.Size = new Size(267, 39);
             panel6.TabIndex = 27;
             // 
             // label11
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.ForeColor = Color.RoyalBlue;
-            label11.Location = new Point(3, 0);
+            label11.ForeColor = Color.FromArgb(3, 49, 90);
+            label11.Location = new Point(3, 3);
             label11.Name = "label11";
-            label11.Size = new Size(72, 21);
+            label11.Size = new Size(88, 28);
             label11.TabIndex = 9;
             label11.Text = "Chức vụ";
             // 
@@ -595,10 +590,10 @@
             // 
             displayPos.AutoSize = true;
             displayPos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayPos.ForeColor = Color.LightSteelBlue;
-            displayPos.Location = new Point(121, 0);
+            displayPos.ForeColor = Color.FromArgb(193, 200, 207);
+            displayPos.Location = new Point(140, 3);
             displayPos.Name = "displayPos";
-            displayPos.Size = new Size(20, 21);
+            displayPos.Size = new Size(24, 28);
             displayPos.TabIndex = 10;
             displayPos.Text = "()";
             // 
@@ -606,19 +601,20 @@
             // 
             panel5.Controls.Add(displayBirth);
             panel5.Controls.Add(label14);
-            panel5.Location = new Point(26, 162);
+            panel5.Location = new Point(30, 216);
+            panel5.Margin = new Padding(3, 4, 3, 4);
             panel5.Name = "panel5";
-            panel5.Size = new Size(234, 29);
+            panel5.Size = new Size(267, 39);
             panel5.TabIndex = 26;
             // 
             // displayBirth
             // 
             displayBirth.AutoSize = true;
             displayBirth.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayBirth.ForeColor = Color.LightSteelBlue;
-            displayBirth.Location = new Point(89, 0);
+            displayBirth.ForeColor = Color.FromArgb(193, 200, 207);
+            displayBirth.Location = new Point(110, 3);
             displayBirth.Name = "displayBirth";
-            displayBirth.Size = new Size(20, 21);
+            displayBirth.Size = new Size(24, 28);
             displayBirth.TabIndex = 12;
             displayBirth.Text = "()";
             // 
@@ -626,10 +622,10 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.ForeColor = Color.SteelBlue;
-            label14.Location = new Point(3, 0);
+            label14.ForeColor = Color.FromArgb(3, 49, 90);
+            label14.Location = new Point(3, 3);
             label14.Name = "label14";
-            label14.Size = new Size(80, 21);
+            label14.Size = new Size(99, 28);
             label14.TabIndex = 11;
             label14.Text = "Ngày sinh";
             // 
@@ -637,19 +633,20 @@
             // 
             panel4.Controls.Add(displayPhone);
             panel4.Controls.Add(label13);
-            panel4.Location = new Point(26, 127);
+            panel4.Location = new Point(30, 169);
+            panel4.Margin = new Padding(3, 4, 3, 4);
             panel4.Name = "panel4";
-            panel4.Size = new Size(234, 29);
+            panel4.Size = new Size(267, 39);
             panel4.TabIndex = 25;
             // 
             // displayPhone
             // 
             displayPhone.AutoSize = true;
             displayPhone.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            displayPhone.ForeColor = Color.LightSteelBlue;
-            displayPhone.Location = new Point(89, 0);
+            displayPhone.ForeColor = Color.FromArgb(193, 200, 207);
+            displayPhone.Location = new Point(110, 3);
             displayPhone.Name = "displayPhone";
-            displayPhone.Size = new Size(20, 21);
+            displayPhone.Size = new Size(24, 28);
             displayPhone.TabIndex = 11;
             displayPhone.Text = "()";
             // 
@@ -657,10 +654,10 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.ForeColor = Color.SteelBlue;
-            label13.Location = new Point(3, 0);
+            label13.ForeColor = Color.FromArgb(3, 49, 90);
+            label13.Location = new Point(3, 3);
             label13.Name = "label13";
-            label13.Size = new Size(38, 21);
+            label13.Size = new Size(47, 28);
             label13.TabIndex = 10;
             label13.Text = "SĐT";
             // 
@@ -669,19 +666,20 @@
             panel3.Controls.Add(label12);
             panel3.Controls.Add(radioButtonMale);
             panel3.Controls.Add(radioButtonFemale);
-            panel3.Location = new Point(26, 92);
+            panel3.Location = new Point(30, 123);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(234, 29);
+            panel3.Size = new Size(267, 39);
             panel3.TabIndex = 24;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.ForeColor = Color.SteelBlue;
-            label12.Location = new Point(3, 0);
+            label12.ForeColor = Color.FromArgb(3, 49, 90);
+            label12.Location = new Point(3, 3);
             label12.Name = "label12";
-            label12.Size = new Size(70, 21);
+            label12.Size = new Size(87, 28);
             label12.TabIndex = 9;
             label12.Text = "Giới tính";
             // 
@@ -690,10 +688,11 @@
             radioButtonMale.AutoSize = true;
             radioButtonMale.Enabled = false;
             radioButtonMale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonMale.ForeColor = Color.LightSteelBlue;
-            radioButtonMale.Location = new Point(89, -2);
+            radioButtonMale.ForeColor = Color.FromArgb(193, 200, 207);
+            radioButtonMale.Location = new Point(110, 3);
+            radioButtonMale.Margin = new Padding(3, 4, 3, 4);
             radioButtonMale.Name = "radioButtonMale";
-            radioButtonMale.Size = new Size(62, 25);
+            radioButtonMale.Size = new Size(75, 32);
             radioButtonMale.TabIndex = 18;
             radioButtonMale.TabStop = true;
             radioButtonMale.Tag = "Nam";
@@ -705,10 +704,11 @@
             radioButtonFemale.AutoSize = true;
             radioButtonFemale.Enabled = false;
             radioButtonFemale.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButtonFemale.ForeColor = Color.LightSteelBlue;
-            radioButtonFemale.Location = new Point(160, -2);
+            radioButtonFemale.ForeColor = Color.FromArgb(193, 200, 207);
+            radioButtonFemale.Location = new Point(201, 3);
+            radioButtonFemale.Margin = new Padding(3, 4, 3, 4);
             radioButtonFemale.Name = "radioButtonFemale";
-            radioButtonFemale.Size = new Size(49, 25);
+            radioButtonFemale.Size = new Size(60, 32);
             radioButtonFemale.TabIndex = 19;
             radioButtonFemale.TabStop = true;
             radioButtonFemale.Tag = "Nữ";
@@ -719,19 +719,20 @@
             // 
             panel2.Controls.Add(label7);
             panel2.Controls.Add(displayID);
-            panel2.Location = new Point(26, 57);
+            panel2.Location = new Point(30, 76);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(234, 29);
+            panel2.Size = new Size(267, 39);
             panel2.TabIndex = 23;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.RoyalBlue;
-            label7.Location = new Point(3, 0);
+            label7.ForeColor = Color.FromArgb(3, 49, 90);
+            label7.Location = new Point(3, 3);
             label7.Name = "label7";
-            label7.Size = new Size(27, 21);
+            label7.Size = new Size(33, 28);
             label7.TabIndex = 9;
             label7.Text = "ID";
             // 
@@ -739,10 +740,10 @@
             // 
             displayID.AutoSize = true;
             displayID.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            displayID.ForeColor = Color.LightSteelBlue;
-            displayID.Location = new Point(89, 0);
+            displayID.ForeColor = Color.FromArgb(193, 200, 207);
+            displayID.Location = new Point(110, 3);
             displayID.Name = "displayID";
-            displayID.Size = new Size(39, 21);
+            displayID.Size = new Size(47, 28);
             displayID.TabIndex = 10;
             displayID.Text = "(ID)";
             // 
@@ -750,10 +751,10 @@
             // 
             fullname.AutoSize = true;
             fullname.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            fullname.ForeColor = Color.FromArgb(0, 0, 64);
-            fullname.Location = new Point(26, 10);
+            fullname.ForeColor = Color.FromArgb(3, 49, 90);
+            fullname.Location = new Point(30, 13);
             fullname.Name = "fullname";
-            fullname.Size = new Size(72, 32);
+            fullname.Size = new Size(89, 41);
             fullname.TabIndex = 22;
             fullname.Text = "(Tên)";
             // 
@@ -763,37 +764,53 @@
             guna2Panel1.CustomizableEdges = customizableEdges31;
             guna2Panel1.Dock = DockStyle.Left;
             guna2Panel1.Location = new Point(0, 0);
+            guna2Panel1.Margin = new Padding(3, 4, 3, 4);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            guna2Panel1.Size = new Size(200, 205);
+            guna2Panel1.Size = new Size(229, 273);
             guna2Panel1.TabIndex = 0;
             // 
             // avatar
             // 
             avatar.BorderRadius = 10;
-            avatar.BorderStyle = BorderStyle.FixedSingle;
             avatar.CustomizableEdges = customizableEdges29;
             avatar.Dock = DockStyle.Fill;
             avatar.ImageRotate = 0F;
             avatar.Location = new Point(0, 0);
+            avatar.Margin = new Padding(3, 4, 3, 4);
             avatar.Name = "avatar";
             avatar.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            avatar.Size = new Size(200, 205);
+            avatar.Size = new Size(229, 273);
+            avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             avatar.TabIndex = 0;
             avatar.TabStop = false;
             avatar.Click += avatar_Click;
             // 
+            // errorInput
+            // 
+            errorInput.AutoSize = true;
+            errorInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            errorInput.ForeColor = Color.Red;
+            errorInput.Location = new Point(714, 167);
+            errorInput.Name = "errorInput";
+            errorInput.Size = new Size(15, 23);
+            errorInput.TabIndex = 75;
+            errorInput.Text = " ";
+            // 
             // selfEditForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(973, 480);
+            ClientSize = new Size(1112, 640);
             Controls.Add(panelEdit);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "selfEditForm";
+            StartPosition = FormStartPosition.WindowsDefaultBounds;
             Load += selfEditForm_Load;
             panelEdit.ResumeLayout(false);
             panelBottom.ResumeLayout(false);
+            panelBottom.PerformLayout();
             guna2CustomGradientPanel12.ResumeLayout(false);
             guna2CustomGradientPanel12.PerformLayout();
             guna2CustomGradientPanel11.ResumeLayout(false);
@@ -838,7 +855,6 @@
         private Panel panel7;
         private Label displayPoint;
         private Label label15;
-        private Label label16;
         private Panel panel6;
         private Label label11;
         private Label displayPos;
@@ -876,5 +892,6 @@
         private Label displayPassword;
         private Guna.UI2.WinForms.Guna2GradientButton btnReset;
         private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
+        private Label errorInput;
     }
 }

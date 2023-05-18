@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
 using DTO;
 
 namespace GUI
@@ -15,6 +16,8 @@ namespace GUI
     {
         Nhanvien nv = new Nhanvien();
         Taikhoan tk = new Taikhoan();
+        NhanvienBLL nvBLL = new NhanvienBLL();
+        TaikhoanBLL tkBLL = new TaikhoanBLL();
 
         public adminForm(Nhanvien nhanvien, Taikhoan taikhoan)
         {
@@ -236,12 +239,16 @@ namespace GUI
             btnInfo.BackColor = SystemColors.Control;
             changeColor(sender, e);
 
+            Nhanvien nvien = nvBLL.getNVById(nv.Id);
+            Taikhoan tkhoan = tkBLL.getAccountById(tk.Id);
+
             panelDisplay.Controls.Clear();
-            selfEditForm info = new selfEditForm(nv, tk);
+            selfEditForm info = new selfEditForm(nvien, tkhoan);
             info.TopLevel = false;
-            panelDisplay.Controls.Add(info);
             info.Dock = DockStyle.Fill;
             info.Show();
+            panelDisplay.Controls.Add(info);
+            info.BringToFront();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -268,6 +275,17 @@ namespace GUI
         private void adminForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnMoney_Click(object sender, EventArgs e)
+        {
+            btnMoney.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
+            Nhanvien nvien = nvBLL.getNVById(nv.Id);
+            Taikhoan tkhoan = tkBLL.getAccountById(tk.Id);
+
+            panelDisplay.Controls.Clear();
         }
     }
 }

@@ -53,5 +53,14 @@ namespace GUI
             labelID.Text = khBLL.getAutoID();
             date_created.Value = DateTime.Now;
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            fullname.Text = "";
+            address.Text = "";
+            phone.Text = "";
+            date_created.Value = DateTime.Now;
+            email.Text = "";
+        }
     }
 }

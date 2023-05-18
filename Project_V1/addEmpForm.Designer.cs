@@ -798,6 +798,7 @@
             avatar.ShadowDecoration.CustomizableEdges = customizableEdges51;
             avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             avatar.Size = new Size(180, 200);
+            avatar.SizeMode = PictureBoxSizeMode.StretchImage;
             avatar.TabIndex = 61;
             avatar.TabStop = false;
             avatar.Click += avatar_Click;

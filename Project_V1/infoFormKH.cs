@@ -55,5 +55,13 @@ namespace GUI
                 this.Close();
             }
         }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            fullname.Text = "";
+            address.Text = "";
+            phone.Text = "";
+            email.Text = "";
+        }
     }
 }

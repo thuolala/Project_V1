@@ -360,6 +360,7 @@ namespace GUI
 
         private void btnReset_Click(object sender, EventArgs e)
         {
+            avatar.Image = null;
             fullname.Text = "";
             if (radbtnFemale.Checked)
             {
@@ -372,6 +373,7 @@ namespace GUI
             dob.Value = DateTime.Now;
             hometown.Text = "";
             phone.Text = "";
+            email.Text = "";
             comboboxPosition.SelectedIndex = 0;
             date_created.Value = DateTime.Now;
             username.Text = "";

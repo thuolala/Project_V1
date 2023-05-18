@@ -346,6 +346,7 @@
             btnMoney.TabIndex = 16;
             btnMoney.Text = "  Xem doanh thu";
             btnMoney.TextAlign = HorizontalAlignment.Left;
+            btnMoney.Click += btnMoney_Click;
             // 
             // btnInfo
             // 

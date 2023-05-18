@@ -38,6 +38,8 @@ namespace GUI
         //load all 
         private void loadBy(DataTable dt)
         {
+            panelDisplay.Controls.Clear();
+
             //define nv
             string _id;
             string _name;
@@ -71,16 +73,10 @@ namespace GUI
             dt = khBLL.getAllKH();
             loadBy(dt);
         }
-        private void loadEach(string phone)
-        {
-            //get by phone
-            DataTable dt = new DataTable();
-            dt = khBLL.getKHByPhone(phone);
-            loadBy(dt);
-        }
 
         private void manageCusForm_Load(object sender, EventArgs e)
         {
+            loadComboBox();
             searchAction();
             loadAll();
         }
@@ -117,11 +113,38 @@ namespace GUI
             DataTable dt = new DataTable();
             dt = khBLL.getKHByPhone(search.Text);
             loadBy(dt);
+        }
 
-            if(search.Text == "")
+        //self define combobox 
+        private void loadComboBox()
+        {
+            comboboxSort.Items.Insert(0, "Tất cả");
+            comboboxSort.Items.Insert(1, "Mua nhiều nhất");
+            comboboxSort.Items.Insert(2, "Lâu năm");
+            comboboxSort.Items.Insert(3, "Mới");
+
+            comboboxSort.SelectedIndex = 0;
+        }
+
+        private void comboboxSort_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //clear
+            panelDisplay.Controls.Clear();
+            search.Text = "";
+
+            //get by 
+            int index = comboboxSort.SelectedIndex;
+            if (index == 0)
             {
-                panelDisplay.Controls.Clear();
                 loadAll();
+            }
+            else
+            {
+                /*
+                DataTable dt = new DataTable();
+                dt = nvBLL.getNVByPos(pos);
+                loadBy(dt);
+                */
             }
         }
     }

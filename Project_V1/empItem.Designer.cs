@@ -96,6 +96,7 @@
             empPic.Name = "empPic";
             empPic.ShadowDecoration.CustomizableEdges = customizableEdges4;
             empPic.Size = new Size(90, 100);
+            empPic.SizeMode = PictureBoxSizeMode.StretchImage;
             empPic.TabIndex = 88;
             empPic.TabStop = false;
             empPic.Click += empPic_Click;
