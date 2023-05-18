@@ -22,40 +22,6 @@ namespace GUI
         KhachhangBLL khBLL = new KhachhangBLL();
         Khachhang kh = new Khachhang();
 
-        private void panelCus_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        public void loadAll()
-        {
-            DataTable dt = new DataTable();
-            dt = khBLL.getAllKH();
-            datagridviewCusList.DataSource = dt;
-            datagridviewCusList.Columns[0].HeaderText = "ID";
-            datagridviewCusList.Columns[1].HeaderText = "Họ tên";
-            datagridviewCusList.Columns[2].HeaderText = "Địa chỉ";
-            datagridviewCusList.Columns[3].HeaderText = "SĐT";
-
-            DataGridViewImageColumn editBtn = new DataGridViewImageColumn();
-            editBtn.HeaderText = "Edit";
-            editBtn.Name = "EditBtn";
-            editBtn.Image = Properties.Resources.pencil1;
-            editBtn.ImageLayout = DataGridViewImageCellLayout.Zoom;
-            editBtn.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            editBtn.Width = 20;
-            datagridviewCusList.Columns.Add(editBtn);
-        }
-
-        private void manageCusForm_Load(object sender, EventArgs e)
-        {
-            loadAll();
-        }
-
-        private void datagridviewCusList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -63,20 +29,48 @@ namespace GUI
             f.ShowDialog();
         }
 
-        private void datagridviewCusList_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            if (e.ColumnIndex == datagridviewCusList.Columns["EditBtn"].Index && e.RowIndex >= 0)
-            {
-                int index = e.RowIndex;
-                string id = datagridviewCusList.Rows[index].Cells[0].Value.ToString();
-                string fname = datagridviewCusList.Rows[index].Cells[1].Value + string.Empty;
-                string address = datagridviewCusList.Rows[index].Cells[2].Value + string.Empty;
-                string phone = datagridviewCusList.Rows[index].Cells[3].Value + string.Empty;
+            panelDisplay.Controls.Clear();
+            loadAll();
+        }
 
-                kh = new Khachhang(id, fname, address, phone);
-                infoFormKH f = new infoFormKH(kh);
-                f.ShowDialog();
+        //load all 
+        private void loadAll()
+        {
+            //get all nv
+            DataTable dt = new DataTable();
+            dt = khBLL.getAllKH();
+
+            //define nv
+            string _id;
+            string _name;
+            string _address;
+            string _phone;
+            string _email;
+            DateTime _created;
+
+            //create list of user control of kh
+            cusItem[] listItem = new cusItem[dt.Rows.Count];
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                _id = dt.Rows[i]["IDKH"].ToString();
+                _name = dt.Rows[i]["HOTEN"].ToString();
+                _address = dt.Rows[i]["DIACHI"].ToString();
+                _phone = dt.Rows[i]["SDT"].ToString();
+                _email = dt.Rows[i]["EMAIL"].ToString();
+                _created = (DateTime)dt.Rows[i]["CREATED"];
+
+                Khachhang khang = new Khachhang(_id, _name, _address, _phone, _email, _created);
+                listItem[i] = new cusItem(khang);
+                panelDisplay.Controls.Add(listItem[i]);
             }
+        }
+
+        private void manageCusForm_Load(object sender, EventArgs e)
+        {
+            loadAll();
         }
     }
 }

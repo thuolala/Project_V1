@@ -14,6 +14,7 @@ using System.Runtime.Intrinsics.X86;
 using System.Xml.Linq;
 using System.Drawing.Imaging;
 using System.Drawing.Drawing2D;
+using System.Text.RegularExpressions;
 
 namespace GUI
 {
@@ -39,10 +40,10 @@ namespace GUI
         }
 
         //resize image to 
-        public Image ResizeImageByPercentage(Image image, int percentage)
+        public Image ResizeImageByPercentage(Image image)
         {
-            int newWidth = (int)(image.Width * percentage / 100.0);
-            int newHeight = (int)(image.Height * percentage / 100.0);
+            int newWidth = 180;
+            int newHeight = 200;
 
             var destRect = new Rectangle(0, 0, newWidth, newHeight);
             var destImage = new Bitmap(newWidth, newHeight);
@@ -73,16 +74,15 @@ namespace GUI
             {
                 result = (Bitmap)original.Clone();
             };
-            return ResizeImageByPercentage(result, 75);
+            return result;
         }
 
-        private byte[] ImageToByteArray(PictureBox pictureBox)
+        private byte[] ImageToByteArray(Image image)
         {
             MemoryStream memoryStream = new MemoryStream();
             //pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
-            Image img = pictureBox.Image;
             //MessageBox.Show(img.RawFormat.ToString());
-            img.Save(memoryStream, ImageFormat.Png);
+            image.Save(memoryStream, ImageFormat.Png);
             return memoryStream.ToArray();
         }
 
@@ -94,9 +94,11 @@ namespace GUI
             if (open.ShowDialog() == DialogResult.OK)
             {
                 filePath = open.FileName;
-                avatar.Image = CloneImage(filePath);
-                avatar.ImageLocation = filePath;
-                img = ImageToByteArray(avatar);
+                Image imgR = CloneImage(filePath);
+                imgR = ResizeImageByPercentage(imgR);
+                avatar.Image = imgR;
+                //avatar.ImageLocation = filePath;
+                img = ImageToByteArray(imgR);
             }
         }
 
@@ -113,7 +115,133 @@ namespace GUI
             }
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private bool checkConfirmPass()
+        {
+            if (password.Text.Equals(confirmPass.Text))
+            {
+                return true;
+            }
+            else
+            {
+                errorInput.Text = "Mật khẩu không trùng khớp!";
+                return false;
+            }
+        }
+
+        private bool ContainsNonAlphabeticChars(string input)
+        {
+            Regex regex = new Regex("[^a-zA-Z]");
+            return regex.IsMatch(input);
+        }
+        private bool ContainsNonNumber(string input)
+        {
+            Regex regex = new Regex("[^0-9]");
+            return regex.IsMatch(input);
+        }
+
+        private bool checkFullname()
+        {
+            if (fullname.Text == "")
+            {
+                errorInput.Text = "Họ tên không được trống!";
+                return false;
+            }
+            else if (ContainsNonAlphabeticChars(fullname.Text))
+            {
+                errorInput.Text = "Họ tên không được chứa ký tự đặc biệt!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkGender()
+        {
+            if (radbtnMale.Checked == false && radbtnFemale.Checked == false)
+            {
+                errorInput.Text = "Vui lòng chọn giới tính!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkTown()
+        {
+            if (hometown.Text == "")
+            {
+                errorInput.Text = "Quê quán không được trống!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkPhone()
+        {
+            if (phone.Text == "")
+            {
+                errorInput.Text = "SĐT không được trống!";
+                return false;
+            }
+            else if (ContainsNonNumber(phone.Text))
+            {
+                errorInput.Text = "SĐT sai định dạng!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        private bool checkEmail()
+        {
+            if (email.Text == "")
+            {
+                errorInput.Text = "Email không được trống!";
+                return false;
+            }
+            else if (email.Text.StartsWith("@") || email.Text.EndsWith("@"))
+            {
+                errorInput.Text = "Email sai định dạng!";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        private bool checkInput()
+        {
+            bool f = checkFullname();
+            bool t = checkTown();
+            bool p = checkPhone();
+            bool e = checkEmail();
+
+            bool res = false;
+            if (f && t && p && p && e)
+            {
+                res = true;
+            }
+            else
+            {
+                if(f == false || t == false || p == false || e == false)
+                {
+                    res = false;
+                }
+            }
+
+            return res;
+        }
+
+        private void addNV()
         {
             string nvName = fullname.Text;
             string nvSex = "";
@@ -131,11 +259,12 @@ namespace GUI
             string nvHome = hometown.Text;
             string nvPhone = phone.Text;
             string nvEmail = email.Text;
+            DateTime created = date_created.Value;
             string nvPos = comboboxPosition.SelectedValue.ToString();
-            byte[] nvAva = ImageToByteArray(avatar);
+            byte[] nvAva = img;
 
             //set nhan vien
-            nv = new Nhanvien(nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, nvAva);
+            nv = new Nhanvien(nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, created, nvAva);
 
             string uname = username.Text;
             string pass = password.Text;
@@ -144,18 +273,50 @@ namespace GUI
             //set taikhoan
             tk = new Taikhoan(uname, pass, per);
 
-            if (nvBLL.addNV(nv) && tkBLL.addAccount(tk))
+            //them ql 
+            if (nvPos.Equals("AD"))
             {
-                MessageBox.Show("Thêm thành công");
-                this.Close();
+                if (nvBLL.addQL(nv) && tkBLL.addAccountQL(tk))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+            }
+            //them nv 
+            else if (nvPos.Equals("BH") || nvPos.Equals("KHO") || nvPos.Equals("TN"))
+            {
+                if (nvBLL.addNV(nv) && tkBLL.addAccountNV(tk))
+                {
+                    MessageBox.Show("Thêm thành công");
+                    this.Close();
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (checkInput())
+            {
+                addNV();
             }
         }
 
         //Get auto id 
         private string getID()
         {
-            string idnv = nvBLL.getAutoID();
-            return idnv;
+            if (comboboxPosition.SelectedValue.ToString().Equals("AD"))
+            {
+                return nvBLL.getAutoIDQL();
+            }
+            else
+            {
+                return nvBLL.getAutoIDNV();
+            }
+        }
+
+        private void setID()
+        {
+            labelID.Text = getID();
         }
 
         //load combobox pos 
@@ -169,13 +330,18 @@ namespace GUI
 
         private void addEmpForm_Load(object sender, EventArgs e)
         {
-            labelID.Text = getID();
             loadComboBox();
+            setID();
         }
 
         private void avatar_Click(object sender, EventArgs e)
         {
             OpenImage();
+        }
+
+        private void comboboxPosition_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            setID();
         }
     }
 }

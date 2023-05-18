@@ -118,53 +118,73 @@ namespace GUI
         //check which users 
         private void checkUser(object sender, EventArgs e)
         {
-            //Select
-            tk = taikhoanBLL.getAccountByUname(username.Text);
-            nv = nhanvienBLL.getNVById(tk.Id);
-            int per = tk.Permission;
-            if (username.Text == "" && string.IsNullOrEmpty(password.Text))
+            try
             {
-                errorLogin.Text = "Tên đăng nhập và mật khẩu không được trống!";
-                panelUname.BorderColor = Color.Red;
-                panelPass.BorderColor = Color.Red;
-            }
-            else
-            {
-                panelUname.BorderColor = Color.FromArgb(94, 148, 255);
-                panelPass.BorderColor = Color.FromArgb(94, 148, 255);
-
-                if ((username.Text == "" || tk.Userame.Equals(username.Text) == false) && ((!string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == true)))
+                //Select
+                tk = taikhoanBLL.getAccountByUname(username.Text);
+                nv = nhanvienBLL.getNVById(tk.Id);
+                int per = tk.Permission;
+                if (username.Text == "" && string.IsNullOrEmpty(password.Text))
                 {
-                    errorLogin.Text = "Tên đăng nhập sai!";
+                    errorLogin.Text = "Tên đăng nhập và mật khẩu không được trống!";
                     panelUname.BorderColor = Color.Red;
-                    panelPass.BorderColor = Color.FromArgb(94, 148, 255);
-                }
-                else if ((string.IsNullOrEmpty(password.Text) || tk.Password.Equals(password.Text) == false) && (username.Text != "" || tk.Userame.Equals(username.Text) == true))
-                {
-                    errorLogin.Text = "Mật khẩu sai!";
-                    panelUname.BorderColor = Color.FromArgb(94, 148, 255);
                     panelPass.BorderColor = Color.Red;
                 }
+
                 else
                 {
-                    if (per == 2)
-                    {
-                        openAdmin(sender, e, nv, tk);
+                    panelUname.BorderColor = Color.FromArgb(3, 49, 90);
+                    panelPass.BorderColor = Color.FromArgb(3, 49, 90);
+
+                    if (tk.Userame.Equals(username.Text) == false){
+                        errorLogin.Text = "Tên đăng nhập sai!";
+                        panelUname.BorderColor = Color.Red;
+                        panelPass.BorderColor = Color.FromArgb(3, 49, 90);
                     }
-                    if (per == 1)
+                    else if ((username.Text == ""))
                     {
-                        if (nv.Idpos.Equals("BH"))
+                        errorLogin.Text = "Tên đăng nhập không được trống!";
+                        panelUname.BorderColor = Color.Red;
+                        panelPass.BorderColor = Color.FromArgb(3, 49, 90);
+                    }
+                    else if ((string.IsNullOrEmpty(password.Text))) 
+                    {
+                        errorLogin.Text = "Mật khẩu không được trống!";
+                        panelUname.BorderColor = Color.FromArgb(3, 49, 90);
+                        panelPass.BorderColor = Color.Red;
+                    }
+                    else if (tk.Password.Equals(password.Text) == false)
+                    {
+                        errorLogin.Text = "Mật khẩu sai!";
+                        panelUname.BorderColor = Color.FromArgb(3, 49, 90);
+                        panelPass.BorderColor = Color.Red;
+                    }
+                    else
+                    {
+                        if (per == 2)
                         {
-                            openNVBH(sender, e, nv, tk);
+                            openAdmin(sender, e, nv, tk);
                         }
-                        if (nv.Idpos.Equals("KHO"))
+                        if (per == 1)
                         {
-                            openNVKho(sender, e, nv, tk);
+                            if (nv.Idpos.Equals("BH"))
+                            {
+                                openNVBH(sender, e, nv, tk);
+                            }
+                            if (nv.Idpos.Equals("KHO"))
+                            {
+                                openNVKho(sender, e, nv, tk);
+                            }
                         }
                     }
                 }
             }
-
+            catch (Exception ex)
+            {
+                errorLogin.Text = "Tên đăng nhập hoặc mật khẩu sai!";
+                panelUname.BorderColor = Color.FromArgb(3, 49, 90);
+                panelPass.BorderColor = Color.Red;
+            }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -193,7 +213,7 @@ namespace GUI
             MailAddress from = new MailAddress("extractteam123@gmail.com", "Pharmacity");
             MailAddress to = new MailAddress(email, nhanvienBLL.getNVById(test.Id).Name);
             List<MailAddress> cc = new List<MailAddress>();
-            cc.Add(new MailAddress("phamthushame2002@gmail.com", "Pharmacity"));
+            cc.Add(new MailAddress("extractteam123@gmail.com", "Pharmacity"));
             handle.SendEmail(from, to, cc);
             MessageBox.Show("Mail đã được gửi!");
         }

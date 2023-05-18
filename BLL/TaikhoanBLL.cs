@@ -32,10 +32,16 @@ namespace BLL
             return taikhoanDAL.getAccountByUName(uname);
         }
 
-        //them account 
-        public bool addAccount(Taikhoan tk)
+        //them account ql
+        public bool addAccountQL(Taikhoan tk)
+        {
+            return taikhoanDAL.addAccountQL(tk);
+        }
+
+        //them account nv
+        public bool addAccountNV(Taikhoan tk)
         { 
-            return taikhoanDAL.addAccount(tk);
+            return taikhoanDAL.addAccountNV(tk);
         }
 
         //update account 

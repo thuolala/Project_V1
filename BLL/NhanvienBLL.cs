@@ -20,10 +20,22 @@ namespace BLL
             return nvDAL.getAllNV();
         }
 
+        //count all
+        public int countAll()
+        {
+            return this.getAllNV().Rows.Count;
+        }
+
         //get all nv by pos
         public DataTable getNVByPos(string idPos)
         {
             return nvDAL.getNVByPos(idPos);
+        }
+
+        //count each
+        public int countEach(string idPos)
+        {
+            return this.getNVByPos(idPos).Rows.Count;
         }
 
         //get nv by id 
@@ -32,10 +44,22 @@ namespace BLL
             return nvDAL.getNVById(nID);
         }
 
-        //get auto id 
-        public string getAutoID()
+        //get auto ql 
+        public string getAutoIDQL()
         {
-            return nvDAL.getAutoID();
+            return nvDAL.getAutoIDQL();
+        }
+
+        //get auto id 
+        public string getAutoIDNV()
+        {
+            return nvDAL.getAutoIDNV();
+        }
+
+        //them ql 
+        public bool addQL(Nhanvien nv)
+        {
+            return nvDAL.addQL(nv);
         }
 
         //them nv 

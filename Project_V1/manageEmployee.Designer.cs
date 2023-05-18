@@ -28,41 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panelEmp = new Guna.UI2.WinForms.Guna2Panel();
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
             panelDisplay = new FlowLayoutPanel();
-            panelPos = new Guna.UI2.WinForms.Guna2Panel();
+            panelTop = new Guna.UI2.WinForms.Guna2Panel();
+            panelSearch = new Guna.UI2.WinForms.Guna2GradientPanel();
+            guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            search = new Guna.UI2.WinForms.Guna2TextBox();
+            empCount = new Label();
             btnRefresh = new PictureBox();
-            panelSearch = new Panel();
-            btnSearch = new Guna.UI2.WinForms.Guna2ImageButton();
-            search = new TextBox();
             btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             panelEmp.SuspendLayout();
             panelShow.SuspendLayout();
-            panelPos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
+            panelTop.SuspendLayout();
             panelSearch.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).BeginInit();
             SuspendLayout();
             // 
             // panelEmp
             // 
             panelEmp.Controls.Add(panelShow);
-            panelEmp.Controls.Add(panelPos);
-            panelEmp.CustomizableEdges = customizableEdges8;
+            panelEmp.Controls.Add(panelTop);
+            panelEmp.CustomizableEdges = customizableEdges27;
             panelEmp.Dock = DockStyle.Fill;
             panelEmp.Location = new Point(0, 0);
             panelEmp.Margin = new Padding(3, 4, 3, 4);
             panelEmp.Name = "panelEmp";
-            panelEmp.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            panelEmp.ShadowDecoration.CustomizableEdges = customizableEdges28;
             panelEmp.Size = new Size(1112, 845);
             panelEmp.TabIndex = 0;
             // 
@@ -70,11 +77,11 @@
             // 
             panelShow.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panelShow.Controls.Add(panelDisplay);
-            panelShow.CustomizableEdges = customizableEdges1;
+            panelShow.CustomizableEdges = customizableEdges15;
             panelShow.Location = new Point(0, 89);
             panelShow.Margin = new Padding(3, 4, 3, 4);
             panelShow.Name = "panelShow";
-            panelShow.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            panelShow.ShadowDecoration.CustomizableEdges = customizableEdges16;
             panelShow.Size = new Size(1112, 756);
             panelShow.TabIndex = 1;
             // 
@@ -89,19 +96,89 @@
             panelDisplay.Size = new Size(1112, 756);
             panelDisplay.TabIndex = 0;
             // 
-            // panelPos
+            // panelTop
             // 
-            panelPos.Controls.Add(btnRefresh);
-            panelPos.Controls.Add(panelSearch);
-            panelPos.Controls.Add(btnAdd);
-            panelPos.CustomizableEdges = customizableEdges6;
-            panelPos.Dock = DockStyle.Top;
-            panelPos.Location = new Point(0, 0);
-            panelPos.Margin = new Padding(3, 4, 3, 4);
-            panelPos.Name = "panelPos";
-            panelPos.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            panelPos.Size = new Size(1112, 91);
-            panelPos.TabIndex = 0;
+            panelTop.BorderColor = Color.Transparent;
+            panelTop.Controls.Add(panelSearch);
+            panelTop.Controls.Add(btnRefresh);
+            panelTop.Controls.Add(btnAdd);
+            panelTop.CustomizableEdges = customizableEdges25;
+            panelTop.Dock = DockStyle.Top;
+            panelTop.Location = new Point(0, 0);
+            panelTop.Margin = new Padding(3, 4, 3, 4);
+            panelTop.Name = "panelTop";
+            panelTop.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            panelTop.Size = new Size(1112, 91);
+            panelTop.TabIndex = 0;
+            // 
+            // panelSearch
+            // 
+            panelSearch.BorderColor = Color.FromArgb(3, 49, 90);
+            panelSearch.BorderRadius = 5;
+            panelSearch.BorderThickness = 1;
+            panelSearch.Controls.Add(guna2PictureBox1);
+            panelSearch.Controls.Add(search);
+            panelSearch.Controls.Add(empCount);
+            panelSearch.CustomizableEdges = customizableEdges21;
+            panelSearch.FillColor = Color.Azure;
+            panelSearch.FillColor2 = Color.Azure;
+            panelSearch.Location = new Point(10, 13);
+            panelSearch.Name = "panelSearch";
+            panelSearch.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            panelSearch.Size = new Size(400, 62);
+            panelSearch.TabIndex = 64;
+            // 
+            // guna2PictureBox1
+            // 
+            guna2PictureBox1.BackColor = Color.Transparent;
+            guna2PictureBox1.CustomizableEdges = customizableEdges17;
+            guna2PictureBox1.FillColor = Color.Transparent;
+            guna2PictureBox1.Image = Properties.Resources.magnifying_glass_search;
+            guna2PictureBox1.ImageRotate = 0F;
+            guna2PictureBox1.Location = new Point(4, 18);
+            guna2PictureBox1.Name = "guna2PictureBox1";
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            guna2PictureBox1.Size = new Size(24, 24);
+            guna2PictureBox1.TabIndex = 65;
+            guna2PictureBox1.TabStop = false;
+            // 
+            // search
+            // 
+            search.Animated = true;
+            search.BackColor = Color.Transparent;
+            search.BorderThickness = 0;
+            search.CustomizableEdges = customizableEdges19;
+            search.DefaultText = "";
+            search.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            search.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            search.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            search.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            search.FillColor = Color.Azure;
+            search.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            search.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            search.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            search.Location = new Point(23, 8);
+            search.Margin = new Padding(6, 8, 6, 8);
+            search.Name = "search";
+            search.PasswordChar = '\0';
+            search.PlaceholderText = "Tìm kiếm theo tên/ID";
+            search.SelectedText = "";
+            search.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            search.Size = new Size(371, 45);
+            search.TabIndex = 67;
+            // 
+            // empCount
+            // 
+            empCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            empCount.AutoSize = true;
+            empCount.BackColor = Color.Transparent;
+            empCount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            empCount.ForeColor = Color.White;
+            empCount.Location = new Point(190, 80);
+            empCount.Name = "empCount";
+            empCount.Size = new Size(49, 38);
+            empCount.TabIndex = 66;
+            empCount.Text = "10";
             // 
             // btnRefresh
             // 
@@ -117,55 +194,12 @@
             btnRefresh.TabStop = false;
             btnRefresh.Click += btnRefresh_Click;
             // 
-            // panelSearch
-            // 
-            panelSearch.BackColor = Color.Azure;
-            panelSearch.Controls.Add(btnSearch);
-            panelSearch.Controls.Add(search);
-            panelSearch.Location = new Point(10, 20);
-            panelSearch.Margin = new Padding(10, 4, 3, 4);
-            panelSearch.Name = "panelSearch";
-            panelSearch.RightToLeft = RightToLeft.No;
-            panelSearch.Size = new Size(400, 52);
-            panelSearch.TabIndex = 27;
-            // 
-            // btnSearch
-            // 
-            btnSearch.CheckedState.ImageSize = new Size(64, 64);
-            btnSearch.HoverState.Image = Properties.Resources.search;
-            btnSearch.Image = Properties.Resources.search;
-            btnSearch.ImageOffset = new Point(0, 0);
-            btnSearch.ImageRotate = 0F;
-            btnSearch.ImageSize = new Size(20, 20);
-            btnSearch.Location = new Point(363, 11);
-            btnSearch.Margin = new Padding(3, 4, 3, 4);
-            btnSearch.Name = "btnSearch";
-            btnSearch.PressedState.Image = Properties.Resources.search;
-            btnSearch.PressedState.ImageSize = new Size(64, 64);
-            btnSearch.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            btnSearch.Size = new Size(23, 27);
-            btnSearch.TabIndex = 12;
-            btnSearch.Click += btnSearch_Click;
-            // 
-            // search
-            // 
-            search.BackColor = Color.Azure;
-            search.BorderStyle = BorderStyle.None;
-            search.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            search.ForeColor = Color.FromArgb(0, 0, 64);
-            search.Location = new Point(16, 11);
-            search.Margin = new Padding(3, 4, 3, 4);
-            search.Name = "search";
-            search.PlaceholderText = "Tìm kiếm theo tên/ID";
-            search.Size = new Size(329, 27);
-            search.TabIndex = 11;
-            // 
             // btnAdd
             // 
             btnAdd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnAdd.Animated = true;
             btnAdd.BorderRadius = 10;
-            btnAdd.CustomizableEdges = customizableEdges4;
+            btnAdd.CustomizableEdges = customizableEdges23;
             btnAdd.DisabledState.BorderColor = Color.DarkGray;
             btnAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -178,7 +212,7 @@
             btnAdd.Location = new Point(900, 20);
             btnAdd.Margin = new Padding(3, 4, 3, 4);
             btnAdd.Name = "btnAdd";
-            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            btnAdd.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnAdd.Size = new Size(200, 55);
             btnAdd.TabIndex = 60;
             btnAdd.Text = "Thêm nhân viên";
@@ -196,24 +230,28 @@
             Load += manageEmployee_Load;
             panelEmp.ResumeLayout(false);
             panelShow.ResumeLayout(false);
-            panelPos.ResumeLayout(false);
-            panelPos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
+            panelTop.ResumeLayout(false);
+            panelTop.PerformLayout();
             panelSearch.ResumeLayout(false);
             panelSearch.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)btnRefresh).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel panelEmp;
-        private Panel panelSearch;
         private Guna.UI2.WinForms.Guna2ImageButton btnSearch;
-        private TextBox search;
         private Guna.UI2.WinForms.Guna2Panel panelShow;
-        private Guna.UI2.WinForms.Guna2Panel panelPos;
+        private Guna.UI2.WinForms.Guna2Panel panelTop;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;
         private FlowLayoutPanel panelDisplay;
         private PictureBox btnRefresh;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelSearch;
+        private Guna.UI2.WinForms.Guna2TextBox search;
+        private Label empCount;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }

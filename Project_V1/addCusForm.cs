@@ -36,14 +36,21 @@ namespace GUI
             string name = fullname.Text;
             string add = address.Text;
             string phoneNum = phone.Text;
+            string mail = email.Text;
+            DateTime created = date_created.Value;
 
             //set kh 
-            kh = new Khachhang(name, add, phoneNum);
+            kh = new Khachhang(name, add, phoneNum, mail, created);
             if (khBLL.addKH(kh))
             {
                 MessageBox.Show("Thêm thành công");
                 this.Close();
             }
+        }
+
+        private void addCusForm_Load(object sender, EventArgs e)
+        {
+            labelID.Text = khBLL.getAutoID();
         }
     }
 }

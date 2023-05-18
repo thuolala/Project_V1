@@ -89,8 +89,52 @@ namespace DAL
             return listPass;
         }
 
-        //them account 
-        public bool addAccount(Taikhoan tk)
+        //QUAN LY
+        //them account ql
+        public bool addAccountQL(Taikhoan tk)
+        {
+            bool result = false;
+
+            try
+            {
+                conn.Open();
+
+                //neu account chua ton tai 
+                if (this.getAccountByUName(tk.Userame) != null)
+                {
+                    //Nhap vao bang Tai khoan 
+                    SqlCommand cmd = new SqlCommand("INSERT_TKQL", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@TENDANGNHAP", tk.Userame));
+                    cmd.Parameters.Add(new SqlParameter("@MATKHAU", tk.Password));
+                    cmd.Parameters.Add(new SqlParameter("@QUYEN", tk.Permission));
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    da.Dispose();
+
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
+        //NHAN VIEN 
+        //them account nv
+        public bool addAccountNV(Taikhoan tk)
         {
             bool result = false;
 
@@ -131,6 +175,7 @@ namespace DAL
             return result;
         }
 
+        //CHUNG 
         //update account 
         public bool updateAccount(Taikhoan tk)
         {

@@ -133,6 +133,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bar_chart1 {
+            get {
+                object obj = ResourceManager.GetObject("bar-chart1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap best_price {
             get {
                 object obj = ResourceManager.GetObject("best-price", resourceCulture);
@@ -166,6 +176,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap customer_review {
             get {
                 object obj = ResourceManager.GetObject("customer-review", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer_review__1_ {
+            get {
+                object obj = ResourceManager.GetObject("customer-review (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +403,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logout6 {
+            get {
+                object obj = ResourceManager.GetObject("logout6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_search {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap management {
             get {
                 object obj = ResourceManager.GetObject("management", resourceCulture);
@@ -396,6 +436,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap medicines {
             get {
                 object obj = ResourceManager.GetObject("medicines", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medicines1 {
+            get {
+                object obj = ResourceManager.GetObject("medicines1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -20,6 +20,12 @@ namespace BLL
             return khDAL.getAllKH();
         }
 
+        //count all
+        public int countAll()
+        {
+            return this.getAllKH().Rows.Count;
+        }
+
         //get all kh by id 
         public Khachhang getKHById(string id)
         {
@@ -36,6 +42,12 @@ namespace BLL
         public bool updateKH(Khachhang kh)
         {
             return khDAL.updateKH(kh);
+        }
+
+        //get auto id 
+        public string getAutoID()
+        {
+            return khDAL.getAutoID();
         }
     }
 }

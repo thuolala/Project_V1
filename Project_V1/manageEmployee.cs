@@ -42,6 +42,7 @@ namespace GUI
             string _phone;
             string _email;
             string _idpos;
+            DateTime _created;
             byte[] _ava;
 
             //create list of user control of nv 
@@ -57,33 +58,20 @@ namespace GUI
                 _phone = dt.Rows[i]["SDT"].ToString();
                 _email = dt.Rows[i]["EMAIL"].ToString();
                 _idpos = dt.Rows[i]["IDVitri"].ToString();
+                _created = (DateTime)dt.Rows[i]["CREATED"];
                 _ava = (byte[])dt.Rows[i]["AVATAR"];
 
-                Nhanvien nvien = new Nhanvien(_id, _name, _gender, _birthday, _hometown, _phone, _email, _idpos, _ava);
+                Nhanvien nvien = new Nhanvien(_id, _name, _gender, _birthday, _hometown, _phone, _email, _idpos, _created, _ava);
                 Taikhoan tkhoan = tkBLL.getAccountById(_id);
                 listItem[i] = new empItem(nvien, tkhoan);
                 panelDisplay.Controls.Add(listItem[i]);
             }
         }
 
-        //close and open login form
-        private void openLogin(object sender, EventArgs e)
-        {
-            this.Hide();
-            loginForm f = new loginForm();
-            f.FormClosed += (sender, e) => this.Close();
-            f.Show();
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             addEmpForm f = new addEmpForm();
             f.ShowDialog();
-        }
-
-        private void logout_Click(object sender, EventArgs e)
-        {
-            openLogin(sender, e);
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)

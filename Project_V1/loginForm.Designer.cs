@@ -76,7 +76,7 @@
             // 
             panelLogin.Anchor = AnchorStyles.None;
             panelLogin.BackColor = Color.White;
-            panelLogin.BorderColor = Color.FromArgb(94, 148, 255);
+            panelLogin.BorderColor = Color.FromArgb(3, 49, 90);
             panelLogin.BorderRadius = 10;
             panelLogin.BorderThickness = 1;
             panelLogin.Controls.Add(errorLogin);
@@ -132,7 +132,7 @@
             // panelPass
             // 
             panelPass.BackColor = Color.White;
-            panelPass.BorderColor = Color.FromArgb(94, 148, 255);
+            panelPass.BorderColor = Color.FromArgb(3, 49, 90);
             panelPass.BorderRadius = 10;
             panelPass.BorderThickness = 1;
             panelPass.Controls.Add(btnShowPass);
@@ -188,7 +188,7 @@
             // panelUname
             // 
             panelUname.BackColor = Color.White;
-            panelUname.BorderColor = Color.FromArgb(94, 148, 255);
+            panelUname.BorderColor = Color.FromArgb(3, 49, 90);
             panelUname.BorderRadius = 10;
             panelUname.BorderThickness = 1;
             panelUname.Controls.Add(username);
@@ -241,7 +241,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(0, 0, 64);
+            label4.ForeColor = Color.FromArgb(3, 49, 90);
             label4.Location = new Point(40, 225);
             label4.Name = "label4";
             label4.Size = new Size(94, 28);
@@ -252,7 +252,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(0, 0, 64);
+            label3.ForeColor = Color.FromArgb(3, 49, 90);
             label3.Location = new Point(40, 127);
             label3.Name = "label3";
             label3.Size = new Size(140, 28);
@@ -262,11 +262,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(0, 0, 64);
-            label2.Location = new Point(141, 41);
+            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.FromArgb(3, 49, 90);
+            label2.Location = new Point(121, 35);
             label2.Name = "label2";
-            label2.Size = new Size(349, 41);
+            label2.Size = new Size(370, 41);
             label2.TabIndex = 15;
             label2.Text = "Đăng nhập vào tài khoản";
             // 

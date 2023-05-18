@@ -12,6 +12,8 @@ namespace DTO
         private string _name;
         private string _address;
         private string _phone;
+        private string _email;
+        private DateTime _created;
 
         public string Id
         {
@@ -49,24 +51,31 @@ namespace DTO
             }
         }
 
+        public string Email { get => _email; set => _email = value; }
+        public DateTime Created { get => _created; set => _created = value; }
+
         public Khachhang()
         {
 
         }
 
-        public Khachhang(string name, string address, string phone)
+        public Khachhang(string name, string address, string phone, string email, DateTime ceated)
         {
             this._name = name;
             this._address = address;
             this._phone = phone;
+            this._email = email;
+            this._created = ceated;
         }
 
-        public Khachhang(string id, string name, string address, string phone)
+        public Khachhang(string id, string name, string address, string phone, string email, DateTime ceated)
         {
             this._id = id;
             this._name = name;
             this._address = address;
             this._phone = phone;
+            this._email = email;
+            this._created = ceated;
         }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,6 +61,8 @@ namespace GUI
             phone.Text = nv.Phone;
             email.Text = nv.Email;
             comboboxPosition.SelectedValue = nv.Idpos;
+            date_created.Value = nv.Created;
+
             using (MemoryStream stream = new MemoryStream(nv.Avatar))
             {
                 Image image = Image.FromStream(stream);
@@ -74,6 +78,34 @@ namespace GUI
             this.Close();
         }
 
+        //resize image to 
+        public Image ResizeImageByPercentage(Image image)
+        {
+            int newWidth = 180;
+            int newHeight = 200;
+
+            var destRect = new Rectangle(0, 0, newWidth, newHeight);
+            var destImage = new Bitmap(newWidth, newHeight);
+
+            destImage.SetResolution(image.HorizontalResolution, image.VerticalResolution);
+
+            using (var graphics = Graphics.FromImage(destImage))
+            {
+                graphics.CompositingMode = CompositingMode.SourceCopy;
+                graphics.CompositingQuality = CompositingQuality.HighQuality;
+                graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+                graphics.SmoothingMode = SmoothingMode.HighQuality;
+                graphics.PixelOffsetMode = PixelOffsetMode.HighQuality;
+
+                using (var wrapMode = new ImageAttributes())
+                {
+                    wrapMode.SetWrapMode(WrapMode.TileFlipXY);
+                    graphics.DrawImage(image, destRect, 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, wrapMode);
+                }
+            }
+            return destImage;
+        }
+
         private Image CloneImage(string path)
         {
             Image result;
@@ -82,13 +114,15 @@ namespace GUI
                 result = (Bitmap)original.Clone();
 
             };
-            return result;
+            return ResizeImageByPercentage(result);
         }
 
-        private byte[] ImageToByteArray(PictureBox pictureBox)
+        private byte[] ImageToByteArray(Image image)
         {
             MemoryStream memoryStream = new MemoryStream();
-            pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            //pictureBox.Image.Save(memoryStream, pictureBox.Image.RawFormat);
+            //MessageBox.Show(img.RawFormat.ToString());
+            image.Save(memoryStream, ImageFormat.Png);
             return memoryStream.ToArray();
         }
 
@@ -100,9 +134,11 @@ namespace GUI
             if (open.ShowDialog() == DialogResult.OK)
             {
                 filePath = open.FileName;
-                avatar.Image = CloneImage(filePath);
-                avatar.ImageLocation = filePath;
-                img = ImageToByteArray(avatar);
+                Image imgR = CloneImage(filePath);
+                imgR = ResizeImageByPercentage(imgR);
+                avatar.Image = imgR;
+                //avatar.ImageLocation = filePath;
+                img = ImageToByteArray(imgR);
             }
         }
 
@@ -144,10 +180,11 @@ namespace GUI
             string nvPhone = phone.Text;
             string nvEmail = email.Text;
             string nvPos = comboboxPosition.SelectedValue.ToString();
-            byte[] nvAva = ImageToByteArray(avatar);
+            DateTime created = date_created.Value;
+            byte[] nvAva = img;
 
             //set nhan vien
-            nv = new Nhanvien(id, nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, nvAva);
+            nv = new Nhanvien(id, nvName, nvSex, nvDob, nvHome, nvPhone, nvEmail, nvPos, created, nvAva);
 
             string uname = username.Text;
             string pass = password.Text;
@@ -184,6 +221,11 @@ namespace GUI
             {
                 // User clicked No or closed the dialog, do something else here
             }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

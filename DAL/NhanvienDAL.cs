@@ -49,9 +49,10 @@ namespace DAL
                 string phone = dt.Rows[0]["SDT"].ToString();
                 string email = dt.Rows[0]["EMAIL"].ToString();
                 string idpos = dt.Rows[0]["IDVitri"].ToString();
+                DateTime created = (DateTime)dt.Rows[0]["CREATED"];
                 byte[] ava = (byte[])dt.Rows[0]["Avatar"];
 
-                nv = new Nhanvien(id, name, gender, birthday, hometown, phone, email, idpos, ava);
+                nv = new Nhanvien(id, name, gender, birthday, hometown, phone, email, idpos, created, ava);
             }
 
             return nv;
@@ -90,8 +91,39 @@ namespace DAL
             return dt;
         }
 
-        //get auto id 
-        public string getAutoID()
+        //get auto id ql
+        public string getAutoIDQL()
+        {
+            string idnv = "";
+            try
+            {
+                conn.Open();
+
+                //Get id
+                SqlCommand cmd = new SqlCommand("Return_IDQL", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    idnv = dt.Rows[0][0].ToString();
+                }
+                da.Dispose();
+            }
+            catch (Exception e)
+            {
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return idnv;
+        }
+
+        //get auto id nv
+        public string getAutoIDNV()
         {
             string idnv = "";
             try
@@ -121,6 +153,55 @@ namespace DAL
             return idnv;
         }
 
+        //them ql 
+        public bool addQL(Nhanvien nv)
+        {
+            bool result = false;
+
+            try
+            {
+                conn.Open();
+
+                //neu nv chua ton tai 
+                if (this.getNVById(nv.Id) != null)
+                {
+                    //Nhap vao bang Nhan vien
+                    SqlCommand cmd = new SqlCommand("INSERT_QL", conn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@HOTEN", SqlDbType.NVarChar)).Value = nv.Name;
+                    cmd.Parameters.Add(new SqlParameter("@GIOITINH", SqlDbType.NVarChar)).Value = nv.Gender;
+                    cmd.Parameters.Add(new SqlParameter("@DOB", SqlDbType.DateTime)).Value = nv.Birthday;
+                    cmd.Parameters.Add(new SqlParameter("@QUEQUAN", SqlDbType.NVarChar)).Value = nv.Hometown;
+                    cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = nv.Phone;
+                    cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.NVarChar)).Value = nv.Email;
+                    cmd.Parameters.Add(new SqlParameter("@IDVitri", SqlDbType.NVarChar)).Value = nv.Idpos;
+                    cmd.Parameters.Add(new SqlParameter("@CREATED", SqlDbType.DateTime)).Value = nv.Created;
+                    cmd.Parameters.Add(new SqlParameter("@AVATAR", SqlDbType.Image)).Value = nv.Avatar;
+
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    da.Dispose();
+
+                    result = true;
+                }
+                else
+                {
+                    result = false;
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
         //them nv 
         public bool addNV(Nhanvien nv)
         {
@@ -143,6 +224,7 @@ namespace DAL
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = nv.Phone;
                     cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.NVarChar)).Value = nv.Email;
                     cmd.Parameters.Add(new SqlParameter("@IDVitri", SqlDbType.NVarChar)).Value = nv.Idpos;
+                    cmd.Parameters.Add(new SqlParameter("@CREATED", SqlDbType.DateTime)).Value = nv.Created;
                     cmd.Parameters.Add(new SqlParameter("@AVATAR", SqlDbType.Image)).Value = nv.Avatar;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -192,6 +274,7 @@ namespace DAL
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = nv.Phone;
                     cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.NVarChar)).Value = nv.Email;
                     cmd.Parameters.Add(new SqlParameter("@IDVitri", SqlDbType.NVarChar)).Value = nv.Idpos;
+                    cmd.Parameters.Add(new SqlParameter("@CREATED", SqlDbType.DateTime)).Value = nv.Created;
                     cmd.Parameters.Add(new SqlParameter("@AVATAR", SqlDbType.Image)).Value = nv.Avatar;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);

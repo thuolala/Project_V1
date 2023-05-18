@@ -17,6 +17,7 @@ namespace DTO
         private string _phone;
         private string _email;
         private string _idpos;
+        private DateTime _created;
         private byte[] _ava; 
 
         public string Id 
@@ -100,10 +101,12 @@ namespace DTO
             }
         }
 
+        public DateTime Created { get => _created; set => _created = value; }
+
         public Nhanvien()
         {
         }
-        public Nhanvien(string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, byte[] avatar)
+        public Nhanvien(string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, DateTime created, byte[] avatar)
         {
             this._name = nname;
             this._gender = ngender;
@@ -112,10 +115,11 @@ namespace DTO
             this._phone = nphone;
             this._email = nemail;
             this._idpos = nidpos;
+            this._created = created;
             this._ava = avatar;
         }
 
-        public Nhanvien(string nid, string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, byte[] avatar)
+        public Nhanvien(string nid, string nname, string ngender, DateTime nbirthday, string nhometown, string nphone, string nemail, string nidpos, DateTime created, byte[] avatar)
         {
             this._id = nid;
             this._name = nname;
@@ -125,9 +129,8 @@ namespace DTO
             this._phone = nphone;
             this._email = nemail;
             this._idpos = nidpos;
+            this._created = created;
             this._ava = avatar;
         }
-
-        
     }
 }

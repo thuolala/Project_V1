@@ -59,35 +59,47 @@
             panelBottom = new Guna.UI2.WinForms.Guna2GradientPanel();
             panelChart = new Guna.UI2.WinForms.Guna2GradientPanel();
             panelData = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label7 = new Label();
+            panelMoney = new Guna.UI2.WinForms.Guna2GradientPanel();
+            monthMoney = new Label();
+            label16 = new Label();
+            todayMoney = new Label();
+            label14 = new Label();
+            totalMoney = new Label();
             label8 = new Label();
             guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2GradientPanel3 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label5 = new Label();
+            panelMed = new Guna.UI2.WinForms.Guna2GradientPanel();
+            medCount = new Label();
             label6 = new Label();
             guna2PictureBox3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label3 = new Label();
+            panelCus = new Guna.UI2.WinForms.Guna2GradientPanel();
+            cusCount = new Label();
             label4 = new Label();
             guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            label2 = new Label();
+            panelEmp = new Guna.UI2.WinForms.Guna2GradientPanel();
+            tnCount = new Label();
+            khoCount = new Label();
+            bhCount = new Label();
+            adminCount = new Label();
+            labelTN = new Label();
+            labelKho = new Label();
+            labelBH = new Label();
+            labelQL = new Label();
+            empCount = new Label();
             label1 = new Label();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             panelTop = new Guna.UI2.WinForms.Guna2GradientPanel();
-            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             labelDashboard = new Label();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             panelDashboard.SuspendLayout();
             panelBottom.SuspendLayout();
             panelData.SuspendLayout();
-            guna2GradientPanel4.SuspendLayout();
+            panelMoney.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).BeginInit();
-            guna2GradientPanel3.SuspendLayout();
+            panelMed.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).BeginInit();
-            guna2GradientPanel1.SuspendLayout();
+            panelCus.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).BeginInit();
-            guna2GradientPanel2.SuspendLayout();
+            panelEmp.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             panelTop.SuspendLayout();
             SuspendLayout();
@@ -116,6 +128,7 @@
             panelBottom.ShadowDecoration.CustomizableEdges = customizableEdges48;
             panelBottom.Size = new Size(1115, 746);
             panelBottom.TabIndex = 69;
+            panelBottom.Layout += panelBottom_Layout;
             // 
             // panelChart
             // 
@@ -130,48 +143,105 @@
             // panelData
             // 
             panelData.BackColor = Color.Transparent;
-            panelData.Controls.Add(guna2GradientPanel4);
-            panelData.Controls.Add(guna2GradientPanel3);
-            panelData.Controls.Add(guna2GradientPanel1);
-            panelData.Controls.Add(guna2GradientPanel2);
+            panelData.Controls.Add(panelMoney);
+            panelData.Controls.Add(panelMed);
+            panelData.Controls.Add(panelCus);
+            panelData.Controls.Add(panelEmp);
             panelData.CustomizableEdges = customizableEdges45;
             panelData.Dock = DockStyle.Top;
             panelData.Location = new Point(0, 0);
             panelData.Name = "panelData";
             panelData.ShadowDecoration.CustomizableEdges = customizableEdges46;
             panelData.Size = new Size(1115, 125);
-            panelData.TabIndex = 67;
+            panelData.TabIndex = 0;
+            panelData.Layout += panelData_Layout;
             // 
-            // guna2GradientPanel4
+            // panelMoney
             // 
-            guna2GradientPanel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2GradientPanel4.BorderColor = Color.FromArgb(3, 49, 90);
-            guna2GradientPanel4.BorderRadius = 2;
-            guna2GradientPanel4.BorderThickness = 1;
-            guna2GradientPanel4.Controls.Add(label7);
-            guna2GradientPanel4.Controls.Add(label8);
-            guna2GradientPanel4.Controls.Add(guna2PictureBox4);
-            guna2GradientPanel4.CustomizableEdges = customizableEdges31;
-            guna2GradientPanel4.FillColor = Color.FromArgb(182, 228, 226);
-            guna2GradientPanel4.FillColor2 = Color.FromArgb(105, 175, 172);
-            guna2GradientPanel4.Location = new Point(835, 0);
-            guna2GradientPanel4.Name = "guna2GradientPanel4";
-            guna2GradientPanel4.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            guna2GradientPanel4.Size = new Size(270, 125);
-            guna2GradientPanel4.TabIndex = 3;
+            panelMoney.Anchor = AnchorStyles.None;
+            panelMoney.BorderColor = Color.FromArgb(3, 49, 90);
+            panelMoney.BorderRadius = 5;
+            panelMoney.BorderThickness = 1;
+            panelMoney.Controls.Add(monthMoney);
+            panelMoney.Controls.Add(label16);
+            panelMoney.Controls.Add(todayMoney);
+            panelMoney.Controls.Add(label14);
+            panelMoney.Controls.Add(totalMoney);
+            panelMoney.Controls.Add(label8);
+            panelMoney.Controls.Add(guna2PictureBox4);
+            panelMoney.CustomizableEdges = customizableEdges31;
+            panelMoney.FillColor = Color.FromArgb(3, 49, 90);
+            panelMoney.FillColor2 = Color.FromArgb(105, 175, 172);
+            panelMoney.Location = new Point(810, 0);
+            panelMoney.Name = "panelMoney";
+            panelMoney.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            panelMoney.Size = new Size(270, 125);
+            panelMoney.TabIndex = 3;
             // 
-            // label7
+            // monthMoney
             // 
-            label7.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label7.AutoSize = true;
-            label7.BackColor = Color.Transparent;
-            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(178, 87);
-            label7.Name = "label7";
-            label7.Size = new Size(49, 38);
-            label7.TabIndex = 66;
-            label7.Text = "10";
+            monthMoney.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            monthMoney.AutoSize = true;
+            monthMoney.BackColor = Color.Transparent;
+            monthMoney.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            monthMoney.ForeColor = Color.FromArgb(224, 224, 224);
+            monthMoney.Location = new Point(100, 86);
+            monthMoney.Name = "monthMoney";
+            monthMoney.Size = new Size(17, 20);
+            monthMoney.TabIndex = 75;
+            monthMoney.Text = "0";
+            // 
+            // label16
+            // 
+            label16.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label16.ForeColor = Color.FromArgb(224, 224, 224);
+            label16.Location = new Point(22, 86);
+            label16.Name = "label16";
+            label16.Size = new Size(77, 20);
+            label16.TabIndex = 74;
+            label16.Text = "Tháng này";
+            // 
+            // todayMoney
+            // 
+            todayMoney.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            todayMoney.AutoSize = true;
+            todayMoney.BackColor = Color.Transparent;
+            todayMoney.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            todayMoney.ForeColor = Color.FromArgb(224, 224, 224);
+            todayMoney.Location = new Point(100, 60);
+            todayMoney.Name = "todayMoney";
+            todayMoney.Size = new Size(17, 20);
+            todayMoney.TabIndex = 73;
+            todayMoney.Text = "0";
+            // 
+            // label14
+            // 
+            label14.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label14.ForeColor = Color.FromArgb(224, 224, 224);
+            label14.Location = new Point(22, 60);
+            label14.Name = "label14";
+            label14.Size = new Size(69, 20);
+            label14.TabIndex = 72;
+            label14.Text = "Hôm nay";
+            // 
+            // totalMoney
+            // 
+            totalMoney.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            totalMoney.AutoSize = true;
+            totalMoney.BackColor = Color.Transparent;
+            totalMoney.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            totalMoney.ForeColor = Color.White;
+            totalMoney.Location = new Point(190, 80);
+            totalMoney.Name = "totalMoney";
+            totalMoney.Size = new Size(49, 38);
+            totalMoney.TabIndex = 66;
+            totalMoney.Text = "10";
             // 
             // label8
             // 
@@ -182,9 +252,9 @@
             label8.ForeColor = Color.White;
             label8.Location = new Point(0, 0);
             label8.Name = "label8";
-            label8.Size = new Size(151, 38);
+            label8.Size = new Size(157, 38);
             label8.TabIndex = 65;
-            label8.Text = "Nhân viên";
+            label8.Text = "Doanh thu";
             // 
             // guna2PictureBox4
             // 
@@ -192,45 +262,45 @@
             guna2PictureBox4.BackColor = Color.Transparent;
             guna2PictureBox4.CustomizableEdges = customizableEdges29;
             guna2PictureBox4.FillColor = Color.Transparent;
-            guna2PictureBox4.Image = Properties.Resources.teamwork__1_;
+            guna2PictureBox4.Image = Properties.Resources.bar_chart1;
             guna2PictureBox4.ImageRotate = 0F;
-            guna2PictureBox4.Location = new Point(172, 30);
+            guna2PictureBox4.Location = new Point(185, 20);
             guna2PictureBox4.Name = "guna2PictureBox4";
             guna2PictureBox4.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            guna2PictureBox4.Size = new Size(234, 139);
+            guna2PictureBox4.Size = new Size(64, 64);
             guna2PictureBox4.TabIndex = 0;
             guna2PictureBox4.TabStop = false;
             // 
-            // guna2GradientPanel3
+            // panelMed
             // 
-            guna2GradientPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            guna2GradientPanel3.BorderColor = Color.FromArgb(3, 49, 90);
-            guna2GradientPanel3.BorderRadius = 2;
-            guna2GradientPanel3.BorderThickness = 1;
-            guna2GradientPanel3.Controls.Add(label5);
-            guna2GradientPanel3.Controls.Add(label6);
-            guna2GradientPanel3.Controls.Add(guna2PictureBox3);
-            guna2GradientPanel3.CustomizableEdges = customizableEdges35;
-            guna2GradientPanel3.FillColor = Color.FromArgb(182, 228, 226);
-            guna2GradientPanel3.FillColor2 = Color.FromArgb(105, 175, 172);
-            guna2GradientPanel3.Location = new Point(560, 0);
-            guna2GradientPanel3.Name = "guna2GradientPanel3";
-            guna2GradientPanel3.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            guna2GradientPanel3.Size = new Size(270, 125);
-            guna2GradientPanel3.TabIndex = 2;
+            panelMed.Anchor = AnchorStyles.None;
+            panelMed.BorderColor = Color.FromArgb(3, 49, 90);
+            panelMed.BorderRadius = 5;
+            panelMed.BorderThickness = 1;
+            panelMed.Controls.Add(medCount);
+            panelMed.Controls.Add(label6);
+            panelMed.Controls.Add(guna2PictureBox3);
+            panelMed.CustomizableEdges = customizableEdges35;
+            panelMed.FillColor = Color.FromArgb(105, 175, 172);
+            panelMed.FillColor2 = Color.FromArgb(3, 49, 90);
+            panelMed.Location = new Point(540, 0);
+            panelMed.Name = "panelMed";
+            panelMed.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            panelMed.Size = new Size(270, 125);
+            panelMed.TabIndex = 2;
             // 
-            // label5
+            // medCount
             // 
-            label5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(178, 87);
-            label5.Name = "label5";
-            label5.Size = new Size(49, 38);
-            label5.TabIndex = 66;
-            label5.Text = "10";
+            medCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            medCount.AutoSize = true;
+            medCount.BackColor = Color.Transparent;
+            medCount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            medCount.ForeColor = Color.White;
+            medCount.Location = new Point(190, 80);
+            medCount.Name = "medCount";
+            medCount.Size = new Size(49, 38);
+            medCount.TabIndex = 66;
+            medCount.Text = "10";
             // 
             // label6
             // 
@@ -241,9 +311,9 @@
             label6.ForeColor = Color.White;
             label6.Location = new Point(0, 0);
             label6.Name = "label6";
-            label6.Size = new Size(151, 38);
+            label6.Size = new Size(148, 38);
             label6.TabIndex = 65;
-            label6.Text = "Nhân viên";
+            label6.Text = "Sản phẩm";
             // 
             // guna2PictureBox3
             // 
@@ -251,44 +321,45 @@
             guna2PictureBox3.BackColor = Color.Transparent;
             guna2PictureBox3.CustomizableEdges = customizableEdges33;
             guna2PictureBox3.FillColor = Color.Transparent;
-            guna2PictureBox3.Image = Properties.Resources.teamwork__1_;
+            guna2PictureBox3.Image = Properties.Resources.medicines1;
             guna2PictureBox3.ImageRotate = 0F;
-            guna2PictureBox3.Location = new Point(172, 30);
+            guna2PictureBox3.Location = new Point(185, 20);
             guna2PictureBox3.Name = "guna2PictureBox3";
             guna2PictureBox3.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            guna2PictureBox3.Size = new Size(234, 139);
+            guna2PictureBox3.Size = new Size(64, 64);
             guna2PictureBox3.TabIndex = 0;
             guna2PictureBox3.TabStop = false;
             // 
-            // guna2GradientPanel1
+            // panelCus
             // 
-            guna2GradientPanel1.BorderColor = Color.FromArgb(3, 49, 90);
-            guna2GradientPanel1.BorderRadius = 2;
-            guna2GradientPanel1.BorderThickness = 1;
-            guna2GradientPanel1.Controls.Add(label3);
-            guna2GradientPanel1.Controls.Add(label4);
-            guna2GradientPanel1.Controls.Add(guna2PictureBox2);
-            guna2GradientPanel1.CustomizableEdges = customizableEdges39;
-            guna2GradientPanel1.FillColor = Color.FromArgb(182, 228, 226);
-            guna2GradientPanel1.FillColor2 = Color.FromArgb(105, 175, 172);
-            guna2GradientPanel1.Location = new Point(285, 0);
-            guna2GradientPanel1.Name = "guna2GradientPanel1";
-            guna2GradientPanel1.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            guna2GradientPanel1.Size = new Size(270, 125);
-            guna2GradientPanel1.TabIndex = 1;
+            panelCus.Anchor = AnchorStyles.None;
+            panelCus.BorderColor = Color.FromArgb(3, 49, 90);
+            panelCus.BorderRadius = 5;
+            panelCus.BorderThickness = 1;
+            panelCus.Controls.Add(cusCount);
+            panelCus.Controls.Add(label4);
+            panelCus.Controls.Add(guna2PictureBox2);
+            panelCus.CustomizableEdges = customizableEdges39;
+            panelCus.FillColor = Color.FromArgb(3, 49, 90);
+            panelCus.FillColor2 = Color.FromArgb(105, 175, 172);
+            panelCus.Location = new Point(270, 0);
+            panelCus.Name = "panelCus";
+            panelCus.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            panelCus.Size = new Size(270, 125);
+            panelCus.TabIndex = 1;
             // 
-            // label3
+            // cusCount
             // 
-            label3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.White;
-            label3.Location = new Point(178, 87);
-            label3.Name = "label3";
-            label3.Size = new Size(49, 38);
-            label3.TabIndex = 66;
-            label3.Text = "10";
+            cusCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            cusCount.AutoSize = true;
+            cusCount.BackColor = Color.Transparent;
+            cusCount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            cusCount.ForeColor = Color.White;
+            cusCount.Location = new Point(190, 80);
+            cusCount.Name = "cusCount";
+            cusCount.Size = new Size(49, 38);
+            cusCount.TabIndex = 66;
+            cusCount.Text = "10";
             // 
             // label4
             // 
@@ -299,9 +370,9 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(0, 0);
             label4.Name = "label4";
-            label4.Size = new Size(151, 38);
+            label4.Size = new Size(171, 38);
             label4.TabIndex = 65;
-            label4.Text = "Nhân viên";
+            label4.Text = "Khách hàng";
             // 
             // guna2PictureBox2
             // 
@@ -309,44 +380,157 @@
             guna2PictureBox2.BackColor = Color.Transparent;
             guna2PictureBox2.CustomizableEdges = customizableEdges37;
             guna2PictureBox2.FillColor = Color.Transparent;
-            guna2PictureBox2.Image = Properties.Resources.teamwork__1_;
+            guna2PictureBox2.Image = Properties.Resources.customer_review__1_;
             guna2PictureBox2.ImageRotate = 0F;
-            guna2PictureBox2.Location = new Point(172, 30);
+            guna2PictureBox2.Location = new Point(185, 20);
             guna2PictureBox2.Name = "guna2PictureBox2";
             guna2PictureBox2.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            guna2PictureBox2.Size = new Size(234, 139);
+            guna2PictureBox2.Size = new Size(64, 64);
             guna2PictureBox2.TabIndex = 0;
             guna2PictureBox2.TabStop = false;
             // 
-            // guna2GradientPanel2
+            // panelEmp
             // 
-            guna2GradientPanel2.BorderColor = Color.FromArgb(3, 49, 90);
-            guna2GradientPanel2.BorderRadius = 2;
-            guna2GradientPanel2.BorderThickness = 1;
-            guna2GradientPanel2.Controls.Add(label2);
-            guna2GradientPanel2.Controls.Add(label1);
-            guna2GradientPanel2.Controls.Add(guna2PictureBox1);
-            guna2GradientPanel2.CustomizableEdges = customizableEdges43;
-            guna2GradientPanel2.FillColor = Color.FromArgb(182, 228, 226);
-            guna2GradientPanel2.FillColor2 = Color.FromArgb(105, 175, 172);
-            guna2GradientPanel2.Location = new Point(10, 0);
-            guna2GradientPanel2.Name = "guna2GradientPanel2";
-            guna2GradientPanel2.ShadowDecoration.CustomizableEdges = customizableEdges44;
-            guna2GradientPanel2.Size = new Size(270, 125);
-            guna2GradientPanel2.TabIndex = 0;
+            panelEmp.Anchor = AnchorStyles.None;
+            panelEmp.BorderColor = Color.FromArgb(3, 49, 90);
+            panelEmp.BorderRadius = 5;
+            panelEmp.BorderThickness = 1;
+            panelEmp.Controls.Add(tnCount);
+            panelEmp.Controls.Add(khoCount);
+            panelEmp.Controls.Add(bhCount);
+            panelEmp.Controls.Add(adminCount);
+            panelEmp.Controls.Add(labelTN);
+            panelEmp.Controls.Add(labelKho);
+            panelEmp.Controls.Add(labelBH);
+            panelEmp.Controls.Add(labelQL);
+            panelEmp.Controls.Add(empCount);
+            panelEmp.Controls.Add(label1);
+            panelEmp.Controls.Add(guna2PictureBox1);
+            panelEmp.CustomizableEdges = customizableEdges43;
+            panelEmp.FillColor = Color.FromArgb(105, 175, 172);
+            panelEmp.FillColor2 = Color.FromArgb(3, 49, 90);
+            panelEmp.Location = new Point(0, 0);
+            panelEmp.Name = "panelEmp";
+            panelEmp.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            panelEmp.Size = new Size(270, 125);
+            panelEmp.TabIndex = 0;
             // 
-            // label2
+            // tnCount
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(178, 87);
-            label2.Name = "label2";
-            label2.Size = new Size(49, 38);
-            label2.TabIndex = 66;
-            label2.Text = "10";
+            tnCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            tnCount.AutoSize = true;
+            tnCount.BackColor = Color.Transparent;
+            tnCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            tnCount.ForeColor = Color.FromArgb(224, 224, 224);
+            tnCount.Location = new Point(102, 104);
+            tnCount.Name = "tnCount";
+            tnCount.Size = new Size(17, 20);
+            tnCount.TabIndex = 74;
+            tnCount.Text = "0";
+            // 
+            // khoCount
+            // 
+            khoCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            khoCount.AutoSize = true;
+            khoCount.BackColor = Color.Transparent;
+            khoCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            khoCount.ForeColor = Color.FromArgb(224, 224, 224);
+            khoCount.Location = new Point(102, 82);
+            khoCount.Name = "khoCount";
+            khoCount.Size = new Size(17, 20);
+            khoCount.TabIndex = 73;
+            khoCount.Text = "0";
+            // 
+            // bhCount
+            // 
+            bhCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            bhCount.AutoSize = true;
+            bhCount.BackColor = Color.Transparent;
+            bhCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            bhCount.ForeColor = Color.FromArgb(224, 224, 224);
+            bhCount.Location = new Point(102, 60);
+            bhCount.Name = "bhCount";
+            bhCount.Size = new Size(17, 20);
+            bhCount.TabIndex = 72;
+            bhCount.Text = "0";
+            // 
+            // adminCount
+            // 
+            adminCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            adminCount.AutoSize = true;
+            adminCount.BackColor = Color.Transparent;
+            adminCount.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            adminCount.ForeColor = Color.FromArgb(224, 224, 224);
+            adminCount.Location = new Point(102, 37);
+            adminCount.Name = "adminCount";
+            adminCount.Size = new Size(17, 20);
+            adminCount.TabIndex = 71;
+            adminCount.Text = "0";
+            // 
+            // labelTN
+            // 
+            labelTN.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelTN.AutoSize = true;
+            labelTN.BackColor = Color.Transparent;
+            labelTN.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelTN.ForeColor = Color.FromArgb(224, 224, 224);
+            labelTN.Location = new Point(24, 104);
+            labelTN.Name = "labelTN";
+            labelTN.Size = new Size(70, 20);
+            labelTN.TabIndex = 70;
+            labelTN.Text = "Thu ngân";
+            // 
+            // labelKho
+            // 
+            labelKho.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelKho.AutoSize = true;
+            labelKho.BackColor = Color.Transparent;
+            labelKho.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelKho.ForeColor = Color.FromArgb(224, 224, 224);
+            labelKho.Location = new Point(24, 82);
+            labelKho.Name = "labelKho";
+            labelKho.Size = new Size(35, 20);
+            labelKho.TabIndex = 69;
+            labelKho.Text = "Kho";
+            // 
+            // labelBH
+            // 
+            labelBH.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelBH.AutoSize = true;
+            labelBH.BackColor = Color.Transparent;
+            labelBH.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelBH.ForeColor = Color.FromArgb(224, 224, 224);
+            labelBH.Location = new Point(24, 60);
+            labelBH.Name = "labelBH";
+            labelBH.Size = new Size(71, 20);
+            labelBH.TabIndex = 68;
+            labelBH.Text = "Bán hàng";
+            // 
+            // labelQL
+            // 
+            labelQL.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labelQL.AutoSize = true;
+            labelQL.BackColor = Color.Transparent;
+            labelQL.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            labelQL.ForeColor = Color.FromArgb(224, 224, 224);
+            labelQL.Location = new Point(24, 37);
+            labelQL.Name = "labelQL";
+            labelQL.Size = new Size(59, 20);
+            labelQL.TabIndex = 67;
+            labelQL.Text = "Quản lý";
+            // 
+            // empCount
+            // 
+            empCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            empCount.AutoSize = true;
+            empCount.BackColor = Color.Transparent;
+            empCount.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
+            empCount.ForeColor = Color.White;
+            empCount.Location = new Point(190, 80);
+            empCount.Name = "empCount";
+            empCount.Size = new Size(49, 38);
+            empCount.TabIndex = 66;
+            empCount.Text = "10";
             // 
             // label1
             // 
@@ -369,10 +553,10 @@
             guna2PictureBox1.FillColor = Color.Transparent;
             guna2PictureBox1.Image = Properties.Resources.teamwork__1_;
             guna2PictureBox1.ImageRotate = 0F;
-            guna2PictureBox1.Location = new Point(172, 30);
+            guna2PictureBox1.Location = new Point(185, 20);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges42;
-            guna2PictureBox1.Size = new Size(184, 114);
+            guna2PictureBox1.Size = new Size(64, 64);
             guna2PictureBox1.TabIndex = 0;
             guna2PictureBox1.TabStop = false;
             // 
@@ -388,12 +572,6 @@
             panelTop.TabIndex = 68;
             panelTop.Layout += panelTop_Layout;
             // 
-            // guna2BorderlessForm1
-            // 
-            guna2BorderlessForm1.ContainerControl = this;
-            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // labelDashboard
             // 
             labelDashboard.AutoSize = true;
@@ -405,6 +583,12 @@
             labelDashboard.TabIndex = 62;
             labelDashboard.Text = "DASHBOARD";
             // 
+            // guna2BorderlessForm1
+            // 
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // adminDashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -414,20 +598,21 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "adminDashboard";
             Text = "adminDashboard";
+            Load += adminDashboard_Load;
             panelDashboard.ResumeLayout(false);
             panelBottom.ResumeLayout(false);
             panelData.ResumeLayout(false);
-            guna2GradientPanel4.ResumeLayout(false);
-            guna2GradientPanel4.PerformLayout();
+            panelMoney.ResumeLayout(false);
+            panelMoney.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox4).EndInit();
-            guna2GradientPanel3.ResumeLayout(false);
-            guna2GradientPanel3.PerformLayout();
+            panelMed.ResumeLayout(false);
+            panelMed.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox3).EndInit();
-            guna2GradientPanel1.ResumeLayout(false);
-            guna2GradientPanel1.PerformLayout();
+            panelCus.ResumeLayout(false);
+            panelCus.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox2).EndInit();
-            guna2GradientPanel2.ResumeLayout(false);
-            guna2GradientPanel2.PerformLayout();
+            panelEmp.ResumeLayout(false);
+            panelEmp.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             panelTop.ResumeLayout(false);
             panelTop.PerformLayout();
@@ -442,22 +627,34 @@
         private Guna.UI2.WinForms.Guna2GradientPanel panelBottom;
         private Guna.UI2.WinForms.Guna2GradientPanel panelChart;
         private Guna.UI2.WinForms.Guna2GradientPanel panelData;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
-        private Label label2;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelEmp;
+        private Label empCount;
         private Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
-        private Label label7;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMoney;
+        private Label totalMoney;
         private Label label8;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel3;
-        private Label label5;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMed;
+        private Label medCount;
         private Label label6;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Label label3;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelCus;
+        private Label cusCount;
         private Label label4;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
         private Label labelDashboard;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox3;
+        private Label labelTN;
+        private Label labelKho;
+        private Label labelBH;
+        private Label labelQL;
+        private Label monthMoney;
+        private Label label16;
+        private Label todayMoney;
+        private Label label14;
+        private Label tnCount;
+        private Label khoCount;
+        private Label bhCount;
+        private Label adminCount;
     }
 }

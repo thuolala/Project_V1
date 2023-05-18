@@ -29,6 +29,13 @@ namespace GUI
             fullname.Text = kh.Name;
             address.Text = kh.Address;
             phone.Text = kh.Phone;
+            email.Text = kh.Email;
+            date_created.Value = kh.Created;
+        }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -37,19 +44,16 @@ namespace GUI
             string name = fullname.Text;
             string add = address.Text;
             string phoneNum = phone.Text;
+            string mail = email.Text;
+            DateTime created = date_created.Value;
 
             //set kh 
-            kh = new Khachhang(id, name, add, phoneNum);
+            kh = new Khachhang(id, name, add, phoneNum, mail, created);
             if (khBLL.updateKH(kh))
             {
                 MessageBox.Show("Cập nhật thành công");
                 this.Close();
             }
-        }
-
-        private void exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

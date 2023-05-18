@@ -36,8 +36,10 @@ namespace DAL
                 string name = dt.Rows[0]["HOTEN"].ToString();
                 string address = dt.Rows[0]["DIACHI"].ToString();
                 string phone = dt.Rows[0]["SDT"].ToString();
+                string mail = dt.Rows[0]["EMAIL"].ToString();
+                DateTime created = (DateTime)dt.Rows[0]["CREATED"];
 
-                kh = new Khachhang(id, name, address, phone);
+                kh = new Khachhang(id, name, address, phone, mail, created);
             }
 
             return kh;
@@ -61,6 +63,8 @@ namespace DAL
                     cmd.Parameters.Add(new SqlParameter("@HOTEN", SqlDbType.NVarChar)).Value = kh.Name;
                     cmd.Parameters.Add(new SqlParameter("@DIACHI", SqlDbType.Text)).Value = kh.Address;
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = kh.Phone;
+                    cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.VarChar)).Value = kh.Email;
+                    cmd.Parameters.Add(new SqlParameter("@CREATED", SqlDbType.DateTime)).Value = kh.Created;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -105,6 +109,8 @@ namespace DAL
                     cmd.Parameters.Add(new SqlParameter("@HOTEN", SqlDbType.NVarChar)).Value = kh.Name;
                     cmd.Parameters.Add(new SqlParameter("@DIACHI", SqlDbType.Text)).Value = kh.Address;
                     cmd.Parameters.Add(new SqlParameter("@SDT", SqlDbType.VarChar)).Value = kh.Phone;
+                    cmd.Parameters.Add(new SqlParameter("@EMAIL", SqlDbType.VarChar)).Value = kh.Email;
+                    cmd.Parameters.Add(new SqlParameter("@CREATED", SqlDbType.DateTime)).Value = kh.Created;
 
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     DataTable dt = new DataTable();
@@ -128,6 +134,37 @@ namespace DAL
             }
 
             return result;
+        }
+
+        //get auto id 
+        public string getAutoID()
+        {
+            string idkh = "";
+            try
+            {
+                conn.Open();
+
+                //Get id
+                SqlCommand cmd = new SqlCommand("Return_IDKH", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                if (dt.Rows.Count > 0)
+                {
+                    idkh = dt.Rows[0][0].ToString();
+                }
+                da.Dispose();
+            }
+            catch (Exception e)
+            {
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return idkh;
         }
     }
 }

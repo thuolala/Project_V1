@@ -56,11 +56,11 @@
             btnDetail.ForeColor = Color.White;
             btnDetail.Image = Properties.Resources.file;
             btnDetail.ImageSize = new Size(32, 32);
-            btnDetail.Location = new Point(373, 0);
+            btnDetail.Location = new Point(375, 0);
             btnDetail.Margin = new Padding(3, 4, 3, 4);
             btnDetail.Name = "btnDetail";
             btnDetail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnDetail.Size = new Size(51, 119);
+            btnDetail.Size = new Size(51, 121);
             btnDetail.TabIndex = 95;
             btnDetail.Click += btnDetail_Click;
             // 
@@ -68,7 +68,7 @@
             // 
             empPos.AutoSize = true;
             empPos.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            empPos.ForeColor = Color.DarkGray;
+            empPos.ForeColor = Color.FromArgb(3, 49, 90);
             empPos.Location = new Point(102, 88);
             empPos.Name = "empPos";
             empPos.Size = new Size(46, 23);
@@ -79,7 +79,7 @@
             // 
             empName.AutoSize = true;
             empName.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            empName.ForeColor = Color.DarkGray;
+            empName.ForeColor = Color.FromArgb(3, 49, 90);
             empName.Location = new Point(102, 4);
             empName.Name = "empName";
             empName.Size = new Size(45, 28);
@@ -104,7 +104,7 @@
             // 
             empID.AutoSize = true;
             empID.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            empID.ForeColor = Color.DarkGray;
+            empID.ForeColor = Color.FromArgb(3, 49, 90);
             empID.Location = new Point(102, 49);
             empID.Name = "empID";
             empID.Size = new Size(27, 23);
@@ -115,8 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Transparent;
-            BorderStyle = BorderStyle.FixedSingle;
+            BackColor = Color.FromArgb(182, 228, 226);
             Controls.Add(empID);
             Controls.Add(btnDetail);
             Controls.Add(empPos);
@@ -124,7 +123,7 @@
             Controls.Add(empPic);
             Margin = new Padding(10, 5, 10, 5);
             Name = "empItem";
-            Size = new Size(424, 119);
+            Size = new Size(426, 121);
             Load += empItem_Load;
             Paint += empItem_Paint;
             ((System.ComponentModel.ISupportInitialize)empPic).EndInit();
