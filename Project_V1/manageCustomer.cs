@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class manageCusForm : Form
+    public partial class manageCustomer : Form
     {
-        public manageCusForm()
+        public manageCustomer()
         {
             InitializeComponent();
         }

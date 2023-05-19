@@ -70,6 +70,7 @@
             btnReset = new Guna.UI2.WinForms.Guna2GradientButton();
             btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             panelBottom = new Guna.UI2.WinForms.Guna2GradientPanel();
+            errorInput = new Label();
             guna2CustomGradientPanel12 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             password = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
@@ -112,7 +113,6 @@
             fullname = new Label();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             avatar = new Guna.UI2.WinForms.Guna2PictureBox();
-            errorInput = new Label();
             panelEdit.SuspendLayout();
             panelBottom.SuspendLayout();
             guna2CustomGradientPanel12.SuspendLayout();
@@ -218,6 +218,17 @@
             panelBottom.ShadowDecoration.CustomizableEdges = customizableEdges26;
             panelBottom.Size = new Size(1085, 201);
             panelBottom.TabIndex = 1;
+            // 
+            // errorInput
+            // 
+            errorInput.AutoSize = true;
+            errorInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
+            errorInput.ForeColor = Color.Red;
+            errorInput.Location = new Point(714, 167);
+            errorInput.Name = "errorInput";
+            errorInput.Size = new Size(15, 23);
+            errorInput.TabIndex = 75;
+            errorInput.Text = " ";
             // 
             // guna2CustomGradientPanel12
             // 
@@ -540,7 +551,7 @@
             panel7.Location = new Point(396, 216);
             panel7.Margin = new Padding(3, 4, 3, 4);
             panel7.Name = "panel7";
-            panel7.Size = new Size(267, 39);
+            panel7.Size = new Size(364, 39);
             panel7.TabIndex = 28;
             // 
             // displayPoint
@@ -572,7 +583,7 @@
             panel6.Location = new Point(396, 76);
             panel6.Margin = new Padding(3, 4, 3, 4);
             panel6.Name = "panel6";
-            panel6.Size = new Size(267, 39);
+            panel6.Size = new Size(364, 39);
             panel6.TabIndex = 27;
             // 
             // label11
@@ -785,17 +796,6 @@
             avatar.TabIndex = 0;
             avatar.TabStop = false;
             avatar.Click += avatar_Click;
-            // 
-            // errorInput
-            // 
-            errorInput.AutoSize = true;
-            errorInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point);
-            errorInput.ForeColor = Color.Red;
-            errorInput.Location = new Point(714, 167);
-            errorInput.Name = "errorInput";
-            errorInput.Size = new Size(15, 23);
-            errorInput.TabIndex = 75;
-            errorInput.Text = " ";
             // 
             // selfEditForm
             // 

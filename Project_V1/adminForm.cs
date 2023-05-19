@@ -89,11 +89,20 @@ namespace GUI
                 btnDashboard.BackColor = SystemColors.Control;
                 btnDashboard.ForeColor = Color.FromArgb(3, 49, 90);
 
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
                 btnEmployee.BackColor = Color.Transparent;
                 btnEmployee.ForeColor = Color.White;
 
                 btnCustomer.BackColor = Color.Transparent;
                 btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
 
                 btnMoney.BackColor = Color.Transparent;
                 btnMoney.ForeColor = Color.White;
@@ -109,11 +118,78 @@ namespace GUI
                 btnDashboard.BackColor = Color.Transparent;
                 btnDashboard.ForeColor = Color.White;
 
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
                 btnEmployee.BackColor = SystemColors.Control;
                 btnEmployee.ForeColor = Color.FromArgb(3, 49, 90);
 
                 btnCustomer.BackColor = Color.Transparent;
                 btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnSale)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnSale.BackColor = SystemColors.Control;
+                btnSale.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnWarehouse)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = SystemColors.Control;
+                btnWarehouse.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
 
                 btnMoney.BackColor = Color.Transparent;
                 btnMoney.ForeColor = Color.White;
@@ -129,11 +205,49 @@ namespace GUI
                 btnDashboard.BackColor = Color.Transparent;
                 btnDashboard.ForeColor = Color.White;
 
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
                 btnEmployee.BackColor = Color.Transparent;
                 btnEmployee.ForeColor = Color.White;
 
                 btnCustomer.BackColor = SystemColors.Control;
                 btnCustomer.ForeColor = Color.FromArgb(3, 49, 90);
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
+
+                btnMoney.BackColor = Color.Transparent;
+                btnMoney.ForeColor = Color.White;
+
+                btnInfo.BackColor = Color.Transparent;
+                btnInfo.ForeColor = Color.White;
+
+                btnLogout.BackColor = Color.Transparent;
+                btnLogout.ForeColor = Color.White;
+            }
+            if (sender == btnMedicine)
+            {
+                btnDashboard.BackColor = Color.Transparent;
+                btnDashboard.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnEmployee.BackColor = Color.Transparent;
+                btnEmployee.ForeColor = Color.White;
+
+                btnCustomer.BackColor = Color.Transparent;
+                btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = SystemColors.Control;
+                btnMedicine.ForeColor = Color.FromArgb(3, 49, 90);
 
                 btnMoney.BackColor = Color.Transparent;
                 btnMoney.ForeColor = Color.White;
@@ -149,11 +263,20 @@ namespace GUI
                 btnDashboard.BackColor = Color.Transparent;
                 btnDashboard.ForeColor = Color.White;
 
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
                 btnEmployee.BackColor = Color.Transparent;
                 btnEmployee.ForeColor = Color.White;
 
                 btnCustomer.BackColor = Color.Transparent;
                 btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
 
                 btnMoney.BackColor = SystemColors.Control;
                 btnMoney.ForeColor = Color.FromArgb(3, 49, 90);
@@ -169,11 +292,20 @@ namespace GUI
                 btnDashboard.BackColor = Color.Transparent;
                 btnDashboard.ForeColor = Color.White;
 
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
                 btnEmployee.BackColor = Color.Transparent;
                 btnEmployee.ForeColor = Color.White;
 
                 btnCustomer.BackColor = Color.Transparent;
                 btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
 
                 btnMoney.BackColor = Color.Transparent;
                 btnMoney.ForeColor = Color.White;
@@ -189,11 +321,20 @@ namespace GUI
                 btnDashboard.BackColor = Color.Transparent;
                 btnDashboard.ForeColor = Color.White;
 
+                btnSale.BackColor = Color.Transparent;
+                btnSale.ForeColor = Color.White;
+
+                btnWarehouse.BackColor = Color.Transparent;
+                btnWarehouse.ForeColor = Color.White;
+
                 btnEmployee.BackColor = Color.Transparent;
                 btnEmployee.ForeColor = Color.White;
 
                 btnCustomer.BackColor = Color.Transparent;
                 btnCustomer.ForeColor = Color.White;
+
+                btnMedicine.BackColor = Color.Transparent;
+                btnMedicine.ForeColor = Color.White;
 
                 btnMoney.BackColor = Color.Transparent;
                 btnMoney.ForeColor = Color.White;
@@ -226,7 +367,7 @@ namespace GUI
             changeColor(sender, e);
 
             panelDisplay.Controls.Clear();
-            manageCusForm manageCus = new manageCusForm();
+            manageCustomer manageCus = new manageCustomer();
             manageCus.TopLevel = false;
             manageCus.Dock = DockStyle.Fill;
             manageCus.Show();
@@ -284,6 +425,35 @@ namespace GUI
 
             Nhanvien nvien = nvBLL.getNVById(nv.Id);
             Taikhoan tkhoan = tkBLL.getAccountById(tk.Id);
+
+            panelDisplay.Controls.Clear();
+        }
+
+        private void btnSale_Click(object sender, EventArgs e)
+        {
+            btnSale.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
+            panelDisplay.Controls.Clear();
+        }
+
+        private void btnMedicine_Click(object sender, EventArgs e)
+        {
+            btnMedicine.BackColor = SystemColors.Control;
+            changeColor(sender, e);
+
+            panelDisplay.Controls.Clear();
+            manageMedicine mM = new manageMedicine();
+            mM.TopLevel = false;
+            panelDisplay.Controls.Add(mM);
+            mM.Dock = DockStyle.Fill;
+            mM.Show();
+        }
+
+        private void btnWarehouse_Click(object sender, EventArgs e)
+        {
+            btnWarehouse.BackColor = SystemColors.Control;
+            changeColor(sender, e);
 
             panelDisplay.Controls.Clear();
         }

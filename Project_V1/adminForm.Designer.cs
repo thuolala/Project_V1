@@ -54,12 +54,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
@@ -82,8 +88,11 @@
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            btnSale = new Guna.UI2.WinForms.Guna2Button();
+            btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             panelShow.SuspendLayout();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)noti).BeginInit();
@@ -288,7 +297,7 @@
             btnEmployee.Image = Properties.Resources.teamwork;
             btnEmployee.ImageAlign = HorizontalAlignment.Left;
             btnEmployee.ImageOffset = new Point(4, 0);
-            btnEmployee.Location = new Point(0, 263);
+            btnEmployee.Location = new Point(3, 263);
             btnEmployee.Name = "btnEmployee";
             btnEmployee.RightToLeft = RightToLeft.No;
             btnEmployee.ShadowDecoration.CustomizableEdges = customizableEdges18;
@@ -313,7 +322,7 @@
             btnCustomer.Image = Properties.Resources.customer_review;
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
             btnCustomer.ImageOffset = new Point(4, 0);
-            btnCustomer.Location = new Point(3, 325);
+            btnCustomer.Location = new Point(3, 511);
             btnCustomer.Name = "btnCustomer";
             btnCustomer.RightToLeft = RightToLeft.No;
             btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges20;
@@ -338,13 +347,13 @@
             btnMoney.Image = Properties.Resources.bar_chart;
             btnMoney.ImageAlign = HorizontalAlignment.Left;
             btnMoney.ImageOffset = new Point(4, 0);
-            btnMoney.Location = new Point(0, 387);
+            btnMoney.Location = new Point(3, 573);
             btnMoney.Name = "btnMoney";
             btnMoney.RightToLeft = RightToLeft.No;
             btnMoney.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnMoney.Size = new Size(270, 56);
             btnMoney.TabIndex = 16;
-            btnMoney.Text = "  Xem doanh thu";
+            btnMoney.Text = "  Xem thống kê";
             btnMoney.TextAlign = HorizontalAlignment.Left;
             btnMoney.Click += btnMoney_Click;
             // 
@@ -363,7 +372,7 @@
             btnInfo.Image = Properties.Resources.pencil;
             btnInfo.ImageAlign = HorizontalAlignment.Left;
             btnInfo.ImageOffset = new Point(4, 0);
-            btnInfo.Location = new Point(0, 449);
+            btnInfo.Location = new Point(3, 635);
             btnInfo.Name = "btnInfo";
             btnInfo.RightToLeft = RightToLeft.No;
             btnInfo.ShadowDecoration.CustomizableEdges = customizableEdges24;
@@ -399,6 +408,9 @@
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(3, 49, 90);
+            panelMenu.Controls.Add(btnWarehouse);
+            panelMenu.Controls.Add(btnSale);
+            panelMenu.Controls.Add(btnMedicine);
             panelMenu.Controls.Add(btnLogout);
             panelMenu.Controls.Add(btnDashboard);
             panelMenu.Controls.Add(guna2Separator1);
@@ -411,22 +423,72 @@
             panelMenu.Controls.Add(displayName);
             panelMenu.Controls.Add(btnMenu);
             panelMenu.Controls.Add(pictureBox4);
-            panelMenu.CustomizableEdges = customizableEdges30;
+            panelMenu.CustomizableEdges = customizableEdges36;
             panelMenu.Dock = DockStyle.Left;
             panelMenu.Location = new Point(0, 0);
             panelMenu.Margin = new Padding(3, 4, 3, 4);
             panelMenu.MaximumSize = new Size(270, 0);
             panelMenu.MinimumSize = new Size(53, 0);
             panelMenu.Name = "panelMenu";
-            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges31;
+            panelMenu.ShadowDecoration.CustomizableEdges = customizableEdges37;
             panelMenu.Size = new Size(270, 845);
             panelMenu.TabIndex = 0;
+            // 
+            // btnSale
+            // 
+            btnSale.Animated = true;
+            btnSale.BackColor = Color.Transparent;
+            btnSale.CustomizableEdges = customizableEdges28;
+            btnSale.DisabledState.BorderColor = Color.DarkGray;
+            btnSale.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSale.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSale.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSale.FillColor = Color.Transparent;
+            btnSale.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSale.ForeColor = Color.White;
+            btnSale.Image = Properties.Resources.invoice;
+            btnSale.ImageAlign = HorizontalAlignment.Left;
+            btnSale.ImageOffset = new Point(4, 0);
+            btnSale.Location = new Point(3, 325);
+            btnSale.Name = "btnSale";
+            btnSale.RightToLeft = RightToLeft.No;
+            btnSale.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            btnSale.Size = new Size(270, 56);
+            btnSale.TabIndex = 21;
+            btnSale.Text = "  Quản lý bán hàng";
+            btnSale.TextAlign = HorizontalAlignment.Left;
+            btnSale.Click += btnSale_Click;
+            // 
+            // btnMedicine
+            // 
+            btnMedicine.Animated = true;
+            btnMedicine.BackColor = Color.Transparent;
+            btnMedicine.CustomizableEdges = customizableEdges30;
+            btnMedicine.DisabledState.BorderColor = Color.DarkGray;
+            btnMedicine.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnMedicine.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnMedicine.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnMedicine.FillColor = Color.Transparent;
+            btnMedicine.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnMedicine.ForeColor = Color.White;
+            btnMedicine.Image = Properties.Resources.medicines;
+            btnMedicine.ImageAlign = HorizontalAlignment.Left;
+            btnMedicine.ImageOffset = new Point(4, 0);
+            btnMedicine.Location = new Point(3, 449);
+            btnMedicine.Name = "btnMedicine";
+            btnMedicine.RightToLeft = RightToLeft.No;
+            btnMedicine.ShadowDecoration.CustomizableEdges = customizableEdges31;
+            btnMedicine.Size = new Size(270, 56);
+            btnMedicine.TabIndex = 20;
+            btnMedicine.Text = "  Quản lý thuốc";
+            btnMedicine.TextAlign = HorizontalAlignment.Left;
+            btnMedicine.Click += btnMedicine_Click;
             // 
             // btnLogout
             // 
             btnLogout.Animated = true;
             btnLogout.BackColor = Color.Transparent;
-            btnLogout.CustomizableEdges = customizableEdges26;
+            btnLogout.CustomizableEdges = customizableEdges32;
             btnLogout.DisabledState.BorderColor = Color.DarkGray;
             btnLogout.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLogout.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -437,10 +499,10 @@
             btnLogout.Image = Properties.Resources.logout5;
             btnLogout.ImageAlign = HorizontalAlignment.Left;
             btnLogout.ImageOffset = new Point(4, 0);
-            btnLogout.Location = new Point(0, 511);
+            btnLogout.Location = new Point(3, 697);
             btnLogout.Name = "btnLogout";
             btnLogout.RightToLeft = RightToLeft.No;
-            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            btnLogout.ShadowDecoration.CustomizableEdges = customizableEdges33;
             btnLogout.Size = new Size(270, 56);
             btnLogout.TabIndex = 19;
             btnLogout.Text = "  Đăng xuất";
@@ -451,7 +513,7 @@
             // 
             btnDashboard.Animated = true;
             btnDashboard.BackColor = Color.Transparent;
-            btnDashboard.CustomizableEdges = customizableEdges28;
+            btnDashboard.CustomizableEdges = customizableEdges34;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -465,12 +527,37 @@
             btnDashboard.Location = new Point(3, 201);
             btnDashboard.Name = "btnDashboard";
             btnDashboard.RightToLeft = RightToLeft.No;
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges35;
             btnDashboard.Size = new Size(270, 56);
             btnDashboard.TabIndex = 14;
             btnDashboard.Text = "  Dashboard";
             btnDashboard.TextAlign = HorizontalAlignment.Left;
             btnDashboard.Click += btnDashboard_Click;
+            // 
+            // btnWarehouse
+            // 
+            btnWarehouse.Animated = true;
+            btnWarehouse.BackColor = Color.Transparent;
+            btnWarehouse.CustomizableEdges = customizableEdges26;
+            btnWarehouse.DisabledState.BorderColor = Color.DarkGray;
+            btnWarehouse.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnWarehouse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnWarehouse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnWarehouse.FillColor = Color.Transparent;
+            btnWarehouse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnWarehouse.ForeColor = Color.White;
+            btnWarehouse.Image = Properties.Resources.warehouse1;
+            btnWarehouse.ImageAlign = HorizontalAlignment.Left;
+            btnWarehouse.ImageOffset = new Point(4, 0);
+            btnWarehouse.Location = new Point(3, 387);
+            btnWarehouse.Name = "btnWarehouse";
+            btnWarehouse.RightToLeft = RightToLeft.No;
+            btnWarehouse.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            btnWarehouse.Size = new Size(270, 56);
+            btnWarehouse.TabIndex = 22;
+            btnWarehouse.Text = "  Quản lý kho";
+            btnWarehouse.TextAlign = HorizontalAlignment.Left;
+            btnWarehouse.Click += btnWarehouse_Click;
             // 
             // adminForm
             // 
@@ -524,5 +611,8 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2PictureBox noti;
         private Label notiCount;
+        private Guna.UI2.WinForms.Guna2Button btnMedicine;
+        private Guna.UI2.WinForms.Guna2Button btnSale;
+        private Guna.UI2.WinForms.Guna2Button btnWarehouse;
     }
 }

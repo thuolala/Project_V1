@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class manageCusForm
+    partial class manageCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -93,6 +93,7 @@
             // 
             // panelTop
             // 
+            panelTop.BackColor = Color.FromArgb(80, 149, 146);
             panelTop.Controls.Add(panelSort);
             panelTop.Controls.Add(panelSearch);
             panelTop.Controls.Add(btnRefresh);
@@ -276,7 +277,7 @@
             btnAdd.Text = "Thêm khách hàng";
             btnAdd.Click += btnAdd_Click;
             // 
-            // manageCusForm
+            // manageCustomer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -284,7 +285,7 @@
             Controls.Add(panelCus);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(3, 4, 3, 4);
-            Name = "manageCusForm";
+            Name = "manageCustomer";
             Load += manageCusForm_Load;
             panelCus.ResumeLayout(false);
             panelTop.ResumeLayout(false);

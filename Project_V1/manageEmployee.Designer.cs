@@ -110,6 +110,7 @@
             // 
             // panelTop
             // 
+            panelTop.BackColor = Color.FromArgb(80, 149, 146);
             panelTop.BorderColor = Color.Transparent;
             panelTop.Controls.Add(panelSort);
             panelTop.Controls.Add(panelSearch);
