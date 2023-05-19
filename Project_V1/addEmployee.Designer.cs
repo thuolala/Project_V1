@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class addEmpForm
+    partial class addEmployee
     {
         /// <summary>
         /// Required designer variable.

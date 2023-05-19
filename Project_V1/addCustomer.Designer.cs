@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class addCusForm
+    partial class addCustomer
     {
         /// <summary>
         /// Required designer variable.

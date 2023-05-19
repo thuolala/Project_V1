@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class cusItem : UserControl
+    public partial class customerItem : UserControl
     {
         public Khachhang kh;
         KhachhangBLL khBLL = new KhachhangBLL();
 
-        public cusItem(Khachhang khachhang)
+        public customerItem(Khachhang khachhang)
         {
             this.kh = khachhang;
             InitializeComponent();

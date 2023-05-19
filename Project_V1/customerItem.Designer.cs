@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class cusItem
+    partial class customerItem
     {
         /// <summary> 
         /// Required designer variable.

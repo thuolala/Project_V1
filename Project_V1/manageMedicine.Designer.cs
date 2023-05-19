@@ -535,6 +535,7 @@
             btnAddMed.Size = new Size(200, 62);
             btnAddMed.TabIndex = 66;
             btnAddMed.Text = "Thêm thuốc";
+            btnAddMed.Click += btnAddMed_Click;
             // 
             // manageMedicine
             // 

@@ -20,6 +20,12 @@ namespace GUI
 
         private void manageMedForm_Load(object sender, EventArgs e)
         {
+            medicineItem mI = new medicineItem("A", 10);
+            panelDisplay.Controls.Add(mI);
+        }
+
+        private void btnAddMed_Click(object sender, EventArgs e)
+        {
 
         }
     }

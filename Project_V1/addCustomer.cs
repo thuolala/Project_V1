@@ -16,9 +16,9 @@ using System.Reflection.Emit;
 
 namespace GUI
 {
-    public partial class addCusForm : Form
+    public partial class addCustomer : Form
     {
-        public addCusForm()
+        public addCustomer()
         {
             InitializeComponent();
         }

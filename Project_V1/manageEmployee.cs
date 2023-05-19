@@ -45,7 +45,7 @@ namespace GUI
             byte[] _ava;
 
             //create list of user control of nv 
-            empItem[] listItem = new empItem[dt.Rows.Count];
+            employeeItem[] listItem = new employeeItem[dt.Rows.Count];
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -62,7 +62,7 @@ namespace GUI
 
                 Nhanvien nvien = new Nhanvien(_id, _name, _gender, _birthday, _hometown, _phone, _email, _idpos, _created, _ava);
                 Taikhoan tkhoan = tkBLL.getAccountById(_id);
-                listItem[i] = new empItem(nvien, tkhoan);
+                listItem[i] = new employeeItem(nvien, tkhoan);
                 panelDisplay.Controls.Add(listItem[i]);
             }
         }
@@ -78,7 +78,7 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            addEmpForm f = new addEmpForm();
+            addEmployee f = new addEmployee();
             f.ShowDialog();
         }
 

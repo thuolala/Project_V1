@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class addMedicineForm : Form
+    public partial class updateMedicine : Form
     {
-        public addMedicineForm()
+        public updateMedicine()
         {
             InitializeComponent();
         }
 
-        private void exit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void addMedicineForm_Load(object sender, EventArgs e)
+        private void updateMedicine_Load(object sender, EventArgs e)
         {
 
         }

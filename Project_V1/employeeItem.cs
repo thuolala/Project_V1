@@ -14,14 +14,14 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class empItem : UserControl
+    public partial class employeeItem : UserControl
     {
         public Nhanvien nv;
         public Taikhoan tk;
         TaikhoanBLL tkBLL = new TaikhoanBLL();
         VitriBLL vtBLL = new VitriBLL();
 
-        public empItem(Nhanvien nvien, Taikhoan tkhoan)
+        public employeeItem(Nhanvien nvien, Taikhoan tkhoan)
         {
             this.nv = nvien;
             this.tk = tkhoan;

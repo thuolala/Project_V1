@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class empItem
+    partial class employeeItem
     {
         /// <summary> 
         /// Required designer variable.

@@ -18,7 +18,7 @@ using System.Text.RegularExpressions;
 
 namespace GUI
 {
-    public partial class addEmpForm : Form
+    public partial class addEmployee : Form
     {
         private string filePath;
         private byte[] img;
@@ -29,7 +29,7 @@ namespace GUI
         VitriBLL vtBLL = new VitriBLL();
         Vitri vt;
 
-        public addEmpForm()
+        public addEmployee()
         {
             InitializeComponent();
         }

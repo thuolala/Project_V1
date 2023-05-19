@@ -25,7 +25,7 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            addCusForm f = new addCusForm();
+            addCustomer f = new addCustomer();
             f.ShowDialog();
         }
 
@@ -49,7 +49,7 @@ namespace GUI
             DateTime _created;
 
             //create list of user control of kh
-            cusItem[] listItem = new cusItem[dt.Rows.Count];
+            customerItem[] listItem = new customerItem[dt.Rows.Count];
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -61,7 +61,7 @@ namespace GUI
                 _created = (DateTime)dt.Rows[i]["CREATED"];
 
                 Khachhang khang = new Khachhang(_id, _name, _address, _phone, _email, _created);
-                listItem[i] = new cusItem(khang);
+                listItem[i] = new customerItem(khang);
                 panelDisplay.Controls.Add(listItem[i]);
             }
         }
