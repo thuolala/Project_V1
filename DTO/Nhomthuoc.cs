@@ -27,6 +27,11 @@ namespace DTO
         {
         }
 
+        public Nhomthuoc(string name)
+        {
+            this._name = name;
+        }
+
         public Nhomthuoc(string id, string name)
         {
             this._id = id;

@@ -216,5 +216,10 @@ namespace GUI
 
             openLogin(sender, e);
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

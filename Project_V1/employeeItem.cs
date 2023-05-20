@@ -72,7 +72,6 @@ namespace GUI
             }
             catch (ArgumentException ex)
             {
-                // Handle the exception here, for example:
                 MessageBox.Show("Error loading image: " + ex.Message);
             }
         }

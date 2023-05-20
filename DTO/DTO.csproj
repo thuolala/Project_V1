@@ -50,14 +50,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bangvanchuyen.cs" />
+    <Compile Include="ChitietDonnhap.cs" />
+    <Compile Include="ChitietHD.cs" />
+    <Compile Include="Doanhthunam.cs" />
+    <Compile Include="Doanhthungay.cs" />
+    <Compile Include="Doanhthuthang.cs" />
+    <Compile Include="DonNhaphang.cs" />
+    <Compile Include="Hoadon.cs" />
     <Compile Include="Khachhang.cs" />
+    <Compile Include="Ngansach.cs" />
+    <Compile Include="Nhacungcap.cs" />
     <Compile Include="Nhanvien.cs" />
     <Compile Include="Nhomthuoc.cs" />
-    <Compile Include="Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Taikhoan.cs" />
+    <Compile Include="Thanhly.cs" />
     <Compile Include="Thuoc.cs" />
-    <Compile Include="Thuocnhap.cs" />
+    <Compile Include="Thuoc_Hop.cs" />
+    <Compile Include="Thuoc_Kho.cs" />
+    <Compile Include="Thuoc_Lo.cs" />
     <Compile Include="Vitri.cs" />
   </ItemGroup>
   <ItemGroup>

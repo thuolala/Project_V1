@@ -128,6 +128,7 @@
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges12;
             panelTop.Size = new Size(1112, 36);
             panelTop.TabIndex = 0;
+            panelTop.Paint += panelTop_Paint;
             // 
             // noti
             // 

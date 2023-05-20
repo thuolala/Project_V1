@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class updateMedicine
+    partial class manageSale
     {
         /// <summary>
         /// Required designer variable.
@@ -28,35 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label9 = new Label();
+            components = new System.ComponentModel.Container();
+            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             SuspendLayout();
             // 
-            // label9
+            // guna2BorderlessForm1
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(3, 49, 90);
-            label9.Location = new Point(391, 9);
-            label9.Name = "label9";
-            label9.Size = new Size(348, 38);
-            label9.TabIndex = 72;
-            label9.Text = "Cập nhật thông tin thuốc";
+            guna2BorderlessForm1.ContainerControl = this;
+            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // updateMedicine
+            // manageSale
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1112, 809);
-            Controls.Add(label9);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "updateMedicine";
-            Load += updateMedicine_Load;
+            Name = "manageSale";
+            Text = "manageSale";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label9;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

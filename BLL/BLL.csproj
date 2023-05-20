@@ -52,10 +52,15 @@
   <ItemGroup>
     <Compile Include="Handle.cs" />
     <Compile Include="KhachhangBLL.cs" />
+    <Compile Include="NhacungcapBLL.cs" />
     <Compile Include="NhanvienBLL.cs" />
-    <Compile Include="ProductBLL.cs" />
+    <Compile Include="NhomthuocBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaikhoanBLL.cs" />
+    <Compile Include="ThuocBLL.cs" />
+    <Compile Include="ThuocHopBLL.cs" />
+    <Compile Include="ThuocKhoBLL.cs" />
+    <Compile Include="ThuocLoBLL.cs" />
     <Compile Include="VitriBLL.cs" />
   </ItemGroup>
   <ItemGroup>

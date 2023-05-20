@@ -457,5 +457,10 @@ namespace GUI
 
             panelDisplay.Controls.Clear();
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

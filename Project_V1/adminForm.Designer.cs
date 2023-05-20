@@ -56,6 +56,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,8 +66,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminForm));
             guna2ResizeForm1 = new Guna.UI2.WinForms.Guna2ResizeForm(components);
             panelShow = new Guna.UI2.WinForms.Guna2Panel();
@@ -88,11 +88,11 @@
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             panelMenu = new Guna.UI2.WinForms.Guna2Panel();
+            btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             btnSale = new Guna.UI2.WinForms.Guna2Button();
             btnMedicine = new Guna.UI2.WinForms.Guna2Button();
             btnLogout = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            btnWarehouse = new Guna.UI2.WinForms.Guna2Button();
             panelShow.SuspendLayout();
             panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)noti).BeginInit();
@@ -140,6 +140,7 @@
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges12;
             panelTop.Size = new Size(1112, 36);
             panelTop.TabIndex = 0;
+            panelTop.Paint += panelTop_Paint;
             // 
             // notiCount
             // 
@@ -434,6 +435,31 @@
             panelMenu.Size = new Size(270, 845);
             panelMenu.TabIndex = 0;
             // 
+            // btnWarehouse
+            // 
+            btnWarehouse.Animated = true;
+            btnWarehouse.BackColor = Color.Transparent;
+            btnWarehouse.CustomizableEdges = customizableEdges26;
+            btnWarehouse.DisabledState.BorderColor = Color.DarkGray;
+            btnWarehouse.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnWarehouse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnWarehouse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnWarehouse.FillColor = Color.Transparent;
+            btnWarehouse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btnWarehouse.ForeColor = Color.White;
+            btnWarehouse.Image = Properties.Resources.warehouse1;
+            btnWarehouse.ImageAlign = HorizontalAlignment.Left;
+            btnWarehouse.ImageOffset = new Point(4, 0);
+            btnWarehouse.Location = new Point(3, 387);
+            btnWarehouse.Name = "btnWarehouse";
+            btnWarehouse.RightToLeft = RightToLeft.No;
+            btnWarehouse.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            btnWarehouse.Size = new Size(270, 56);
+            btnWarehouse.TabIndex = 22;
+            btnWarehouse.Text = "  Quản lý kho";
+            btnWarehouse.TextAlign = HorizontalAlignment.Left;
+            btnWarehouse.Click += btnWarehouse_Click;
+            // 
             // btnSale
             // 
             btnSale.Animated = true;
@@ -533,31 +559,6 @@
             btnDashboard.Text = "  Dashboard";
             btnDashboard.TextAlign = HorizontalAlignment.Left;
             btnDashboard.Click += btnDashboard_Click;
-            // 
-            // btnWarehouse
-            // 
-            btnWarehouse.Animated = true;
-            btnWarehouse.BackColor = Color.Transparent;
-            btnWarehouse.CustomizableEdges = customizableEdges26;
-            btnWarehouse.DisabledState.BorderColor = Color.DarkGray;
-            btnWarehouse.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnWarehouse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnWarehouse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnWarehouse.FillColor = Color.Transparent;
-            btnWarehouse.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnWarehouse.ForeColor = Color.White;
-            btnWarehouse.Image = Properties.Resources.warehouse1;
-            btnWarehouse.ImageAlign = HorizontalAlignment.Left;
-            btnWarehouse.ImageOffset = new Point(4, 0);
-            btnWarehouse.Location = new Point(3, 387);
-            btnWarehouse.Name = "btnWarehouse";
-            btnWarehouse.RightToLeft = RightToLeft.No;
-            btnWarehouse.ShadowDecoration.CustomizableEdges = customizableEdges27;
-            btnWarehouse.Size = new Size(270, 56);
-            btnWarehouse.TabIndex = 22;
-            btnWarehouse.Text = "  Quản lý kho";
-            btnWarehouse.TextAlign = HorizontalAlignment.Left;
-            btnWarehouse.Click += btnWarehouse_Click;
             // 
             // adminForm
             // 

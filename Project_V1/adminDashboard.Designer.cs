@@ -571,6 +571,7 @@
             panelTop.ShadowDecoration.CustomizableEdges = customizableEdges24;
             panelTop.Size = new Size(1115, 65);
             panelTop.TabIndex = 68;
+            panelTop.Paint += panelTop_Paint;
             panelTop.Layout += panelTop_Layout;
             // 
             // labelDashboard

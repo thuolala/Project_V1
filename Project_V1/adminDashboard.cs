@@ -83,5 +83,10 @@ namespace GUI
         {
             getCount();
         }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

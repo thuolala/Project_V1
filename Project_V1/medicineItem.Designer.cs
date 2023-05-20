@@ -43,6 +43,7 @@
             label10 = new Label();
             avaiQuan = new Label();
             btnDetail = new Guna.UI2.WinForms.Guna2GradientButton();
+            labelID = new Label();
             ((System.ComponentModel.ISupportInitialize)medPic).BeginInit();
             guna2Panel1.SuspendLayout();
             SuspendLayout();
@@ -57,6 +58,7 @@
             medPic.Name = "medPic";
             medPic.ShadowDecoration.CustomizableEdges = customizableEdges2;
             medPic.Size = new Size(240, 190);
+            medPic.SizeMode = PictureBoxSizeMode.CenterImage;
             medPic.TabIndex = 0;
             medPic.TabStop = false;
             // 
@@ -159,12 +161,25 @@
             btnDetail.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDetail.Size = new Size(272, 48);
             btnDetail.TabIndex = 99;
+            btnDetail.Click += btnDetail_Click;
+            // 
+            // labelID
+            // 
+            labelID.AutoSize = true;
+            labelID.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            labelID.ForeColor = Color.DarkGray;
+            labelID.Location = new Point(172, 198);
+            labelID.Name = "labelID";
+            labelID.Size = new Size(22, 17);
+            labelID.TabIndex = 100;
+            labelID.Text = "ID";
             // 
             // medicineItem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(182, 228, 226);
+            Controls.Add(labelID);
             Controls.Add(btnDetail);
             Controls.Add(avaiQuan);
             Controls.Add(label10);
@@ -197,5 +212,6 @@
         private Label label10;
         private Label avaiQuan;
         private Guna.UI2.WinForms.Guna2GradientButton btnDetail;
+        private Label labelID;
     }
 }

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class updateMedicine : Form
+    public partial class manageSale : Form
     {
-        public updateMedicine()
+        public manageSale()
         {
             InitializeComponent();
-        }
-
-        private void updateMedicine_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

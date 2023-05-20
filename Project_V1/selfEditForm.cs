@@ -190,5 +190,10 @@ namespace GUI
             email.Text = "";
             password.Text = "";
         }
+
+        private void panelEdit_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -152,6 +152,7 @@
             panelEdit.ShadowDecoration.CustomizableEdges = customizableEdges36;
             panelEdit.Size = new Size(1112, 640);
             panelEdit.TabIndex = 0;
+            panelEdit.Paint += panelEdit_Paint;
             // 
             // btnReset
             // 
